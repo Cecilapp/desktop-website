@@ -10,7 +10,6 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "@css",
         "css": "tailwind-builder assets/tailwind.css --minify",
         "css:watch": "tailwind-builder assets/tailwind.css --watch",
         "serve": "php cecil.phar serve",
