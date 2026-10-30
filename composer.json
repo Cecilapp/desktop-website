@@ -1,0 +1,27 @@
+{
+    "name": "cecilapp/desktop-website",
+    "description": "Website of Cecil Desktop",
+    "type": "project",
+    "license": "MIT",
+    "require-dev": {
+        "aligny/tailwind-builder": "*"
+    },
+    "config": {
+        "process-timeout": 0,
+        "allow-plugins": {
+            "cecil/theme-installer": true
+        }
+    },
+    "scripts": {
+        "css": "tailwind-builder assets/tailwind.css --minify",
+        "css:watch": "tailwind-builder assets/tailwind.css --watch",
+        "serve": "php cecil.phar serve",
+        "build": [
+            "@css",
+            "php cecil.phar build --optimize"
+        ]
+    },
+    "require": {
+        "cecil/theme-netlify": "^3.0"
+    }
+}

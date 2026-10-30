@@ -1,0 +1,36 @@
+# Cecil Desktop website
+
+One-page website of [Cecil Desktop](https://github.com/Cecilapp/Desktop), built with [Cecil](https://cecil.app) and [Tailwind CSS](https://tailwindcss.com) (compiled by [tailwind-builder](https://github.com/ArnaudLigny/tailwind-builder)).
+
+## Content
+
+- `data/home.yml` (English) and `data/home.fr.yml` (French): all the page content (hero, features, pricing, FAQ)
+- `translations/messages.fr.yaml`: UI strings of the templates (navigation, buttons, footer)
+- `cecil.yml`: site options, including the download URL and version (`download`)
+- `assets/images/screenshots/`: app screenshots
+
+## Netlify
+
+The [netlify](https://github.com/Cecilapp/theme-netlify) theme component (installed in `themes/` by `composer install`) generates the `_redirects` and `_headers` files; redirects are defined under `netlify.redirects` in `cecil.yml` (e.g. `/download/*` to the installers on Cloudflare R2).
+
+## Development
+
+Requirements: PHP 8.3+ and Composer.
+
+```bash
+composer install
+curl -LO https://cecil.app/cecil.phar
+```
+
+Compile the CSS and preview the site (in two terminals):
+
+```bash
+composer css:watch   # assets/tailwind.css → assets/styles.css
+composer serve       # http://localhost:8000
+```
+
+## Build
+
+```bash
+composer build       # minified CSS + optimized site in _site/
+```

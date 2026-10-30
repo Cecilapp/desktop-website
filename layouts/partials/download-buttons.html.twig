@@ -1,0 +1,22 @@
+{# Download button of each installer: `downloads` ([{name, arch, url, version}]) #}
+<div class="flex flex-wrap items-center justify-center gap-4">
+  {% for download in downloads %}
+  <a href="{{ download.url }}" class="inline-flex items-center gap-2 rounded-lg bg-gold-300 px-6 py-3 font-semibold text-navy-950 shadow hover:bg-gold-200">
+    {{ include('partials/icon.html.twig', {name: 'download', class: 'size-5'}) }}
+    {% trans with {'%os%': download.name} %}Download for %os%{% endtrans %}
+    {%- if download.arch %} <span class="font-normal text-navy-800">({{ download.arch }})</span>{% endif %}
+  </a>
+  {% else %}
+  <span aria-disabled="true" class="inline-flex cursor-not-allowed items-center gap-2 rounded-lg bg-white/10 px-6 py-3 font-semibold text-navy-300">
+    {{ include('partials/icon.html.twig', {name: 'download', class: 'size-5'}) }}
+    {% trans %}Download free{% endtrans %}
+  </span>
+  {% endfor %}
+</div>
+<p class="mt-5 text-sm text-navy-200">
+  {%- if downloads|length > 0 -%}
+    {% trans with {'%version%': downloads[0].version} %}Version %version%{% endtrans %}
+  {%- else -%}
+    {% trans %}Coming soon{% endtrans %}
+  {%- endif -%}
+</p>

@@ -1,0 +1,54 @@
+title: Cecil Desktop
+baseline: The desktop app for Cecil
+baseurl: https://desktop.cecil.app/
+description: Manage, build, preview and publish your Cecil static sites from a native desktop app, without the terminal.
+image: images/screenshots/overview.png
+author:
+  name: Cecil
+  url: https://cecil.app
+language: en
+languages:
+  - code: en
+    name: English
+    locale: en_US
+  - code: fr
+    name: Français
+    locale: fr_FR
+    config:
+      baseline: L'application desktop pour Cecil
+      description: Gérez, buildez, prévisualisez et publiez vos sites statiques Cecil depuis une application desktop native, sans terminal.
+
+# custom options, used by the templates
+download:
+  url: /download/ # redirected to the R2 bucket (see `netlify.redirects`)
+  manifests: https://pub-530b20baba974fa4997de33fa2bed14e.r2.dev/desktop/ # electron-builder update files
+  platforms:
+    - name: Windows
+      manifest: latest.yml
+      ext: exe
+      archs: # label of the architecture found in the installer file name
+        arm64: ARM64
+        x64: x64
+    - name: macOS
+      manifest: latest-mac.yml
+      ext: dmg
+      archs:
+        arm64: Apple Silicon
+        x64: Intel
+        universal: Universal
+      default_arch: Intel # file name without architecture (electron-builder)
+
+theme:
+  - netlify
+netlify:
+  redirects:
+    - from: /download/*
+      to: https://pub-530b20baba974fa4997de33fa2bed14e.r2.dev/desktop/:splat
+      status: 302
+
+output:
+  pagetypeformats:
+    homepage: [html]
+metatags:
+  title:
+    divider: " · "

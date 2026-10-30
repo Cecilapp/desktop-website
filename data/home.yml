@@ -1,0 +1,112 @@
+hero:
+  beta: Beta · The current version is in beta testing
+  title: Your Cecil sites, <span class="text-gold-400">without the terminal</span>.
+  text: "Manage, build, preview and publish your static sites from a native desktop app. Cecil is embedded: nothing else to install."
+  note: Free for 1 site · Windows and macOS
+  screenshot:
+    image: images/screenshots/overview.png
+    alt: Cecil Desktop overview of a site, with the last build, the preview and the publication status
+
+intro:
+  title: Everything Cecil does, one click away.
+  text: Build logs, live preview, Markdown editor and deployments in one window. Raw configuration and detailed logs stay visible, because you're a developer.
+
+features:
+  - title: Write content, see it live
+    text: Browse the `pages/` tree, edit Markdown with syntax highlighting and fill the front matter through a form. Save, and the preview reloads in your browser.
+    points:
+      - Markdown editor with line numbers
+      - Front matter form, raw YAML for the rest
+      - Open any page in your external editor
+    screenshot:
+      image: images/screenshots/content.png
+      alt: Markdown editor with the pages tree and the front matter form
+  - title: Publish in one click
+    text: Deploy to Netlify, Vercel, GitHub Pages or AWS S3 directly through their APIs. Only the changed files are sent, and every deployment is kept in the history.
+    points:
+      - Several targets per site (production, staging…)
+      - Differential uploads
+      - No git, Netlify or AWS CLI required
+    screenshot:
+      image: images/screenshots/publish.png
+      alt: Publication in progress to Netlify, with the deployments history
+  - title: Your tokens stay safe
+    text: Hosting accounts are stored once and shared between your sites. Tokens are encrypted with the system keychain and never written to your projects.
+    points:
+      - Windows Credential Manager and macOS Keychain
+      - Tokens checked before each deployment
+      - No telemetry
+    screenshot:
+      image: images/screenshots/accounts.png
+      alt: Preferences listing the Netlify, Vercel and AWS S3 accounts
+
+more:
+  title: And everything you expect.
+  items:
+    - icon: build
+      title: Full or incremental builds
+      text: Drafts, environment, base URL… with streamed logs and a summary per step.
+    - icon: preview
+      title: Live preview
+      text: A local server with live reload, opened in your browser. One per site.
+    - icon: sites
+      title: All your sites
+      text: Open an existing project or create a new one, and switch between them.
+    - icon: themes
+      title: Themes
+      text: Browse, install and update the official Cecil themes.
+    - icon: doctor
+      title: Diagnostics
+      text: Deprecated options, broken links and SEO checks, with readable errors.
+    - icon: shortcuts
+      title: Keyboard first
+      text: Command palette, Ctrl/Cmd+B to build, Ctrl/Cmd+P to preview.
+
+pricing:
+  title: Free for 1 site. One license for unlimited.
+  text: All the features are in both plans. Pay once, no subscription.
+  plans:
+    - name: Free
+      price: 0 €
+      period: forever
+      text: To discover Cecil Desktop or manage a few sites.
+      features:
+        - 1 site
+        - Build, preview and content editing
+        - Publish to Netlify, Vercel, GitHub Pages and S3
+        - Themes and diagnostics
+      cta: Download free
+    - name: Pro
+      price: 49 €
+      period: one-time payment
+      text: For freelancers and agencies with many sites.
+      features:
+        - Unlimited sites
+        - Everything in Free
+        - 1 year of updates included
+        - Supports the development of Cecil
+      cta: Get Cecil Desktop Pro
+      disabled: Available after the beta
+      highlight: true
+
+faq:
+  title: A few questions.
+  items:
+    - question: What is Cecil Desktop?
+      answer: "A desktop application to manage your [Cecil](https://cecil.app) sites: create, edit, build, preview and publish them without typing a single command."
+    - question: Do I need to install PHP or Cecil?
+      answer: No. Cecil Desktop embeds PHP and Cecil. The embedded Cecil version is shown in the app, and is updated with each release.
+    - question: Does it replace my code editor?
+      answer: No. The built-in editor is made for content (Markdown and front matter). Templates and assets are opened in your favorite editor in one click.
+    - question: Where are my sites and tokens stored?
+      answer: "Your sites stay where they are, on your disk: Cecil Desktop doesn't move or convert anything. Hosting tokens are encrypted with the system keychain."
+    - question: What happens after the first year of a Pro license?
+      answer: "Your license is perpetual: you keep using the last version released during your year of updates. Renew only if you want the new versions."
+    - question: Which systems are supported?
+      answer: Windows 10+ and macOS 12+ (Intel and Apple Silicon). Linux is planned.
+    - question: Is it open source?
+      answer: "Cecil, the static site generator (CLI) embedded in Cecil Desktop, is open source: its source code is on [GitHub](https://github.com/Cecilapp/Cecil). Your sites stay standard Cecil projects, that you can build without the app."
+
+cta:
+  title: Your next site is one click away.
+  text: Download Cecil Desktop for free, and open your first site in seconds.

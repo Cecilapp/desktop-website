@@ -1,0 +1,112 @@
+hero:
+  beta: Bêta · La version actuelle est en test
+  title: Vos sites Cecil, <span class="text-gold-400">sans le terminal</span>.
+  text: "Gérez, buildez, prévisualisez et publiez vos sites statiques depuis une application desktop native. Cecil est embarqué : rien d'autre à installer."
+  note: Gratuit pour 1 site · Windows et macOS
+  screenshot:
+    image: images/screenshots/overview.png
+    alt: Aperçu d'un site dans Cecil Desktop, avec le dernier build, la preview et l'état de la publication
+
+intro:
+  title: Tout ce que fait Cecil, à un clic.
+  text: Logs de build, preview en direct, éditeur Markdown et déploiements dans une seule fenêtre. La configuration brute et les logs détaillés restent visibles, parce que vous êtes développeur.
+
+features:
+  - title: Écrivez, voyez le résultat en direct
+    text: "Parcourez l'arborescence `pages/`, éditez le Markdown avec coloration syntaxique et remplissez le front matter via un formulaire. Enregistrez : la preview se recharge dans votre navigateur."
+    points:
+      - Éditeur Markdown avec numéros de ligne
+      - Front matter en formulaire, YAML brut pour le reste
+      - Ouverture de n'importe quelle page dans votre éditeur externe
+    screenshot:
+      image: images/screenshots/content.png
+      alt: Éditeur Markdown avec l'arborescence des pages et le formulaire de front matter
+  - title: Publiez en un clic
+    text: Déployez sur Netlify, Vercel, GitHub Pages ou AWS S3 directement via leurs API. Seuls les fichiers modifiés sont envoyés, et chaque déploiement est conservé dans l'historique.
+    points:
+      - Plusieurs cibles par site (production, recette…)
+      - Envoi différentiel
+      - Aucun CLI git, Netlify ou AWS requis
+    screenshot:
+      image: images/screenshots/publish.png
+      alt: Publication en cours sur Netlify, avec l'historique des déploiements
+  - title: Vos jetons restent en sécurité
+    text: Les comptes des hébergeurs sont enregistrés une fois et partagés entre vos sites. Les jetons sont chiffrés avec le trousseau du système et jamais écrits dans vos projets.
+    points:
+      - Gestionnaire d'identification Windows et Trousseau macOS
+      - Jetons vérifiés avant chaque déploiement
+      - Aucune télémétrie
+    screenshot:
+      image: images/screenshots/accounts.png
+      alt: Préférences listant les comptes Netlify, Vercel et AWS S3
+
+more:
+  title: Et tout ce que vous attendez.
+  items:
+    - icon: build
+      title: Builds complets ou incrémentaux
+      text: Brouillons, environnement, URL de base… avec logs en direct et résumé par étape.
+    - icon: preview
+      title: Preview en direct
+      text: Un serveur local avec rechargement automatique, ouvert dans votre navigateur. Un par site.
+    - icon: sites
+      title: Tous vos sites
+      text: Ouvrez un projet existant ou créez-en un nouveau, et passez de l'un à l'autre.
+    - icon: themes
+      title: Thèmes
+      text: Parcourez, installez et mettez à jour les thèmes officiels de Cecil.
+    - icon: doctor
+      title: Diagnostic
+      text: Options dépréciées, liens cassés et vérifications SEO, avec des erreurs lisibles.
+    - icon: shortcuts
+      title: Pensé pour le clavier
+      text: Palette de commandes, Ctrl/Cmd+B pour builder, Ctrl/Cmd+P pour prévisualiser.
+
+pricing:
+  title: Gratuit pour 1 site. Une licence pour un nombre illimité.
+  text: Toutes les fonctionnalités sont dans les deux offres. Payez une fois, sans abonnement.
+  plans:
+    - name: Gratuit
+      price: 0 €
+      period: pour toujours
+      text: Pour découvrir Cecil Desktop ou gérer quelques sites.
+      features:
+        - 1 site
+        - Build, preview et édition du contenu
+        - Publication sur Netlify, Vercel, GitHub Pages et S3
+        - Thèmes et diagnostic
+      cta: Télécharger gratuitement
+    - name: Pro
+      price: 49 €
+      period: paiement unique
+      text: Pour les freelances et les agences qui gèrent de nombreux sites.
+      features:
+        - Sites illimités
+        - Tout ce qu'inclut l'offre gratuite
+        - 1 an de mises à jour inclus
+        - Soutient le développement de Cecil
+      cta: Obtenir Cecil Desktop Pro
+      disabled: Disponible après la bêta
+      highlight: true
+
+faq:
+  title: Quelques questions.
+  items:
+    - question: Qu'est-ce que Cecil Desktop ?
+      answer: "Une application desktop pour gérer vos sites [Cecil](https://cecil.app) : les créer, les éditer, les builder, les prévisualiser et les publier sans taper une seule commande."
+    - question: Dois-je installer PHP ou Cecil ?
+      answer: Non. Cecil Desktop embarque PHP et Cecil. La version de Cecil embarquée est affichée dans l'application, et mise à jour à chaque release.
+    - question: Remplace-t-il mon éditeur de code ?
+      answer: Non. L'éditeur intégré est fait pour le contenu (Markdown et front matter). Les templates et les assets s'ouvrent dans votre éditeur préféré en un clic.
+    - question: Où sont stockés mes sites et mes jetons ?
+      answer: "Vos sites restent là où ils sont, sur votre disque : Cecil Desktop ne déplace ni ne convertit rien. Les jetons des hébergeurs sont chiffrés avec le trousseau du système."
+    - question: Que se passe-t-il après la première année d'une licence Pro ?
+      answer: "Votre licence est perpétuelle : vous continuez à utiliser la dernière version publiée pendant votre année de mises à jour. Renouvelez seulement si vous voulez les nouvelles versions."
+    - question: Quels systèmes sont pris en charge ?
+      answer: Windows 10+ et macOS 12+ (Intel et Apple Silicon). Linux est prévu.
+    - question: Est-ce open source ?
+      answer: "Cecil, le générateur de site statique (CLI) embarqué dans Cecil Desktop, est open source : son code source est sur [GitHub](https://github.com/Cecilapp/Cecil). Vos sites restent des projets Cecil standards, que vous pouvez builder sans l'application."
+
+cta:
+  title: Votre prochain site est à un clic.
+  text: Téléchargez Cecil Desktop gratuitement, et ouvrez votre premier site en quelques secondes.

@@ -1,0 +1,4 @@
+{# Links to the translations of the current page #}
+{% for translation in page.translations %}
+<a href="{{ url(translation) }}" hreflang="{{ translation.language }}" lang="{{ translation.language }}" class="text-sm font-medium uppercase hover:text-navy-900 dark:hover:text-white" title="{{ site.language.name(translation.language)|e('html_attr') }}">{{ translation.language }}</a>
+{% endfor %}

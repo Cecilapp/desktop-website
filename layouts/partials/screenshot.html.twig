@@ -1,0 +1,8 @@
+{# App window frame around a screenshot: `screenshot` ({image, alt}), `class`, `eager` #}
+<figure class="overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-navy-900/10 dark:ring-white/10 {{ class ?? '' }}">
+  {{ html(asset(screenshot.image), {
+    alt: screenshot.alt,
+    class: 'block h-auto w-full',
+    loading: (eager ?? false) ? 'eager' : 'lazy'
+  }, {responsive: true, formats: ['webp']}) }}
+</figure>
