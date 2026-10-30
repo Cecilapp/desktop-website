@@ -11,6 +11,8 @@ One-page website of [Cecil Desktop](https://github.com/Cecilapp/Desktop), built 
 
 ## Netlify
 
+The site is built by Netlify with the [Cecil build script](https://cecil.app/build.sh) (see `netlify.toml`): it downloads Cecil, runs `composer install` (which compiles the CSS) then builds the site.
+
 The [netlify](https://github.com/Cecilapp/theme-netlify) theme component (installed in `themes/` by `composer install`) generates the `_redirects` and `_headers` files; redirects are defined under `netlify.redirects` in `cecil.yml` (e.g. `/download/*` to the installers on Cloudflare R2).
 
 ## Development
@@ -34,3 +36,7 @@ composer serve       # http://localhost:8000
 ```bash
 composer build       # minified CSS + optimized site in _site/
 ```
+
+## License
+
+[EUPL-1.2](LICENSE)

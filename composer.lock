@@ -4,8 +4,65 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f04bc49eefd753f4f82c2f5b1ecdc90",
+    "content-hash": "c647fed21b44496a9fa7ab7c9c03df0d",
     "packages": [
+        {
+            "name": "aligny/tailwind-builder",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ArnaudLigny/tailwind-builder.git",
+                "reference": "6cb0395f3622d0d70ff3ba0ea61342a22094ba21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ArnaudLigny/tailwind-builder/zipball/6cb0395f3622d0d70ff3ba0ea61342a22094ba21",
+                "reference": "6cb0395f3622d0d70ff3ba0ea61342a22094ba21",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2",
+                "symfony/console": "^7.4",
+                "symfony/process": "^7.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.5"
+            },
+            "bin": [
+                "bin/tailwind-builder"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aligny\\TailwindBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arnaud Ligny"
+                }
+            ],
+            "description": "Composer package to build Tailwind CSS using the standalone CLI binary.",
+            "keywords": [
+                "tailwind",
+                "tailwindcss"
+            ],
+            "support": {
+                "issues": "https://github.com/ArnaudLigny/tailwind-builder/issues",
+                "source": "https://github.com/ArnaudLigny/tailwind-builder/tree/1.2.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ArnaudLigny",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-10-07T21:37:41+00:00"
+        },
         {
             "name": "cecil/theme-installer",
             "version": "2.1.0",
@@ -125,65 +182,6 @@
                 }
             ],
             "time": "2026-10-19T11:19:58+00:00"
-        }
-    ],
-    "packages-dev": [
-        {
-            "name": "aligny/tailwind-builder",
-            "version": "1.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ArnaudLigny/tailwind-builder.git",
-                "reference": "6cb0395f3622d0d70ff3ba0ea61342a22094ba21"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ArnaudLigny/tailwind-builder/zipball/6cb0395f3622d0d70ff3ba0ea61342a22094ba21",
-                "reference": "6cb0395f3622d0d70ff3ba0ea61342a22094ba21",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.2",
-                "symfony/console": "^7.4",
-                "symfony/process": "^7.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^11.5"
-            },
-            "bin": [
-                "bin/tailwind-builder"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Aligny\\TailwindBuilder\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Arnaud Ligny"
-                }
-            ],
-            "description": "Composer package to build Tailwind CSS using the standalone CLI binary.",
-            "keywords": [
-                "tailwind",
-                "tailwindcss"
-            ],
-            "support": {
-                "issues": "https://github.com/ArnaudLigny/tailwind-builder/issues",
-                "source": "https://github.com/ArnaudLigny/tailwind-builder/tree/1.2.3"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/ArnaudLigny",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-10-07T21:37:41+00:00"
         },
         {
             "name": "psr/container",
@@ -985,6 +983,7 @@
             "time": "2026-10-23T17:06:53+00:00"
         }
     ],
+    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {},

@@ -1,0 +1,8 @@
+[build]
+  publish = "_site"
+  # downloads Cecil, runs `composer install` (themes + CSS compilation) then `cecil build`
+  command = "curl -sSOL https://cecil.app/build.sh && bash ./build.sh"
+
+[build.environment]
+  PHP_VERSION = "8.3"
+  CECIL_CMD_OPTIONS = "--optimize"
