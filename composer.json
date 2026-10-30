@@ -1,8 +1,4 @@
 {
-    "name": "cecilapp/desktop-website",
-    "description": "Website of Cecil Desktop",
-    "type": "project",
-    "license": "EUPL-1.2",
     "require": {
         "aligny/tailwind-builder": "^1.2",
         "cecil/theme-netlify": "^3.0"

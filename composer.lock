@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c647fed21b44496a9fa7ab7c9c03df0d",
+    "content-hash": "66a6311993c93cbeee14f9392815c3e0",
     "packages": [
         {
             "name": "aligny/tailwind-builder",
