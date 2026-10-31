@@ -1,22 +1,26 @@
-{#- Download button of each installer: `downloads` ([{name, arch, url, version}]) ~#}
-          <div class="flex flex-wrap items-center justify-center gap-4">
-            {%- for download in downloads ~%}
-            <a href="{{ download.url }}" class="inline-flex items-center gap-2 rounded-lg bg-gold-300 px-6 py-3 font-semibold text-navy-950 shadow hover:bg-gold-200">
-              {{- include('partials/icon.html.twig', {name: 'download', class: 'size-5'}) ~}}
-              {%- trans with {'%os%': download.name} %}Download for %os%{% endtrans %}
-              {%- if download.arch %} <span class="font-normal text-navy-800">({{ download.arch }})</span>{% endif ~%}
-            </a>
-            {%- else ~%}
-            <span aria-disabled="true" class="inline-flex cursor-not-allowed items-center gap-2 rounded-lg bg-white/10 px-6 py-3 font-semibold text-navy-300">
-              {{- include('partials/icon.html.twig', {name: 'download', class: 'size-5'}) ~}}
-              {%- trans %}Download free{% endtrans ~%}
-            </span>
-            {%- endfor ~%}
+{#- Download button of each installer: `downloads` ([{name, os, arch, arch_key, url, version}]) ~#}
+          <div data-downloads>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              {%- for download in downloads ~%}
+              <a href="{{ download.url }}" data-os="{{ download.os }}" data-arch="{{ download.arch_key }}" class="inline-flex items-center gap-2 rounded-lg bg-gold-300 px-6 py-3 font-semibold text-navy-950 shadow hover:bg-gold-200">
+                {{- include('partials/icon.html.twig', {name: 'download', class: 'size-5'}) ~}}
+                {%- trans with {'%os%': download.name} %}Download for %os%{% endtrans %}
+                {%- if download.arch %} <span class="font-normal text-navy-800">({{ download.arch }})</span>{% endif ~%}
+              </a>
+              {%- else ~%}
+              <span aria-disabled="true" class="inline-flex cursor-not-allowed items-center gap-2 rounded-lg bg-white/10 px-6 py-3 font-semibold text-navy-300">
+                {{- include('partials/icon.html.twig', {name: 'download', class: 'size-5'}) ~}}
+                {%- trans %}Download free{% endtrans ~%}
+              </span>
+              {%- endfor ~%}
+            </div>
+            <p class="mt-5 text-sm text-navy-200">
+              {%- if downloads|length > 0 -%}
+                {%- trans with {'%version%': downloads[0].version} %}Version %version%{% endtrans ~%}
+                {#- shown by the OS detection script, when other platforms' buttons are hidden ~#}
+                <button type="button" data-downloads-all hidden class="cursor-pointer hover:text-white"> · <span class="underline">{% trans %}Other platforms{% endtrans %}</span></button>
+              {%- else -%}
+                {%- trans %}Coming soon{% endtrans ~%}
+              {%- endif ~%}
+            </p>
           </div>
-          <p class="mt-5 text-sm text-navy-200">
-            {%- if downloads|length > 0 -%}
-              {%- trans with {'%version%': downloads[0].version} %}Version %version%{% endtrans ~%}
-            {%- else -%}
-              {%- trans %}Coming soon{% endtrans ~%}
-            {%- endif ~%}
-          </p>

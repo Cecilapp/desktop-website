@@ -16,7 +16,9 @@
           {%- if file matches '/[-_.]' ~ key ~ '[-_.]/i' %}{% set arch = label %}{% endif %}
         {%- endfor %}
       {%- endif %}
-      {%- set downloads = downloads|merge([{name: platform.name, arch: arch, url: site.download.url ~ file|url_encode, version: release.version}]) %}
+      {#- architecture key (e.g. `arm64`), matched against the visitor's one #}
+      {%- set arch_key = arch ? (platform.archs ?? {})|filter(label => label == arch)|keys|first : null %}
+      {%- set downloads = downloads|merge([{name: platform.name, os: platform.name|lower, arch: arch, arch_key: arch_key, url: site.download.url ~ file|url_encode, version: release.version}]) %}
     {%- endfor %}
   {%- endif %}
 {% endfor %}
@@ -185,5 +187,35 @@
         </ul>
       </div>
     </footer>
+    {#- Shows only the download buttons of the visitor's OS (and architecture, when known) ~#}
+    <script>
+      (async () => {
+        const platform = (navigator.userAgentData?.platform || navigator.platform || '').toLowerCase();
+        // mobile devices (iPadOS reports itself as macOS): keep all buttons
+        if (/android|iphone|ipad|ipod/i.test(navigator.userAgent) || (/^mac/.test(platform) && navigator.maxTouchPoints > 1)) return;
+        const os = /^win/.test(platform) ? 'windows' : /^mac/.test(platform) ? 'macos' : null;
+        if (!os) return;
+        // architecture is only exposed by Chromium browsers (Safari on Apple Silicon reports Intel)
+        let arch = null;
+        try {
+          const values = await navigator.userAgentData?.getHighEntropyValues(['architecture']);
+          arch = {arm: 'arm64', x86: 'x64'}[values?.architecture] ?? null;
+        } catch {}
+        document.querySelectorAll('[data-downloads]').forEach(group => {
+          const links = [...group.querySelectorAll('a[data-os]')];
+          let matches = links.filter(a => a.dataset.os === os);
+          const archMatches = matches.filter(a => a.dataset.arch === arch || a.dataset.arch === 'universal');
+          if (arch && archMatches.length) matches = archMatches;
+          if (!matches.length || matches.length === links.length) return;
+          links.forEach(a => a.hidden = !matches.includes(a));
+          const toggle = group.querySelector('[data-downloads-all]');
+          toggle.hidden = false;
+          toggle.addEventListener('click', () => {
+            links.forEach(a => a.hidden = false);
+            toggle.hidden = true;
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
