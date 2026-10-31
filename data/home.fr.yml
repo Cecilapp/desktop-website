@@ -1,14 +1,14 @@
 hero:
   beta: Bêta · La version actuelle est en test
-  title: Créez, prévisualisez, publiez. <span class="text-gold-400">Sans ligne de commande</span>.
+  title: Du Markdown au site en ligne, <span class="text-gold-400">en un clic</span>.
   text: "Une application desktop native pour gérer et builder vos sites statiques. Cecil est embarqué : rien d'autre à installer."
   note: Gratuit pour 1 site · Windows et macOS
   screenshot:
-    image: images/screenshots/overview.png
-    alt: Aperçu d'un site dans Cecil Desktop, avec le dernier build, la preview et l'état de la publication
+    image: images/screenshots/sites.png
+    alt: Liste des sites dans Cecil Desktop, avec l'état de leur dernier build et de leur publication
 
 intro:
-  title: Tout ce que fait Cecil, à un clic.
+  title: Tout ce que fait Cecil, sous la main.
   text: Logs de build, preview en direct, éditeur Markdown et déploiements dans une seule fenêtre. La configuration brute et les logs détaillés restent visibles.
 
 features:
@@ -21,7 +21,7 @@ features:
     screenshot:
       image: images/screenshots/content.png
       alt: Éditeur Markdown avec l'arborescence des pages et le formulaire de front matter
-  - title: Publiez en un clic
+  - title: Publiez où vous voulez
     text: Déployez sur Netlify, Vercel, GitHub Pages ou AWS S3 directement via leurs API. Seuls les fichiers modifiés sont envoyés, et chaque déploiement est conservé dans l'historique.
     points:
       - Plusieurs cibles par site (production, recette…)

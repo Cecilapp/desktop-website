@@ -1,14 +1,14 @@
 hero:
   beta: Beta · The current version is in beta testing
-  title: Write, preview, publish. <span class="text-gold-400">No command line</span>.
+  title: From Markdown to live site, <span class="text-gold-400">in one click</span>.
   text: "A native desktop app to manage and build your static sites. Cecil is embedded: nothing else to install."
   note: Free for 1 site · Windows and macOS
   screenshot:
-    image: images/screenshots/overview.png
-    alt: Cecil Desktop overview of a site, with the last build, the preview and the publication status
+    image: images/screenshots/sites.png
+    alt: Cecil Desktop listing the sites, with the state of their last build and publication
 
 intro:
-  title: Everything Cecil does, one click away.
+  title: Everything Cecil does, at your fingertips.
   text: Build logs, live preview, Markdown editor and deployments in one window. Raw configuration and detailed logs stay visible.
 
 features:
@@ -21,7 +21,7 @@ features:
     screenshot:
       image: images/screenshots/content.png
       alt: Markdown editor with the pages tree and the front matter form
-  - title: Publish in one click
+  - title: Publish anywhere
     text: Deploy to Netlify, Vercel, GitHub Pages or AWS S3 directly through their APIs. Only the changed files are sent, and every deployment is kept in the history.
     points:
       - Several targets per site (production, staging…)
