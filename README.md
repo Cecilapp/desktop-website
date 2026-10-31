@@ -15,6 +15,15 @@ The site is built by Netlify with the [Cecil build script](https://cecil.app/bui
 
 The [netlify](https://github.com/Cecilapp/theme-netlify) theme component (installed in `themes/` by `composer install`) generates the `_redirects` and `_headers` files; redirects are defined under `netlify.redirects` in `cecil.yml` (e.g. `/download/*` to the installers on Cloudflare R2).
 
+### Feedback of the beta testers
+
+`netlify/functions/feedback.mjs` (`POST /api/feedback`) receives the feedback sent from the app (Help › Send feedback) and creates an issue in the private repository of the app, labelled `beta` and `bug` / `enhancement` / `question`. Environment variables of the Netlify site:
+
+- `GITHUB_TOKEN`: fine-grained token, repository `Cecilapp/Desktop` only, permission "Issues: Read and write" (it expires: renew it)
+- `FEEDBACK_REPO` (optional): `Cecilapp/Desktop` by default
+
+Requests are rate limited (5 per minute and IP, `config.rateLimit`); the app's User-Agent (`Cecil Desktop/…`) is required.
+
 ## Development
 
 Requirements: PHP 8.3+ and Composer.
