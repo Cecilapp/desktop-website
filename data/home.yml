@@ -1,7 +1,7 @@
 hero:
   beta: Beta · The current version is in beta testing
-  title: Your Cecil sites, <span class="text-gold-400">without the terminal</span>.
-  text: "Manage, build, preview and publish your static sites from a native desktop app. Cecil is embedded: nothing else to install."
+  title: Write, preview, publish. <span class="text-gold-400">No command line</span>.
+  text: "A native desktop app to manage and build your static sites. Cecil is embedded: nothing else to install."
   note: Free for 1 site · Windows and macOS
   screenshot:
     image: images/screenshots/overview.png
@@ -9,7 +9,7 @@ hero:
 
 intro:
   title: Everything Cecil does, one click away.
-  text: Build logs, live preview, Markdown editor and deployments in one window. Raw configuration and detailed logs stay visible, because you're a developer.
+  text: Build logs, live preview, Markdown editor and deployments in one window. Raw configuration and detailed logs stay visible.
 
 features:
   - title: Write content, see it live
