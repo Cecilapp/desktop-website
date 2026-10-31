@@ -29,7 +29,7 @@ features:
       - Aucun CLI git, Netlify ou AWS requis
     screenshot:
       image: images/screenshots/publish.png
-      alt: Publication en cours sur Netlify, avec l'historique des déploiements
+      alt: Cible de publication Netlify, avec l'historique des déploiements
   - title: Vos jetons restent en sécurité
     text: Les comptes des hébergeurs sont enregistrés une fois et partagés entre vos sites. Les jetons sont chiffrés avec le trousseau du système et jamais écrits dans vos projets.
     points:
@@ -38,7 +38,7 @@ features:
       - Aucune télémétrie
     screenshot:
       image: images/screenshots/accounts.png
-      alt: Préférences listant les comptes Netlify, Vercel et AWS S3
+      alt: Préférences listant le compte Netlify, avec son jeton vérifié
 
 more:
   title: Et tout ce que vous attendez.

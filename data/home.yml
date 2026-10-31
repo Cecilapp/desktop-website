@@ -29,7 +29,7 @@ features:
       - No git, Netlify or AWS CLI required
     screenshot:
       image: images/screenshots/publish.png
-      alt: Publication in progress to Netlify, with the deployments history
+      alt: Netlify publishing target, with the deployments history
   - title: Your tokens stay safe
     text: Hosting accounts are stored once and shared between your sites. Tokens are encrypted with the system keychain and never written to your projects.
     points:
@@ -38,7 +38,7 @@ features:
       - No telemetry
     screenshot:
       image: images/screenshots/accounts.png
-      alt: Preferences listing the Netlify, Vercel and AWS S3 accounts
+      alt: Preferences listing the Netlify account, with its token checked
 
 more:
   title: And everything you expect.
