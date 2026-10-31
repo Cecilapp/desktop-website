@@ -1,6 +1,6 @@
 {#- Download button of each installer: `downloads` ([{name, os, arch, arch_key, url, version}]) ~#}
           <div data-downloads>
-            <div class="flex flex-wrap items-center justify-center gap-4">
+            <div data-downloads-buttons class="flex flex-wrap items-center justify-center gap-4">
               {%- for download in downloads ~%}
               <a href="{{ download.url }}" data-os="{{ download.os }}" data-arch="{{ download.arch_key }}" class="inline-flex items-center gap-2 rounded-lg bg-gold-300 px-6 py-3 font-semibold text-navy-950 shadow hover:bg-gold-200">
                 {{- include('partials/icon.html.twig', {name: 'download', class: 'size-5'}) ~}}
@@ -10,15 +10,29 @@
               {%- else ~%}
               <span aria-disabled="true" class="inline-flex cursor-not-allowed items-center gap-2 rounded-lg bg-white/10 px-6 py-3 font-semibold text-navy-300">
                 {{- include('partials/icon.html.twig', {name: 'download', class: 'size-5'}) ~}}
-                {%- trans %}Download free{% endtrans ~%}
+                {%- trans %}Download{% endtrans ~%}
               </span>
               {%- endfor ~%}
             </div>
+            {%- if downloads|length > 0 ~%}
+            {#- shown by the OS detection script on mobile devices, instead of the installers ~#}
+            {%- set platforms = [] %}
+            {%- for download in downloads %}{% if download.name not in platforms %}{% set platforms = platforms|merge([download.name]) %}{% endif %}{% endfor %}
+            {%- set and %}{% trans %}and{% endtrans %}{% endset %}
+            {%- set copied %}{% trans %}Link copied{% endtrans %}{% endset ~%}
+            <div data-downloads-share hidden>
+              <button type="button" data-copied="{{ copied|e('html_attr') }}" class="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-gold-300 px-6 py-3 font-semibold text-navy-950 shadow hover:bg-gold-200">
+                {{- include('partials/icon.html.twig', {name: 'share', class: 'size-5'}) ~}}
+                <span data-label>{% trans %}Send the link to my computer{% endtrans %}</span>
+              </button>
+              <p class="mt-5 text-sm text-navy-200">{% trans with {'%platforms%': platforms|join(', ', ' ' ~ and ~ ' ')} %}Available for %platforms%: open this page on your computer to install it.{% endtrans %}</p>
+            </div>
+            {%- endif ~%}
             <p class="mt-5 text-sm text-navy-200">
               {%- if downloads|length > 0 -%}
                 {%- trans with {'%version%': downloads[0].version} %}Version %version%{% endtrans ~%}
-                {#- shown by the OS detection script, when other platforms' buttons are hidden ~#}
-                <button type="button" data-downloads-all hidden class="cursor-pointer hover:text-white"> · <span class="underline">{% trans %}Other platforms{% endtrans %}</span></button>
+                {#- shown by the OS detection script, when installers are hidden ~#}
+                <button type="button" data-downloads-all hidden class="cursor-pointer hover:text-white"> · <span data-context="desktop" hidden class="underline">{% trans %}Other platforms{% endtrans %}</span><span data-context="mobile" hidden class="underline">{% trans %}Show downloads{% endtrans %}</span></button>
               {%- else -%}
                 {%- trans %}Coming soon{% endtrans ~%}
               {%- endif ~%}
