@@ -69,7 +69,7 @@ pricing:
     - name: Gratuit
       price: 0 €
       period: pour toujours
-      text: Pour découvrir Cecil Desktop ou gérer quelques sites.
+      text: Pour découvrir Cecil Desktop et gérer votre premier site.
       features:
         - 1 site
         - Build, preview et édition du contenu
