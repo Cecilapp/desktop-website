@@ -2,7 +2,7 @@ title: Cecil Desktop
 baseline: The desktop app for Cecil
 baseurl: https://desktop.cecil.app/
 description: Manage, build, preview and publish your Cecil static sites from a native desktop app, without the terminal.
-image: images/screenshots/overview.png
+image: images/screenshots/sites.png
 author:
   name: Cecil
   url: https://cecil.app
