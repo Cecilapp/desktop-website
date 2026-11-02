@@ -22,7 +22,7 @@ languages:
 download:
   url: /download/ # redirected to the R2 bucket (see `netlify.redirects`)
   manifests: https://pub-530b20baba974fa4997de33fa2bed14e.r2.dev/desktop/ # electron-builder update files
-  platforms:
+  platforms: # the first one gives the version: the others are shown only for the same version
     - name: Windows
       manifest: latest.yml
       ext: exe

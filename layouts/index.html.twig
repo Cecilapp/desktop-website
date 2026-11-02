@@ -22,6 +22,10 @@
     {%- endfor %}
   {%- endif %}
 {% endfor %}
+{#- only the installers of the reference version (the first platform, Windows): a platform not built
+    for the latest release (e.g. macOS) keeps the update file of an older one, its buttons are hidden #}
+{% set version = (downloads|first).version ?? null %}
+{% set downloads = downloads|filter(d => d.version == version) %}
 <!DOCTYPE html>
 <html lang="{{ site.language }}" class="scroll-smooth">
   <head>
