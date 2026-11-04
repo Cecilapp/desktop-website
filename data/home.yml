@@ -20,7 +20,7 @@ features:
       - Open any page in your external editor
     screenshot:
       image: images/screenshots/content.png
-      alt: Markdown editor with the pages tree and the front matter form
+      alt: Markdown editor with the pages tree and the live preview
   - title: Publish anywhere
     text: Deploy to Netlify, Vercel, GitHub Pages or AWS S3 directly through their APIs. Only the changed files are sent, and every deployment is kept in the history.
     points:

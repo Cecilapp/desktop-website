@@ -20,7 +20,7 @@ features:
       - Ouverture de n'importe quelle page dans votre éditeur externe
     screenshot:
       image: images/screenshots/content.png
-      alt: Éditeur Markdown avec l'arborescence des pages et le formulaire de front matter
+      alt: Éditeur Markdown avec l'arborescence des pages et l'aperçu en direct
   - title: Publiez où vous voulez
     text: Déployez sur Netlify, Vercel, GitHub Pages ou AWS S3 directement via leurs API. Seuls les fichiers modifiés sont envoyés, et chaque déploiement est conservé dans l'historique.
     points:
