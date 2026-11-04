@@ -52,3 +52,6 @@ output:
 metatags:
   title:
     divider: " · "
+layouts:
+  images:
+    dark_suffix: .dark # e.g. `sites.dark.png` is the dark variant of `sites.png`
