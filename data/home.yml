@@ -2,7 +2,7 @@ hero:
   beta: Beta · The current version is in beta testing
   title: From Markdown to live site, <span class="text-gold-400">in one click</span>.
   text: "A native desktop app to manage and build your static sites. Cecil is embedded: nothing else to install."
-  note: Free for 1 site · Windows and macOS
+  note:
   screenshot:
     image: images/screenshots/sites.png
     alt: Cecil Desktop listing the sites, with the state of their last build and publication
