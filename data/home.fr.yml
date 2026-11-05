@@ -5,6 +5,7 @@ hero:
   note:
   screenshot:
     image: images/screenshots/sites.png
+    video: videos/demo.mp4 # la capture reste en repli (chargement, animations réduites)
     alt: Liste des sites dans Cecil Desktop, avec l'état de leur dernier build et de leur publication
 
 intro:

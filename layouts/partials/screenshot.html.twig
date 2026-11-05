@@ -1,8 +1,18 @@
-{#- App window frame around a screenshot: `screenshot` ({image, alt}), `class`, `eager` -#}
-<figure class="overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-navy-900/10 dark:ring-white/10 {{ class ?? '' }}">
+{#- App window frame around a screenshot: `screenshot` ({image, alt, video?}), `class`, `eager`
+    With `video` (light variant; the dark one has the `layouts.images.dark_suffix`), the video plays
+    over the screenshot, which stays visible while it loads and when motion is reduced -#}
+<figure class="relative overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-navy-900/10 dark:ring-white/10 {{ class ?? '' }}">
   {{- html(asset(screenshot.image), {
     alt: screenshot.alt,
     class: 'block h-auto w-full',
     loading: (eager ?? false) ? 'eager' : 'lazy'
   }, {responsive: true, formats: ['webp']}) ~}}
+  {%- if screenshot.video is defined ~%}
+  {%- set dark_suffix = site.layouts.images.dark_suffix ?? '.dark' %}
+  {%- set dark_video = screenshot.video|replace({'.mp4': dark_suffix ~ '.mp4'}) %}
+  <video class="absolute inset-0 size-full motion-reduce:hidden" width="1280" height="800" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true" data-demo-video>
+    <source src="{{ asset(dark_video) }}" type="video/mp4" media="(prefers-color-scheme: dark)">
+    <source src="{{ asset(screenshot.video) }}" type="video/mp4">
+  </video>
+  {%- endif ~%}
 </figure>

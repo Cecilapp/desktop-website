@@ -193,6 +193,14 @@
     </footer>
     {#- Shows only the download buttons of the visitor's OS (and architecture, when known) ~#}
     <script>
+      // demo videos are hidden when motion is reduced: stops them too (no download, no playback)
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('[data-demo-video]').forEach(video => {
+          video.pause();
+          video.querySelectorAll('source').forEach(source => source.remove());
+          video.load();
+        });
+      }
       (async () => {
         const groups = document.querySelectorAll('[data-downloads]');
         // displays the "show all" toggle of a group, labelled for the `context` (desktop or mobile)

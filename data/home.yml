@@ -5,6 +5,7 @@ hero:
   note:
   screenshot:
     image: images/screenshots/sites.png
+    video: videos/demo.mp4 # the screenshot stays the fallback (loading, reduced motion)
     alt: Cecil Desktop listing the sites, with the state of their last build and publication
 
 intro:
