@@ -1,5 +1,5 @@
 hero:
-  beta: Bêta · La version actuelle est en test
+  beta: Beta · La version actuelle est en test
   title: Du Markdown au site en ligne, <span class="text-gold-400">en un clic</span>.
   text: "Une application desktop native pour gérer et builder vos sites statiques. Cecil est embarqué : rien d'autre à installer."
   note:
@@ -107,7 +107,7 @@ pricing:
         - 1 an de mises à jour inclus
         - Soutient le développement de Cecil
       cta: Obtenir Cecil Desktop Pro
-      disabled: Disponible après la bêta
+      disabled: Disponible après la beta
       highlight: true
 
 faq:
