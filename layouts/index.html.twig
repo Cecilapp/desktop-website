@@ -183,12 +183,40 @@
       </section>
     </main>
     {#- Footer ~#}
-    <footer class="border-t border-slate-200 dark:border-white/10">
-      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-6">
-        <p>© {{ site.time|date('Y') }} <a href="https://ligny.fr" class="hover:text-navy-900 dark:hover:text-white">Arnaud Ligny</a></p>
-        <ul class="flex flex-wrap gap-x-6 gap-y-2">
-          <li><a href="{{ cecil.url }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Powered by Cecil{% endtrans %}</a></li>
-        </ul>
+    <footer class="border-t border-slate-200 bg-slate-50 dark:border-white/10 dark:bg-navy-900/40">
+      <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div class="flex flex-col justify-between gap-10 sm:flex-row">
+          <div class="max-w-sm">
+            <a href="{{ url(page) }}" class="flex items-center gap-2.5 font-semibold text-navy-900 dark:text-white">
+              {{- html(asset('images/logo.png'), {width: 28, height: 28, alt: '', class: 'size-7'}, {responsive: 'density'}) ~}}
+              {{- site.title ~}}
+            </a>
+            <p class="mt-4 text-sm/6">{{ site.description }}</p>
+          </div>
+          <div class="grid grid-cols-2 gap-10 sm:gap-16">
+            <div>
+              <h2 class="text-xs font-semibold tracking-wider text-slate-500 uppercase dark:text-slate-400">Desktop</h2>
+              <ul class="mt-4 space-y-3 text-sm">
+                <li><a href="#features" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Features{% endtrans %}</a></li>
+                <li><a href="#pricing" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Pricing{% endtrans %}</a></li>
+                <li><a href="#faq" class="hover:text-navy-900 dark:hover:text-white">{% trans %}FAQ{% endtrans %}</a></li>
+                <li><a href="#download" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Download{% endtrans %}</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-xs font-semibold tracking-wider text-slate-500 uppercase dark:text-slate-400">Cecil</h2>
+              <ul class="mt-4 space-y-3 text-sm">
+                <li><a href="https://cecil.app" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Website{% endtrans %}</a></li>
+                <li><a href="https://cecil.app/documentation/" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Documentation{% endtrans %}</a></li>
+                <li><a href="https://github.com/Cecilapp/Cecil" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Source code{% endtrans %}</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 flex flex-col gap-2 border-t border-slate-200 pt-8 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between dark:border-white/10 dark:text-slate-400">
+          <p>© {{ site.time|date('Y') }} <a href="https://arnaudligny.fr" class="hover:text-navy-900 dark:hover:text-white">Arnaud Ligny</a></p>
+          <p><a href="{{ cecil.url }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Powered by Cecil{% endtrans %}</a></p>
+        </div>
       </div>
     </footer>
     {#- Shows only the download buttons of the visitor's OS (and architecture, when known) ~#}
