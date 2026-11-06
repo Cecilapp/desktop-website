@@ -84,7 +84,7 @@ more:
       text: L'application télécharge ses mises à jour et les installe au redémarrage, chacune avec la dernière version de Cecil (Windows pour l'instant, macOS bientôt).
 
 pricing:
-  title: Gratuit pour 1 site. Une licence pour un nombre illimité.
+  title: Gratuit pour 1 site. Une licence pour des sites illimités.
   text: Toutes les fonctionnalités sont dans les deux offres. Payez une fois, sans abonnement.
   plans:
     - name: Gratuit
@@ -100,7 +100,7 @@ pricing:
     - name: Pro
       price: 49 €
       period: paiement unique
-      text: Pour les freelances et les agences qui gèrent de nombreux sites.
+      text: Pour gérer plusieurs sites, des freelances aux agences.
       features:
         - Sites illimités
         - Tout ce qu'inclut l'offre gratuite

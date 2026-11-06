@@ -84,7 +84,7 @@ more:
       text: The app downloads its updates and installs them on restart, each one with the latest Cecil inside (Windows for now, macOS soon).
 
 pricing:
-  title: Free for 1 site. One license for unlimited.
+  title: Free for 1 site. One license for unlimited sites.
   text: All the features are in both plans. Pay once, no subscription.
   plans:
     - name: Free
@@ -100,7 +100,7 @@ pricing:
     - name: Pro
       price: 49 €
       period: one-time payment
-      text: For freelancers and agencies with many sites.
+      text: For managing several sites, from freelancers to agencies.
       features:
         - Unlimited sites
         - Everything in Free
