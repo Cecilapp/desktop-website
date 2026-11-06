@@ -16,12 +16,23 @@ features:
   - title: Écrivez, voyez le résultat en direct
     text: "Parcourez l'arborescence `pages/`, éditez le Markdown avec coloration syntaxique et remplissez le front matter via un formulaire. Enregistrez : la preview se recharge dans votre navigateur."
     points:
-      - Éditeur Markdown avec numéros de ligne
-      - Front matter en formulaire, YAML brut pour le reste
+      - Barre de mise en forme et raccourcis, plan et nombre de mots
+      - Rendu de la page à côté de l'éditeur, ou mode concentration pour le texte seul
+      - Images glissées, collées ou choisies, copiées dans le site
+      - Front matter en formulaire, vérifié comme le fait Cecil, YAML brut pour le reste
       - Ouverture de n'importe quelle page dans votre éditeur externe
     screenshot:
       image: images/screenshots/content.png
       alt: Éditeur Markdown avec l'arborescence des pages et l'aperçu en direct
+  - title: Buildez, vérifiez, corrigez
+    text: "Un clic et Cecil builde le site. Les logs défilent dans le panneau Sortie, et les problèmes sont regroupés par message : un avertissement répété cinquante fois n'apparaît qu'une fois, avec son nombre."
+    points:
+      - Options de build (brouillons, environnement, URL de base…)
+      - Diagnostic de la configuration, du front matter, du SEO et des liens
+      - Historique des builds, avec leur durée et leurs problèmes
+    screenshot:
+      image: images/screenshots/build.png
+      alt: Aperçu d'un site, avec l'état de sa preview, de son build, de sa publication et de son diagnostic, et l'historique de ses builds
   - title: Publiez où vous voulez
     text: Déployez sur Netlify, Vercel, GitHub Pages ou AWS S3 directement via leurs API. Seuls les fichiers modifiés sont envoyés, et chaque déploiement est conservé dans l'historique.
     points:
@@ -45,23 +56,32 @@ more:
   title: Et tout ce que vous attendez.
   items:
     - icon: build
-      title: Builds complets ou incrémentaux
-      text: Brouillons, environnement, URL de base… avec logs en direct et résumé par étape.
+      title: Builds avec options
+      text: Brouillons, environnement, URL de base… avec logs en direct, problèmes regroupés par message et historique des builds.
     - icon: preview
       title: Preview en direct
       text: Un serveur local avec rechargement automatique, ouvert dans votre navigateur. Un par site.
     - icon: sites
       title: Tous vos sites
-      text: Ouvrez un projet existant ou créez-en un nouveau, et passez de l'un à l'autre.
+      text: Ouvrez un projet, ou glissez son dossier sur la fenêtre. Créez-en un nouveau avec un assistant, et passez de l'un à l'autre.
+    - icon: config
+      title: Configuration
+      text: Un formulaire pour chaque option, ou le YAML brut. Vérifiée comme Cecil la charge, et seul ce que vous modifiez est réécrit.
     - icon: themes
       title: Thèmes
-      text: Parcourez, installez et mettez à jour les thèmes officiels de Cecil.
+      text: Parcourez, installez et mettez à jour les thèmes Cecil publiés sur Packagist, sans Composer.
     - icon: doctor
       title: Diagnostic
-      text: Options dépréciées, liens cassés et vérifications SEO, avec des erreurs lisibles.
+      text: Vérifications du projet, du front matter, du SEO, des liens et du cache, avec des résultats lisibles dans l'application.
     - icon: shortcuts
       title: Pensé pour le clavier
-      text: Palette de commandes, Ctrl/Cmd+B pour builder, Ctrl/Cmd+P pour prévisualiser.
+      text: Palette de commandes avec Ctrl/Cmd+K, Ctrl/Cmd+P pour prévisualiser, Ctrl/Cmd+Maj+B pour builder.
+    - icon: desktop
+      title: Une vraie application desktop
+      text: Thèmes clair et sombre qui suivent le système, menus et notifications natifs, progression dans la barre des tâches. En français et en anglais.
+    - icon: updates
+      title: Toujours à jour
+      text: L'application télécharge ses mises à jour et les installe au redémarrage, chacune avec la dernière version de Cecil (Windows pour l'instant, macOS bientôt).
 
 pricing:
   title: Gratuit pour 1 site. Une licence pour un nombre illimité.

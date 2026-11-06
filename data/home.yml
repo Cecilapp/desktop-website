@@ -16,12 +16,23 @@ features:
   - title: Write content, see it live
     text: Browse the `pages/` tree, edit Markdown with syntax highlighting and fill the front matter through a form. Save, and the preview reloads in your browser.
     points:
-      - Markdown editor with line numbers
-      - Front matter form, raw YAML for the rest
+      - Formatting toolbar and shortcuts, outline and word count
+      - Rendered page next to the editor, or focus mode for the text alone
+      - Images dropped, pasted or picked, copied into the site
+      - Front matter form checked like Cecil does, raw YAML for the rest
       - Open any page in your external editor
     screenshot:
       image: images/screenshots/content.png
       alt: Markdown editor with the pages tree and the live preview
+  - title: Build, check, fix
+    text: One click builds the site with Cecil. Logs stream into the output panel, and problems are grouped by message, so a warning repeated fifty times shows up once, with its count.
+    points:
+      - Build options (drafts, environment, base URL…)
+      - Diagnostics of the configuration, front matter, SEO and links
+      - History of the builds, with their duration and problems
+    screenshot:
+      image: images/screenshots/build.png
+      alt: Overview of a site, with the state of its preview, build, publishing and diagnostics, and the history of its builds
   - title: Publish anywhere
     text: Deploy to Netlify, Vercel, GitHub Pages or AWS S3 directly through their APIs. Only the changed files are sent, and every deployment is kept in the history.
     points:
@@ -45,23 +56,32 @@ more:
   title: And everything you expect.
   items:
     - icon: build
-      title: Full or incremental builds
-      text: Drafts, environment, base URL… with streamed logs and a summary per step.
+      title: Builds with options
+      text: Drafts, environment, base URL… with streamed logs, problems grouped by message and the history of builds.
     - icon: preview
       title: Live preview
       text: A local server with live reload, opened in your browser. One per site.
     - icon: sites
       title: All your sites
-      text: Open an existing project or create a new one, and switch between them.
+      text: Open a project, or drop its folder on the window. Create a new one with a wizard, and switch between them.
+    - icon: config
+      title: Configuration
+      text: A form for every option, or the raw YAML. Checked like Cecil loads it, and only what you changed is rewritten.
     - icon: themes
       title: Themes
-      text: Browse, install and update the official Cecil themes.
+      text: Browse, install and update the Cecil themes published on Packagist, without Composer.
     - icon: doctor
       title: Diagnostics
-      text: Deprecated options, broken links and SEO checks, with readable errors.
+      text: Project, front matter, SEO, links and cache checks, with readable results in the app.
     - icon: shortcuts
       title: Keyboard first
-      text: Command palette, Ctrl/Cmd+B to build, Ctrl/Cmd+P to preview.
+      text: Command palette with Ctrl/Cmd+K, Ctrl/Cmd+P to preview, Ctrl/Cmd+Shift+B to build.
+    - icon: desktop
+      title: A real desktop app
+      text: Light and dark themes following the system, native menus and notifications, progress in the taskbar. In English and French.
+    - icon: updates
+      title: Always up to date
+      text: The app downloads its updates and installs them on restart, each one with the latest Cecil inside (Windows for now, macOS soon).
 
 pricing:
   title: Free for 1 site. One license for unlimited.
