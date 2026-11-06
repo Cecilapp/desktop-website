@@ -118,13 +118,15 @@ faq:
     - question: Do I need to install PHP or Cecil?
       answer: No. Cecil Desktop embeds PHP and Cecil. The embedded Cecil version is shown in the app, and is updated with each release.
     - question: Does it replace my code editor?
-      answer: No. The built-in editor is made for content (Markdown and front matter). Templates and assets are opened in your favorite editor in one click.
+      answer: No. The built-in editor is made for content (Markdown and front matter), and a page opens in your favorite editor in one click. Templates and assets stay in your code editor.
     - question: Where are my sites and tokens stored?
       answer: "Your sites stay where they are, on your disk: Cecil Desktop doesn't move or convert anything. Hosting tokens are encrypted with the system keychain."
     - question: What happens after the first year of a Pro license?
       answer: "Your license is perpetual: you keep using the last version released during your year of updates. Renew only if you want the new versions."
     - question: Which systems are supported?
       answer: Windows 10+ and macOS 12+ (Intel and Apple Silicon). Linux is planned.
+    - question: Why does my system warn me when installing?
+      answer: "Cecil Desktop is not signed yet, so the system warns about an unknown publisher. On Windows, click *More info* then *Run anyway*. On macOS, open *System Settings › Privacy & Security* and click *Open Anyway*. Signing is on its way."
     - question: Is it open source?
       answer: "Cecil, the static site generator (CLI) embedded in Cecil Desktop, is open source: its source code is on [GitHub](https://github.com/Cecilapp/Cecil). Your sites stay standard Cecil projects, that you can build without the app."
 

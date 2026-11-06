@@ -118,13 +118,15 @@ faq:
     - question: Dois-je installer PHP ou Cecil ?
       answer: Non. Cecil Desktop embarque PHP et Cecil. La version de Cecil embarquée est affichée dans l'application, et mise à jour à chaque release.
     - question: Remplace-t-il mon éditeur de code ?
-      answer: Non. L'éditeur intégré est fait pour le contenu (Markdown et front matter). Les templates et les assets s'ouvrent dans votre éditeur préféré en un clic.
+      answer: Non. L'éditeur intégré est fait pour le contenu (Markdown et front matter), et une page s'ouvre dans votre éditeur préféré en un clic. Les templates et les assets restent dans votre éditeur de code.
     - question: Où sont stockés mes sites et mes jetons ?
       answer: "Vos sites restent là où ils sont, sur votre disque : Cecil Desktop ne déplace ni ne convertit rien. Les jetons des hébergeurs sont chiffrés avec le trousseau du système."
     - question: Que se passe-t-il après la première année d'une licence Pro ?
       answer: "Votre licence est perpétuelle : vous continuez à utiliser la dernière version publiée pendant votre année de mises à jour. Renouvelez seulement si vous voulez les nouvelles versions."
     - question: Quels systèmes sont pris en charge ?
       answer: Windows 10+ et macOS 12+ (Intel et Apple Silicon). Linux est prévu.
+    - question: Pourquoi mon système m'avertit-il à l'installation ?
+      answer: "Cecil Desktop n'est pas encore signé : le système signale donc un éditeur inconnu. Sous Windows, cliquez sur *Informations complémentaires* puis *Exécuter quand même*. Sous macOS, ouvrez *Réglages Système › Confidentialité et sécurité* et cliquez sur *Ouvrir quand même*. La signature est en cours."
     - question: Est-ce open source ?
       answer: "Cecil, le générateur de site statique (CLI) embarqué dans Cecil Desktop, est open source : son code source est sur [GitHub](https://github.com/Cecilapp/Cecil). Vos sites restent des projets Cecil standards, que vous pouvez builder sans l'application."
 
