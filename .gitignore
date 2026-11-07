@@ -4,3 +4,6 @@
 /vendor/
 /cecil.phar
 /themes/
+
+# Local Netlify folder
+.netlify

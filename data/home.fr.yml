@@ -84,8 +84,8 @@ more:
       text: L'application télécharge ses mises à jour et les installe au redémarrage, chacune avec la dernière version de Cecil (Windows pour l'instant, macOS bientôt).
 
 pricing:
-  title: Gratuit pour 1 site. Une licence pour des sites illimités.
-  text: Toutes les fonctionnalités sont dans les deux offres. Payez une fois, sans abonnement.
+  title: Gratuit pour 1 site. Une licence pour aller plus loin.
+  text: Payez une fois, sans abonnement. Pendant la beta, tout est inclus.
   plans:
     - name: Gratuit
       price: 0 €
@@ -94,8 +94,8 @@ pricing:
       features:
         - 1 site
         - Build, preview et édition du contenu
-        - Publication sur Netlify, Vercel, GitHub Pages et S3
-        - Thèmes et diagnostic
+        - Publication vers Netlify, Vercel, GitHub Pages ou S3 (1 cible par site)
+        - Thèmes et diagnostics de base
       cta: Télécharger gratuitement
     - name: Pro
       price: 49 €
@@ -103,8 +103,10 @@ pricing:
       text: Pour gérer plusieurs sites, des freelances aux agences.
       features:
         - Sites illimités
-        - Tout ce qu'inclut l'offre gratuite
-        - 1 an de mises à jour inclus
+        - Plusieurs cibles de publication par site
+        - Diagnostics SEO et liens
+        - Formulaire du schéma de pages
+        - 1 an de mises à jour inclus, sur 3 ordinateurs
         - Soutient le développement de Cecil
       cta: Obtenir Cecil Desktop Pro
       disabled: Disponible après la beta
@@ -122,7 +124,7 @@ faq:
     - question: Où sont stockés mes sites et mes jetons ?
       answer: "Vos sites restent là où ils sont, sur votre disque : Cecil Desktop ne déplace ni ne convertit rien. Les jetons des hébergeurs sont chiffrés avec le trousseau du système."
     - question: Que se passe-t-il après la première année d'une licence Pro ?
-      answer: "Votre licence est perpétuelle : vous continuez à utiliser la dernière version publiée pendant votre année de mises à jour. Renouvelez seulement si vous voulez les nouvelles versions."
+      answer: "Votre licence est perpétuelle : les fonctions Pro restent disponibles dans toutes les versions publiées pendant votre année de mises à jour. Les versions suivantes fonctionnent comme la version gratuite, sans rien vous retirer (vos sites restent utilisables) : renouvelez seulement si vous voulez leurs fonctions Pro."
     - question: Quels systèmes sont pris en charge ?
       answer: Windows 10+ et macOS 12+ (Intel et Apple Silicon). Linux est prévu.
     - question: Pourquoi mon système m'avertit-il à l'installation ?
