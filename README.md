@@ -24,6 +24,18 @@ The [netlify](https://github.com/Cecilapp/theme-netlify) theme component (instal
 
 Requests are rate limited (5 per minute and IP, `config.rateLimit`); the app's User-Agent (`Cecil Desktop/…`) is required.
 
+### Licenses of Cecil Desktop Pro
+
+`netlify/functions/license.mjs` (`POST /api/license/{activate,validate,deactivate}`) activates, validates and deactivates the license keys sold with [Polar](https://polar.sh) (its public license API, no API token), and answers with a token signed with Ed25519, verified by the app (`App\Support\LicenseToken`). A key Polar does not know anymore (refunded, revoked, machine deactivated) gives a signed `invalid` token. Polar's keys do not expire: the updates a license covers are counted here from the purchase. See `docs/spikes/licensing.md` of the app. Environment variables of the Netlify site:
+
+- `POLAR_ORGANIZATION_ID`: the organization selling the licenses
+- `LICENSE_SIGNING_KEY`: the private key, its 32 bytes seed in base64 (`php artisan license:keygen` in the app, whose public key goes into its `config/license.php`): keep it secret
+- `POLAR_API` (optional): `https://sandbox-api.polar.sh` to test with Polar's sandbox
+- `POLAR_BENEFIT_IDS` (optional): the license key benefits accepted, separated by commas (default: any of the organization)
+- `LICENSE_UPDATES_DAYS` (optional): how long the updates are covered after the purchase, 365 by default
+
+Requests are rate limited (20 per minute and IP) and require the app's User-Agent.
+
 ## Development
 
 Requirements: PHP 8.3+ and Composer.

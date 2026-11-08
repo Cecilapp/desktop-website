@@ -84,8 +84,8 @@ more:
       text: The app downloads its updates and installs them on restart, each one with the latest Cecil inside (Windows for now, macOS soon).
 
 pricing:
-  title: Free for 1 site. One license for unlimited sites.
-  text: All the features are in both plans. Pay once, no subscription.
+  title: Free for 1 site. One license to go further.
+  text: Pay once, no subscription. During the beta, everything is included.
   plans:
     - name: Free
       price: 0 €
@@ -94,8 +94,8 @@ pricing:
       features:
         - 1 site
         - Build, preview and content editing
-        - Publish to Netlify, Vercel, GitHub Pages and S3
-        - Themes and diagnostics
+        - Publish to Netlify, Vercel, GitHub Pages or S3 (1 target per site)
+        - Themes and basic diagnostics
       cta: Download free
     - name: Pro
       price: 49 €
@@ -103,8 +103,10 @@ pricing:
       text: For managing several sites, from freelancers to agencies.
       features:
         - Unlimited sites
-        - Everything in Free
-        - 1 year of updates included
+        - Several publication targets per site
+        - SEO and links diagnostics
+        - Form of the pages schema
+        - 1 year of updates included, on 3 computers
         - Supports the development of Cecil
       cta: Get Cecil Desktop Pro
       disabled: Available after the beta
@@ -122,7 +124,7 @@ faq:
     - question: Where are my sites and tokens stored?
       answer: "Your sites stay where they are, on your disk: Cecil Desktop doesn't move or convert anything. Hosting tokens are encrypted with the system keychain."
     - question: What happens after the first year of a Pro license?
-      answer: "Your license is perpetual: you keep using the last version released during your year of updates. Renew only if you want the new versions."
+      answer: "Your license is perpetual: the Pro features stay available in every version released during your year of updates. The next versions work like the free version, without taking anything away (your sites stay usable): renew only if you want their Pro features."
     - question: Which systems are supported?
       answer: Windows 10+ and macOS 12+ (Intel and Apple Silicon). Linux is planned.
     - question: Why does my system warn me when installing?
