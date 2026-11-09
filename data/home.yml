@@ -27,7 +27,7 @@ features:
   - title: Build, check, fix
     text: One click builds the site with Cecil. Logs stream into the output panel, and problems are grouped by message, so a warning repeated fifty times shows up once, with its count.
     points:
-      - Build options (drafts, environment, base URL…)
+      - Build options (drafts, dry run, optimization, base URL)
       - Diagnostics of the configuration, front matter, SEO and links
       - History of the builds, with their duration and problems
     screenshot:
@@ -57,7 +57,7 @@ more:
   items:
     - icon: build
       title: Builds with options
-      text: Drafts, environment, base URL… with streamed logs, problems grouped by message and the history of builds.
+      text: Drafts, dry run, optimization, base URL… with streamed logs, problems grouped by message and the history of builds.
     - icon: preview
       title: Live preview
       text: A local server with live reload, opened in your browser. One per site.
