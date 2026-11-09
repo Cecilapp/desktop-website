@@ -2,7 +2,6 @@
 /.cache/
 /.cecil/
 /vendor/
-/cecil.phar
 /themes/
 
 # Local Netlify folder
