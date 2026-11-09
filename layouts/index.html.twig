@@ -33,7 +33,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{- include('partials/metatags.html.twig') ~}}
     <meta name="color-scheme" content="light dark">
-    {{- html(asset('styles.css')) ~}}
+    {{- html(asset('site.css')) ~}}
   </head>
   <body class="bg-white text-slate-700 antialiased dark:bg-navy-950 dark:text-slate-300">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-navy-800">{% trans %}Skip to content{% endtrans %}</a>
@@ -48,6 +48,7 @@
           <li><a href="#features" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Features{% endtrans %}</a></li>
           <li><a href="#pricing" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Pricing{% endtrans %}</a></li>
           <li><a href="#faq" class="hover:text-navy-900 dark:hover:text-white">{% trans %}FAQ{% endtrans %}</a></li>
+          <li><a href="{{ url('docs') }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Documentation{% endtrans %}</a></li>
         </ul>
         <div class="ml-auto flex items-center gap-4 md:ml-0">
           {{- include('partials/languages-switcher.html.twig') ~}}
@@ -208,6 +209,7 @@
                 <li><a href="#features" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Features{% endtrans %}</a></li>
                 <li><a href="#pricing" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Pricing{% endtrans %}</a></li>
                 <li><a href="#faq" class="hover:text-navy-900 dark:hover:text-white">{% trans %}FAQ{% endtrans %}</a></li>
+                <li><a href="{{ url('docs') }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Documentation{% endtrans %}</a></li>
                 <li><a href="#download" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Download{% endtrans %}</a></li>
               </ul>
             </div>

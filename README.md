@@ -8,6 +8,7 @@ One-page website of [Cecil Desktop](https://github.com/Cecilapp/Desktop), built 
 - `translations/messages.fr.yaml`: UI strings of the templates (navigation, buttons, footer)
 - `cecil.yml`: site options, including the download URL and version (`download`)
 - `assets/images/screenshots/`: app screenshots
+- `pages/docs/`: the documentation (`/docs/`), rendered with the [Docs](https://github.com/Cecilapp/theme-docs) and [FlexSearch](https://github.com/Cecilapp/theme-flexsearch) themes, styled with the brand colors by `assets/tailwind-docs.css`
 
 ## Netlify
 
@@ -48,7 +49,8 @@ curl -LO https://cecil.app/cecil.phar
 Compile the CSS and preview the site (in two terminals):
 
 ```bash
-composer css:watch   # assets/tailwind.css → assets/styles.css
+composer css:watch        # assets/tailwind.css → assets/site.css (homepage)
+composer css:watch:docs   # assets/tailwind-docs.css → assets/styles.css (documentation, Docs theme)
 composer serve       # http://localhost:8000
 ```
 

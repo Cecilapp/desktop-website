@@ -1,7 +1,9 @@
 {
     "require": {
         "aligny/tailwind-builder": "^1.2",
-        "cecil/theme-netlify": "^3.0"
+        "cecil/theme-netlify": "^3.0",
+        "cecil/theme-docs": "^6.0.1",
+        "cecil/theme-flexsearch": "^1.2"
     },
     "config": {
         "process-timeout": 0,
@@ -13,8 +15,14 @@
         }
     },
     "scripts": {
-        "css": "tailwind-builder assets/tailwind.css --minify",
-        "css:watch": "tailwind-builder assets/tailwind.css --watch",
+        "css": [
+            "@css:site",
+            "@css:docs"
+        ],
+        "css:site": "tailwind-builder assets/tailwind.css --output=assets/site.css --minify",
+        "css:docs": "tailwind-builder assets/tailwind-docs.css --output=assets/styles.css --minify",
+        "css:watch": "tailwind-builder assets/tailwind.css --output=assets/site.css --watch",
+        "css:watch:docs": "tailwind-builder assets/tailwind-docs.css --output=assets/styles.css --watch",
         "serve": "php cecil.phar serve",
         "build": [
             "@css",

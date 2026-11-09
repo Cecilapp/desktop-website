@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4fd162fe53483a5aa8ab25cc84a8f0a0",
+    "content-hash": "0934e63d7118c21231f4b6edc65ca0b4",
     "packages": [
         {
             "name": "aligny/tailwind-builder",
@@ -63,6 +63,116 @@
             ],
             "time": "2026-10-07T21:37:41+00:00",
             "published-time": "2026-10-07T21:39:29+00:00"
+        },
+        {
+            "name": "cecil/theme-docs",
+            "version": "6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Cecilapp/theme-docs.git",
+                "reference": "375d7700ba20f11c73fbb40dac3231fd7622eaad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Cecilapp/theme-docs/zipball/375d7700ba20f11c73fbb40dac3231fd7622eaad",
+                "reference": "375d7700ba20f11c73fbb40dac3231fd7622eaad",
+                "shasum": ""
+            },
+            "require": {
+                "cecil/theme-installer": "^1.0||^2.0"
+            },
+            "require-dev": {
+                "aligny/tailwind-builder": "^1.2"
+            },
+            "suggest": {
+                "cecil/theme-docsearch": "Search with Algolia DocSearch",
+                "cecil/theme-flexsearch": "Client side search with FlexSearch, without external service"
+            },
+            "type": "cecil-theme",
+            "extra": {
+                "name": "docs",
+                "branch-alias": {
+                    "dev-main": "6.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Cecil theme Docs",
+            "keywords": [
+                "cecil",
+                "documentation",
+                "theme"
+            ],
+            "support": {
+                "issues": "https://github.com/Cecilapp/theme-docs/issues",
+                "source": "https://github.com/Cecilapp/theme-docs/tree/6.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ArnaudLigny",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/cecil",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2026-11-09T09:35:44+00:00",
+            "published-time": "2026-11-09T09:37:25+00:00"
+        },
+        {
+            "name": "cecil/theme-flexsearch",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Cecilapp/theme-flexsearch.git",
+                "reference": "2fe9e4c6e3baa970c72af99bbeb009676979dab2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Cecilapp/theme-flexsearch/zipball/2fe9e4c6e3baa970c72af99bbeb009676979dab2",
+                "reference": "2fe9e4c6e3baa970c72af99bbeb009676979dab2",
+                "shasum": ""
+            },
+            "require": {
+                "cecil/theme-installer": "^1.4||^2.0"
+            },
+            "type": "cecil-theme",
+            "extra": {
+                "name": "flexsearch",
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Cecil component theme FlexSearch",
+            "keywords": [
+                "FlexSearch",
+                "cecil",
+                "search",
+                "theme"
+            ],
+            "support": {
+                "issues": "https://github.com/Cecilapp/theme-flexsearch/issues",
+                "source": "https://github.com/Cecilapp/theme-flexsearch/tree/1.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ArnaudLigny",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/cecil",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2026-10-20T02:18:56+00:00",
+            "published-time": "2026-10-20T02:19:06+00:00"
         },
         {
             "name": "cecil/theme-installer",
