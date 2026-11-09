@@ -27,7 +27,7 @@ features:
   - title: Buildez, vérifiez, corrigez
     text: "Un clic et Cecil builde le site. Les logs défilent dans le panneau Sortie, et les problèmes sont regroupés par message : un avertissement répété cinquante fois n'apparaît qu'une fois, avec son nombre."
     points:
-      - Options de build (brouillons, environnement, URL de base…)
+      - Options de build (brouillons, dry-run, optimisation, URL de base)
       - Diagnostic de la configuration, du front matter, du SEO et des liens
       - Historique des builds, avec leur durée et leurs problèmes
     screenshot:
@@ -57,7 +57,7 @@ more:
   items:
     - icon: build
       title: Builds avec options
-      text: Brouillons, environnement, URL de base… avec logs en direct, problèmes regroupés par message et historique des builds.
+      text: Brouillons, dry-run, optimisation, URL de base… avec logs en direct, problèmes regroupés par message et historique des builds.
     - icon: preview
       title: Preview en direct
       text: Un serveur local avec rechargement automatique, ouvert dans votre navigateur. Un par site.

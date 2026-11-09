@@ -1,14 +1,15 @@
 {
   "name": "cecil-desktop-demo-video",
   "private": true,
-  "description": "Records the demo video of the home page from the real Cecil Desktop app",
+  "description": "Records the demo video of the home page and the screenshots of the documentation from the real Cecil Desktop app",
   "type": "commonjs",
   "scripts": {
     "launch": "powershell -NoProfile -ExecutionPolicy Bypass -File launch.ps1",
     "record": "node record.cjs rec-light",
     "record:dark": "node record.cjs rec-dark dark",
     "make": "node make.cjs rec-light light",
-    "make:dark": "node make.cjs rec-dark dark"
+    "make:dark": "node make.cjs rec-dark dark",
+    "screenshots": "node screenshots.cjs"
   },
   "dependencies": {
     "playwright-core": "^1.48.2"

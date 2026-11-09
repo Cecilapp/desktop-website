@@ -17,6 +17,25 @@ languages:
     config:
       baseline: L'application desktop pour Cecil
       description: Gérez, buildez, prévisualisez et publiez vos sites statiques Cecil depuis une application desktop native, sans terminal.
+      menus:
+        main:
+          - id: docs
+            name: Documentation
+            url: /fr/docs/
+            weight: 10
+          - id: download
+            name: Télécharger
+            url: /fr/#download
+            weight: 20
+        footer:
+          - id: home
+            name: Cecil Desktop
+            url: /fr/
+            weight: 10
+          - id: cecil
+            name: Documentation de Cecil
+            url: https://cecil.app/documentation/
+            weight: 20
 
 # custom options, used by the templates
 download:
@@ -39,7 +58,52 @@ download:
       default_arch: Intel # file name without architecture (electron-builder)
 
 theme:
+  - docs # layouts of the documentation (`pages/docs/`); the homepage keeps `layouts/index.html.twig`
+  - flexsearch # search in the documentation
   - netlify
+
+# documentation (Docs theme)
+logo: images/logo.png
+sidebar:
+  collapsed: true
+footer: © Arnaud Ligny
+github: # "Edit this page" link
+  repo: https://github.com/Cecilapp/desktop-website
+  branch: main
+  path: pages
+menus:
+  main:
+    - id: docs
+      name: Documentation
+      url: /docs/
+      weight: 10
+    - id: download
+      name: Download
+      url: /#download
+      weight: 20
+  footer:
+    - id: home
+      name: Cecil Desktop
+      url: /
+      weight: 10
+    - id: cecil
+      name: Cecil documentation
+      url: https://cecil.app/documentation/
+      weight: 20
+flexsearch:
+  sections:
+    docs:
+      limit: 8
+taxonomies:
+  tags: disabled # no blog
+pages:
+  body:
+    images:
+      dark_suffix: .dark # e.g. `sites.dark.png` is the dark variant of `sites.png` (as `layouts.images.dark_suffix`)pwa:
+  manifest:
+    theme_color: '#1f4762'
+    theme_color_dark: '#132e42'
+
 netlify:
   redirects:
     - from: /download/*

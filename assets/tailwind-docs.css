@@ -1,0 +1,40 @@
+/*
+ * Stylesheet of the documentation (`/docs/`), built with the layouts of the Docs theme
+ * (installed in `themes/docs` by Composer): its templates load `styles.css`, compiled from this file.
+ * The homepage has its own stylesheet (`tailwind.css` → `site.css`).
+ */
+@import '../themes/docs/assets/css/tailwind.css';
+
+@source '../themes/docs/layouts';
+@source '../themes/flexsearch/layouts';
+@source '../layouts/docs';
+
+/* brand colors (see `tailwind.css`) instead of the theme blue */
+@theme {
+  --color-primary-50: #f1f6f9;
+  --color-primary-100: #dde9f0;
+  --color-primary-200: #b9d2e1;
+  --color-primary-300: #87b1cb;
+  --color-primary-400: #4f87aa;
+  --color-primary-500: #2f6a8f;
+  --color-primary-600: #245676;
+  --color-primary-700: #1f4762;
+  --color-primary-800: #193c55;
+  --color-primary-900: #132e42;
+  --color-primary-950: #0b1c29;
+}
+
+/* out of any layer, to override the typography plugin (`markdown` class, in the utilities layer) */
+
+/* links in the text: navy is close to the text color, they are underlined to stand out */
+#content :is(p, li, td) a {
+  @apply underline decoration-primary-300 underline-offset-2 hover:decoration-current dark:decoration-primary-600;
+}
+/* inline code (e.g. shortcuts): a light background instead of the backticks */
+#content :not(pre) > code {
+  @apply rounded-sm bg-primary-100 px-1.5 py-0.5 font-medium whitespace-nowrap dark:bg-primary-900;
+}
+#content :not(pre) > code::before,
+#content :not(pre) > code::after {
+  content: none;
+}
