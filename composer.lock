@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0934e63d7118c21231f4b6edc65ca0b4",
+    "content-hash": "a8d912d9a41120d457a13b27a7dd2a22",
     "packages": [
         {
             "name": "aligny/tailwind-builder",
@@ -66,16 +66,16 @@
         },
         {
             "name": "cecil/theme-docs",
-            "version": "6.0.1",
+            "version": "7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-docs.git",
-                "reference": "375d7700ba20f11c73fbb40dac3231fd7622eaad"
+                "reference": "0cf5b071cfe0c1507d86ce00f34c2c12f1948bb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-docs/zipball/375d7700ba20f11c73fbb40dac3231fd7622eaad",
-                "reference": "375d7700ba20f11c73fbb40dac3231fd7622eaad",
+                "url": "https://api.github.com/repos/Cecilapp/theme-docs/zipball/0cf5b071cfe0c1507d86ce00f34c2c12f1948bb4",
+                "reference": "0cf5b071cfe0c1507d86ce00f34c2c12f1948bb4",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +107,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-docs/issues",
-                "source": "https://github.com/Cecilapp/theme-docs/tree/6.0.1"
+                "source": "https://github.com/Cecilapp/theme-docs/tree/7.0.0"
             },
             "funding": [
                 {
@@ -119,8 +119,8 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2026-11-09T09:35:44+00:00",
-            "published-time": "2026-11-09T09:37:25+00:00"
+            "time": "2026-11-09T21:45:58+00:00",
+            "published-time": "2026-11-09T21:53:58+00:00"
         },
         {
             "name": "cecil/theme-flexsearch",
@@ -295,6 +295,57 @@
             ],
             "time": "2026-10-19T11:19:58+00:00",
             "published-time": "2026-10-19T11:20:06+00:00"
+        },
+        {
+            "name": "cecil/theme-pwa",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Cecilapp/theme-pwa.git",
+                "reference": "f7e957eb39a56eac47f7588b145d20fa0c5c50a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Cecilapp/theme-pwa/zipball/f7e957eb39a56eac47f7588b145d20fa0c5c50a6",
+                "reference": "f7e957eb39a56eac47f7588b145d20fa0c5c50a6",
+                "shasum": ""
+            },
+            "require": {
+                "cecil/theme-installer": "^1.4||^2.0"
+            },
+            "type": "cecil-theme",
+            "extra": {
+                "name": "pwa",
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Cecil component theme PWA",
+            "keywords": [
+                "cecil",
+                "pwa",
+                "service worker",
+                "theme"
+            ],
+            "support": {
+                "source": "https://github.com/Cecilapp/theme-pwa/tree/3.0.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ArnaudLigny",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/cecil",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2026-10-19T21:46:00+00:00",
+            "published-time": "2026-10-19T21:46:26+00:00"
         },
         {
             "name": "psr/container",

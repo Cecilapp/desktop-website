@@ -66,6 +66,7 @@ theme:
   - docs       # layouts of the documentation (`pages/docs/`); the homepage keeps `layouts/index.html.twig`
   - flexsearch # search in the documentation
   - netlify
+  - pwa
 
 # documentation (Docs theme)
 logo: images/logo.png

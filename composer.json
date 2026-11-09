@@ -1,32 +1,33 @@
 {
-    "require": {
-        "aligny/tailwind-builder": "^1.2",
-        "cecil/theme-netlify": "^3.0",
-        "cecil/theme-docs": "^6.0.1",
-        "cecil/theme-flexsearch": "^1.2"
+  "require": {
+    "aligny/tailwind-builder": "^1.2",
+    "cecil/theme-netlify": "^3.0",
+    "cecil/theme-docs": "^7.0",
+    "cecil/theme-flexsearch": "^1.2",
+    "cecil/theme-pwa": "^3.0"
+  },
+  "config": {
+    "process-timeout": 0,
+    "platform": {
+      "php": "8.3"
     },
-    "config": {
-        "process-timeout": 0,
-        "platform": {
-            "php": "8.3"
-        },
-        "allow-plugins": {
-            "cecil/theme-installer": true
-        }
-    },
-    "scripts": {
-        "css": [
-            "@css:site",
-            "@css:docs"
-        ],
-        "css:site": "tailwind-builder assets/tailwind.css --output=assets/site.css --minify",
-        "css:docs": "tailwind-builder assets/tailwind-docs.css --output=assets/styles.css --minify",
-        "css:watch": "tailwind-builder assets/tailwind.css --output=assets/site.css --watch",
-        "css:watch:docs": "tailwind-builder assets/tailwind-docs.css --output=assets/styles.css --watch",
-        "serve": "php cecil.phar serve",
-        "build": [
-            "@css",
-            "php cecil.phar build --optimize"
-        ]
+    "allow-plugins": {
+      "cecil/theme-installer": true
     }
+  },
+  "scripts": {
+    "css": [
+      "@css:site",
+      "@css:docs"
+    ],
+    "css:site": "tailwind-builder assets/tailwind.css --output=assets/site.css --minify",
+    "css:docs": "tailwind-builder assets/tailwind-docs.css --output=assets/styles.css --minify",
+    "css:watch": "tailwind-builder assets/tailwind.css --output=assets/site.css --watch",
+    "css:watch:docs": "tailwind-builder assets/tailwind-docs.css --output=assets/styles.css --watch",
+    "serve": "php cecil.phar serve",
+    "build": [
+      "@css",
+      "php cecil.phar build --optimize"
+    ]
+  }
 }
