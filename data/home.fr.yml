@@ -1,5 +1,5 @@
 hero:
-  beta: Beta · La version actuelle est en test
+  beta: Bêta · La version actuelle est en test
   title: Du Markdown au site en ligne, <span class="text-gold-400">en un clic</span>.
   text: "Une application desktop native pour gérer et builder vos sites statiques. Cecil est embarqué : rien d'autre à installer."
   note:
@@ -85,7 +85,7 @@ more:
 
 pricing:
   title: Gratuit pour 1 site. Une licence pour aller plus loin.
-  text: Payez une fois, sans abonnement. Pendant la beta, tout est inclus.
+  text: Payez une fois, sans abonnement. Pendant la bêta, tout est inclus.
   plans:
     - name: Gratuit
       price: 0 €
@@ -110,7 +110,7 @@ pricing:
         - Soutient le développement de Cecil
       cta: Obtenir Cecil Desktop Pro
       url: https://buy.polar.sh/polar_cl_J1QrbXjCKqohqt6HgHuNEfX7XH80MbfYtDKoa2BJ3CQ
-      disabled: Disponible après la beta
+      disabled: Disponible après la bêta
       highlight: true
 
 faq:
