@@ -217,7 +217,10 @@
         </div>
         <div class="mt-12 flex flex-col gap-2 border-t border-slate-200 pt-8 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between dark:border-white/10 dark:text-slate-400">
           <p>© {{ site.time|date('Y') }} <a href="{{ site.author.url }}" class="hover:text-navy-900 dark:hover:text-white">{{ site.author.name }}</a></p>
-          <p><a href="{{ cecil.url }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Powered by Cecil{% endtrans %}</a></p>
+          <p class="flex gap-4">
+            <a href="{{ url('credits') }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Credits{% endtrans %}</a>
+            <a href="{{ cecil.url }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Powered by Cecil{% endtrans %}</a>
+          </p>
         </div>
       </div>
     </footer>

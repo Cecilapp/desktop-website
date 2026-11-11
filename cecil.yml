@@ -29,6 +29,10 @@ languages:
             name: Télécharger
             url: /fr/#download
             weight: 20
+        footer:
+          - id: credits
+            name: Crédits
+            url: /fr/credits/
 menus:
   main:
     - id: index
@@ -41,6 +45,10 @@ menus:
       name: Download
       url: /#download
       weight: 20
+  footer:
+    - id: credits
+      name: Credits
+      url: /credits/
 
 # custom options, used by the templates
 download:
