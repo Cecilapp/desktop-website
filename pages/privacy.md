@@ -8,7 +8,7 @@ _Last updated: November 11, 2026_
 
 Cecil Desktop works on your computer: no account, no analytics, no tracking. This page lists everything the app sends over the Internet, and why.
 
-Data controller: Aperture Lab, sole proprietorship of Arnaud Ligny, <!-- TODO: city -->, France. Contact: [contact@aperturelab.fr](mailto:contact@aperturelab.fr).
+Data controller: Aperture Lab, sole proprietorship of Arnaud Ligny, Montreuil, France. Contact: [contact@aperturelab.fr](mailto:contact@aperturelab.fr).
 
 ## What stays on your computer
 

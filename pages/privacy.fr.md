@@ -8,7 +8,7 @@ _Dernière mise à jour : 11 novembre 2026_
 
 Cecil Desktop fonctionne sur votre ordinateur : pas de compte, pas de mesure d'audience, pas de pistage. Cette page liste tout ce que l'application envoie sur Internet, et pourquoi.
 
-Responsable du traitement : Aperture Lab, entreprise individuelle d'Arnaud Ligny, <!-- TODO: ville -->, France. Contact : [contact@aperturelab.fr](mailto:contact@aperturelab.fr).
+Responsable du traitement : Aperture Lab, entreprise individuelle d'Arnaud Ligny, Montreuil, France. Contact : [contact@aperturelab.fr](mailto:contact@aperturelab.fr).
 
 ## Ce qui reste sur votre ordinateur
 

@@ -10,8 +10,8 @@ Ces conditions s'appliquent à l'utilisation de Cecil Desktop (« l'application 
 
 ## Éditeur
 
-Cecil Desktop est édité par Aperture Lab, entreprise individuelle d'Arnaud Ligny, <!-- TODO: ville -->, France.
-SIRET : <!-- TODO: numéro SIRET -->. TVA non applicable, article 293 B du CGI.
+Cecil Desktop est édité par Aperture Lab, entreprise individuelle d'Arnaud Ligny, Montreuil, France.
+SIRET en cours d’attribution. TVA non applicable, article 293 B du CGI.
 
 Contact : [contact@aperturelab.fr](mailto:contact@aperturelab.fr)
 

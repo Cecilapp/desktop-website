@@ -10,8 +10,8 @@ These terms apply to the use of Cecil Desktop (the "app") and to the Pro license
 
 ## Publisher
 
-Cecil Desktop is published by Aperture Lab, sole proprietorship (_entreprise individuelle_) of Arnaud Ligny, <!-- TODO: city -->, France.
-SIRET: <!-- TODO: SIRET number -->. VAT not applicable, article 293 B of the French General Tax Code.
+Cecil Desktop is published by Aperture Lab, sole proprietorship (_entreprise individuelle_) of Arnaud Ligny, Montreuil, France.
+SIRET number being assigned. VAT not applicable, article 293 B of the French General Tax Code.
 
 Contact: [contact@aperturelab.fr](mailto:contact@aperturelab.fr)
 
