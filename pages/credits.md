@@ -4,9 +4,7 @@ description: The people and the open source projects behind Cecil Desktop.
 ---
 # Credits
 
-Cecil Desktop is designed and developed by [Arnaud Ligny](https://arnaudligny.fr) ([Aperture Lab](https://aperturelab.fr)), the creator of [Cecil](https://cecil.app).
-
-Developed with the help of [Claude Code](https://claude.com/product/claude-code).
+Cecil Desktop is designed and developed by [Arnaud Ligny](https://arnaudligny.fr) ([Aperture Lab](https://aperturelab.fr)), the creator of [Cecil](https://cecil.app), with the help of [Claude Code](https://claude.com/product/claude-code).
 
 The app stands on the shoulders of many open source projects: thanks to their authors and contributors.
 
