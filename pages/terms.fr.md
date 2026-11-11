@@ -4,25 +4,20 @@ description: Les conditions d'utilisation de Cecil Desktop et de sa licence Pro.
 ---
 # Conditions d'utilisation
 
-<!-- TODO: date de la dernière mise à jour, une fois le texte définitif -->
-_Dernière mise à jour : TODO_
+_Dernière mise à jour : 11 novembre 2026_
 
 Ces conditions s'appliquent à l'utilisation de Cecil Desktop (« l'application ») et à la licence Pro. En installant ou en utilisant l'application, vous les acceptez.
 
 ## Éditeur
 
-Cecil Desktop est édité par Aperture Lab, Arnaud Ligny.
-<!-- TODO: forme juridique, adresse, SIRET, numéro de TVA -->
+Cecil Desktop est édité par Aperture Lab, entreprise individuelle d'Arnaud Ligny, <!-- TODO: ville -->, France.
+SIRET : <!-- TODO: numéro SIRET -->. TVA non applicable, article 293 B du CGI.
 
-Contact : <!-- TODO: adresse e-mail de contact -->
+Contact : [contact@aperturelab.fr](mailto:contact@aperturelab.fr)
 
 ## L'application
 
 Cecil Desktop est une application de bureau pour gérer, builder, prévisualiser et publier des sites statiques faits avec [Cecil](https://cecil.app). Elle travaille sur les fichiers de vos sites, sur votre ordinateur : aucun compte n'est nécessaire.
-
-L'application est distribuée sous la [Licence publique de l'Union européenne (EUPL) v1.2](https://eupl.eu/1.2/fr/).
-<!-- TODO: vérifier l'articulation entre la licence du code et la licence Pro -->
-
 ## Version gratuite et licence Pro
 
 La version gratuite est gratuite, sans limite de durée. Elle gère un site, avec une cible de publication par site, et les diagnostics de base. Le mode Rédaction est gratuit.
@@ -49,7 +44,7 @@ Gardez des sauvegardes de vos sites : l'application modifie leurs fichiers, et l
 
 ## Garantie et responsabilité
 
-L'application est fournie « en l'état », sans garantie, comme le prévoient les articles 7 et 8 de l'EUPL. Dans les limites permises par la loi, l'éditeur n'est pas responsable des pertes de données, de revenus ni des dommages indirects résultant de l'utilisation de l'application.
+L'application est fournie « en l'état », sans garantie d'aucune sorte. Dans les limites permises par la loi, l'éditeur n'est pas responsable des pertes de données, de revenus ni des dommages indirects résultant de l'utilisation de l'application.
 
 ## Données personnelles
 
@@ -61,5 +56,4 @@ Ces conditions peuvent changer, notamment avec les nouvelles versions de l'appli
 
 ## Droit applicable
 
-<!-- TODO: droit applicable et juridiction compétente (ex. droit français) -->
-TODO
+Ces conditions sont régies par le droit français.

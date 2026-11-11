@@ -4,12 +4,11 @@ description: Ce que Cecil Desktop envoie, à qui, et ce qui reste sur votre ordi
 ---
 # Politique de confidentialité
 
-<!-- TODO: date de la dernière mise à jour, une fois le texte définitif -->
-_Dernière mise à jour : TODO_
+_Dernière mise à jour : 11 novembre 2026_
 
 Cecil Desktop fonctionne sur votre ordinateur : pas de compte, pas de mesure d'audience, pas de pistage. Cette page liste tout ce que l'application envoie sur Internet, et pourquoi.
 
-Responsable du traitement : Aperture Lab, Arnaud Ligny. <!-- TODO: adresse, adresse e-mail de contact -->
+Responsable du traitement : Aperture Lab, entreprise individuelle d'Arnaud Ligny, <!-- TODO: ville -->, France. Contact : [contact@aperturelab.fr](mailto:contact@aperturelab.fr).
 
 ## Ce qui reste sur votre ordinateur
 
@@ -44,9 +43,9 @@ Ce site n'utilise ni cookies ni mesure d'audience. Son hébergeur, Netlify, cons
 
 ## Durée de conservation
 
-<!-- TODO: durée de conservation des retours (issues GitHub) et des données de licence -->
-TODO
+- **Retours** : conservés jusqu'à la clôture de l'issue créée, puis supprimés ou anonymisés.
+- **Licence** : les activations sont conservées tant que la licence est active. Polar conserve les données des achats pendant la durée imposée par la loi.
 
 ## Vos droits
 
-Conformément au RGPD, vous pouvez accéder à vos données, les rectifier ou les supprimer, et vous opposer à leur traitement : écrivez à <!-- TODO: adresse e-mail de contact -->. Vous pouvez aussi adresser une réclamation à la [CNIL](https://www.cnil.fr).
+Conformément au RGPD, vous pouvez accéder à vos données, les rectifier ou les supprimer, et vous opposer à leur traitement : écrivez à [contact@aperturelab.fr](mailto:contact@aperturelab.fr). Vous pouvez aussi adresser une réclamation à la [CNIL](https://www.cnil.fr).

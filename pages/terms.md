@@ -4,25 +4,20 @@ description: The terms of use of Cecil Desktop and of its Pro license.
 ---
 # Terms of use
 
-<!-- TODO: date of the last update, once the text is final -->
-_Last updated: TODO_
+_Last updated: November 11, 2026_
 
 These terms apply to the use of Cecil Desktop (the "app") and to the Pro license. By installing or using the app, you accept them.
 
 ## Publisher
 
-Cecil Desktop is published by Aperture Lab, Arnaud Ligny.
-<!-- TODO: legal form, address, registration number (SIRET), VAT number -->
+Cecil Desktop is published by Aperture Lab, sole proprietorship (_entreprise individuelle_) of Arnaud Ligny, <!-- TODO: city -->, France.
+SIRET: <!-- TODO: SIRET number -->. VAT not applicable, article 293 B of the French General Tax Code.
 
-Contact: <!-- TODO: contact e-mail address -->
+Contact: [contact@aperturelab.fr](mailto:contact@aperturelab.fr)
 
 ## The app
 
 Cecil Desktop is a desktop app to manage, build, preview and publish static sites made with [Cecil](https://cecil.app). It works on the files of your sites, on your computer: no account is needed.
-
-The app is distributed under the [European Union Public Licence (EUPL) v1.2](https://eupl.eu/1.2/en/).
-<!-- TODO: check how the license of the code and the Pro license fit together -->
-
 ## Free version and Pro license
 
 The free version is free of charge, without time limit. It manages one site, with one publication target per site, and the basic diagnoses. The Writing mode is free.
@@ -49,7 +44,7 @@ Keep backups of your sites: the app edits their files, and deletes them to the r
 
 ## Warranty and liability
 
-The app is provided "as is", without warranty, as stated in articles 7 and 8 of the EUPL. Within the limits allowed by law, the publisher is not liable for loss of data, of revenue or for any indirect damage resulting from the use of the app.
+The app is provided "as is", without warranty of any kind. Within the limits allowed by law, the publisher is not liable for loss of data, of revenue or for any indirect damage resulting from the use of the app.
 
 ## Personal data
 
@@ -61,5 +56,4 @@ These terms may change, in particular with new versions of the app. The version 
 
 ## Applicable law
 
-<!-- TODO: applicable law and competent courts (e.g. French law) -->
-TODO
+These terms are governed by French law.

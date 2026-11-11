@@ -4,12 +4,11 @@ description: What Cecil Desktop sends, to whom, and what stays on your computer.
 ---
 # Privacy policy
 
-<!-- TODO: date of the last update, once the text is final -->
-_Last updated: TODO_
+_Last updated: November 11, 2026_
 
 Cecil Desktop works on your computer: no account, no analytics, no tracking. This page lists everything the app sends over the Internet, and why.
 
-Data controller: Aperture Lab, Arnaud Ligny. <!-- TODO: address, contact e-mail address -->
+Data controller: Aperture Lab, sole proprietorship of Arnaud Ligny, <!-- TODO: city -->, France. Contact: [contact@aperturelab.fr](mailto:contact@aperturelab.fr).
 
 ## What stays on your computer
 
@@ -44,9 +43,9 @@ This website uses no cookies and no analytics. Its host, Netlify, keeps technica
 
 ## Retention
 
-<!-- TODO: how long the feedback (GitHub issues) and the license data are kept -->
-TODO
+- **Feedback**: kept until the issue it created is closed, then deleted or anonymized.
+- **License**: the activations are kept as long as the license is active. Polar keeps the data of the purchases for the time required by law.
 
 ## Your rights
 
-Under the GDPR, you can access, correct or delete your data, and object to its processing: write to <!-- TODO: contact e-mail address -->. You can also lodge a complaint with the [CNIL](https://www.cnil.fr).
+Under the GDPR, you can access, correct or delete your data, and object to its processing: write to [contact@aperturelab.fr](mailto:contact@aperturelab.fr). You can also lodge a complaint with the [CNIL](https://www.cnil.fr).
