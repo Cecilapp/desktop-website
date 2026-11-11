@@ -18,6 +18,7 @@ Contact : [contact@aperturelab.fr](mailto:contact@aperturelab.fr)
 ## L'application
 
 Cecil Desktop est une application de bureau pour gérer, builder, prévisualiser et publier des sites statiques faits avec [Cecil](https://cecil.app). Elle travaille sur les fichiers de vos sites, sur votre ordinateur : aucun compte n'est nécessaire.
+
 ## Version gratuite et licence Pro
 
 La version gratuite est gratuite, sans limite de durée. Elle gère un site, avec une cible de publication par site, et les diagnostics de base. Le mode Rédaction est gratuit.
