@@ -16,10 +16,11 @@ Un compte contient le jeton (ou les clés) d'un hébergeur. Il est enregistré u
 :::info
 La version gratuite permet 1 cible par site. [Cecil Desktop Pro](../pro.md) en permet plusieurs. Le nombre de comptes n'est pas limité.
 :::
+Une cible peut être **partagée** avec les rédacteurs du site, par son profil : chaque rédacteur y publie alors avec son propre compte. Voir [Mode Rédaction](../writing-mode.md#cibles-partagees).
 
 ## Ajouter une cible
 
-1. Ouvrez la section **Publication** du site (`Ctrl/⌘+4`) et cliquez sur **Nouvelle cible**.
+1. Ouvrez la section **Publication** du site (`Ctrl/⌘+5`) et cliquez sur **Nouvelle cible**.
 2. Choisissez l'**Hébergeur**, et donnez un nom à la cible (par ex. *Production*).
 3. Renseignez les réglages de l'hébergeur : voir [Netlify](netlify.md), [Vercel](vercel.md), [GitHub Pages](github-pages.md) ou [AWS S3](aws-s3.md).
 4. Si besoin, indiquez une **URL de base du build**, pour publier avec une autre URL que celle de la configuration (par ex. pour une cible de préproduction).

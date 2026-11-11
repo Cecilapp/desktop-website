@@ -73,6 +73,15 @@ more:
     - icon: doctor
       title: Diagnostic
       text: Vérifications du projet, du front matter, du SEO, des liens et du cache, avec des résultats lisibles dans l'application.
+    - icon: writing
+      title: Mode Rédaction
+      text: Confiez un site à un rédacteur, un client ou une équipe. Ils écrivent, ajoutent des images, prévisualisent et publient ; la configuration, le thème et les builds restent hors de vue.
+    - icon: media
+      title: Médias
+      text: Les images et les fichiers du site par dossier, importés par glisser-déposer, avec les pages qui utilisent chacun d'eux.
+    - icon: share
+      title: Publication partagée
+      text: Le site décrit ses cibles de publication, sans aucun jeton. Chaque rédacteur publie avec son propre compte chez l'hébergeur.
     - icon: shortcuts
       title: Pensé pour le clavier
       text: Palette de commandes avec Ctrl/Cmd+K, Ctrl/Cmd+P pour prévisualiser, Ctrl/Cmd+Maj+B pour builder.
@@ -96,6 +105,7 @@ pricing:
         - Build, preview et édition du contenu
         - Publication vers Netlify, Vercel, GitHub Pages ou S3 (1 cible par site)
         - Thèmes et diagnostics de base
+        - Mode Rédaction, pour tous les sites qu'un responsable vous confie
       cta: Télécharger gratuitement
     - name: Pro
       price: 49 €
@@ -106,6 +116,7 @@ pricing:
         - Plusieurs cibles de publication par site
         - Diagnostics SEO et liens
         - Formulaire du schéma de pages
+        - Profil de rédaction : sections modifiables, droits sur les pages, cibles partagées
         - 1 an de mises à jour inclus, sur 3 ordinateurs
         - Soutient le développement de Cecil
       cta: Obtenir Cecil Desktop Pro
@@ -122,6 +133,12 @@ faq:
       answer: Non. Cecil Desktop embarque PHP et Cecil. La version de Cecil embarquée est affichée dans l'application, et mise à jour à chaque release.
     - question: Remplace-t-il mon éditeur de code ?
       answer: Non. L'éditeur intégré est fait pour le contenu (Markdown et front matter), et une page s'ouvre dans votre éditeur préféré en un clic. Les templates et les assets restent dans votre éditeur de code.
+    - question: Puis-je confier un site à un rédacteur non technique ?
+      answer: "Oui. Ouvrez le site en [mode Rédaction](/fr/docs/writing-mode/) pour tout le monde, avec un petit fichier de profil versionné avec le site (`.cecil-desktop.yml`) : le rédacteur dispose des pages des sections que vous avez choisies, des médias, de la preview et de la publication, et de rien d'autre. Il publie avec son propre compte chez l'hébergeur : le site ne contient jamais de jeton."
+    - question: Le rédacteur a-t-il besoin d'une licence Pro ?
+      answer: "Non. Le mode Rédaction est gratuit, et un site ouvert en mode Rédaction par son profil ne compte pas dans le site unique de la version gratuite. Pro s'adresse au responsable, pour choisir les sections modifiables, les droits sur les pages et les cibles de publication partagées."
+    - question: Le mode Rédaction est-il une protection ?
+      answer: "Non. C'est un mode de l'interface, pour simplifier la rédaction : chacun peut revenir en mode Gestion sur son ordinateur (après une confirmation), et les fichiers du site appartiennent à qui les a sur son disque."
     - question: Où sont stockés mes sites et mes jetons ?
       answer: "Vos sites restent là où ils sont, sur votre disque : Cecil Desktop ne déplace ni ne convertit rien. Les jetons des hébergeurs sont chiffrés avec le trousseau du système."
     - question: Que se passe-t-il après la première année d'une licence Pro ?

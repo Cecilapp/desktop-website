@@ -4,7 +4,7 @@ description: Parcourez, installez, mettez à jour et supprimez les thèmes Cecil
 ---
 # Thèmes
 
-La section **Thèmes** d'un site (`Ctrl/⌘+3`) liste les thèmes installés dans le site, et le catalogue des thèmes Cecil.
+La section **Thèmes** d'un site (`Ctrl/⌘+4`) liste les thèmes installés dans le site, et le catalogue des thèmes Cecil.
 
 ## Catalogue
 

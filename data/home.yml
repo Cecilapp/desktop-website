@@ -73,6 +73,15 @@ more:
     - icon: doctor
       title: Diagnostics
       text: Project, front matter, SEO, links and cache checks, with readable results in the app.
+    - icon: writing
+      title: Writing mode
+      text: Hand a site to a writer, a client or a team. They write, add images, preview and publish; the configuration, the theme and the builds stay out of sight.
+    - icon: media
+      title: Media
+      text: The images and files of the site by folder, imported by drag and drop, with the pages that use each of them.
+    - icon: share
+      title: Shared publishing
+      text: The site describes its publishing targets, without any token. Each writer publishes with their own hosting account.
     - icon: shortcuts
       title: Keyboard first
       text: Command palette with Ctrl/Cmd+K, Ctrl/Cmd+P to preview, Ctrl/Cmd+Shift+B to build.
@@ -96,6 +105,7 @@ pricing:
         - Build, preview and content editing
         - Publish to Netlify, Vercel, GitHub Pages or S3 (1 target per site)
         - Themes and basic diagnostics
+        - Writing mode, for every site a manager hands you
       cta: Download free
     - name: Pro
       price: 49 €
@@ -106,6 +116,7 @@ pricing:
         - Several publication targets per site
         - SEO and links diagnostics
         - Form of the pages schema
+        - Writing profile: editable sections, rights on the pages, shared targets
         - 1 year of updates included, on 3 computers
         - Supports the development of Cecil
       cta: Get Cecil Desktop Pro
@@ -122,6 +133,12 @@ faq:
       answer: No. Cecil Desktop embeds PHP and Cecil. The embedded Cecil version is shown in the app, and is updated with each release.
     - question: Does it replace my code editor?
       answer: No. The built-in editor is made for content (Markdown and front matter), and a page opens in your favorite editor in one click. Templates and assets stay in your code editor.
+    - question: Can I give a site to a non-technical writer?
+      answer: "Yes. Open the site in [Writing mode](/docs/writing-mode/) for everyone, with a small profile file versioned with the site (`.cecil-desktop.yml`): the writer gets the pages of the sections you chose, the media, the preview and publishing, and nothing else. They publish with their own hosting account: the site never contains a token."
+    - question: Does the writer need a Pro license?
+      answer: "No. The Writing mode is free, and a site opened in Writing mode by its profile doesn't count in the 1 site of the free version. Pro is for the manager, to choose the editable sections, the rights on the pages and the shared publishing targets."
+    - question: Is the Writing mode a security feature?
+      answer: "No. It is a mode of the interface, to make writing simpler: anyone can switch back to the Management mode on their computer (after a confirmation), and the files of the site belong to whoever has them on their disk."
     - question: Where are my sites and tokens stored?
       answer: "Your sites stay where they are, on your disk: Cecil Desktop doesn't move or convert anything. Hosting tokens are encrypted with the system keychain."
     - question: What happens after the first year of a Pro license?

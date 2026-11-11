@@ -84,7 +84,7 @@ Si le front matter n'est pas en YAML, ou ne peut pas être lu, tout le fichier e
 
 <span class="tag">Pro</span> Si le site définit un schéma de ses pages (`pages.schema` dans la configuration), ses variables sont aussi présentées comme des champs de formulaire, avec leur type (texte, liste de valeurs, nombre, interrupteur, date, liste…), leur valeur par défaut et un badge **Requis** : les variables communes sous **Variables du site**, celles de la section sous **Variables de « section »**.
 
-Dans la version gratuite, ces variables restent dans **Autres variables (YAML)**, et sont toujours vérifiées.
+Dans la version gratuite, ces variables restent dans **Autres variables (YAML)**, et sont toujours vérifiées ; en [mode Rédaction](writing-mode.md), le formulaire est gratuit.
 
 ## Plan
 
@@ -105,3 +105,22 @@ Pour ajouter une image à une page :
 Les images importées sont copiées dans le dossier `assets/images/` du site, avec un nom converti en slug, et insérées sous la forme `![alt](/images/nom.jpg)`. Une image déjà importée est réutilisée, pas copiée à nouveau.
 
 Formats acceptés : AVIF, GIF, JPEG, PNG, SVG et WebP, jusqu'à 12 Mo.
+
+:::tip
+Les images et les fichiers du site se gèrent aussi dans la section [Médias](#medias).
+:::
+
+## Médias
+
+La section **Médias** d'un site (`Ctrl/⌘+3`) liste ses médias, en 2 onglets :
+
+- **Images** : les images de `assets/` et `static/` (tous deux sont servis à la racine du site, leurs dossiers sont donc fusionnés) ;
+- **Fichiers** : les autres fichiers de `static/` (PDF, documents…).
+
+Chaque onglet s'ouvre sur le dossier où vont les nouveaux médias : `assets/images/` et `static/` par défaut, ou les dossiers fixés par le [profil du site](writing-mode.md#le-profil-du-site). Parcourez les dossiers, cherchez dans tous les dossiers, et affichez les médias en aperçu ou en liste.
+
+Pour ajouter des médias, **déposez** des fichiers sur l'écran, ou cliquez sur **Importer des images…** / **Importer des fichiers…** (jusqu'à 12 Mo par fichier) : ils sont copiés dans le dossier affiché s'il se trouve dans le dossier du profil, sinon dans le dossier du profil lui-même.
+
+Sélectionnez un média pour voir son **Adresse sur le site**, les pages qui l'utilisent (cliquez sur l'une d'elles pour l'ouvrir), et **Copier le Markdown** pour l'insérer dans une page. **Mettre à la corbeille** vous prévient d'abord si des pages l'utilisent.
+
+En [mode Rédaction](writing-mode.md), la section Médias ne montre que les dossiers du profil.

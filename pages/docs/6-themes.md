@@ -4,7 +4,7 @@ description: Browse, install, update and remove the Cecil themes published on Pa
 ---
 # Themes
 
-The **Themes** section of a site (`Ctrl/⌘+3`) lists the themes installed in the site, and the catalog of the Cecil themes.
+The **Themes** section of a site (`Ctrl/⌘+4`) lists the themes installed in the site, and the catalog of the Cecil themes.
 
 ## Catalog
 

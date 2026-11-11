@@ -84,7 +84,7 @@ If the front matter is not in YAML, or can't be read, the whole file is edited a
 
 <span class="tag">Pro</span> If the site defines a schema of its pages (`pages.schema` in the configuration), its variables are shown as form fields too, with their type (text, list of values, number, switch, date, list…), their default value and a **Required** badge: common variables under **Variables of the site**, those of the section under **Variables of “section”**.
 
-In the free version, these variables stay in **Other variables (YAML)**, and are still checked.
+In the free version, these variables stay in **Other variables (YAML)**, and are still checked; in [Writing mode](writing-mode.md), the form is free.
 
 ## Outline
 
@@ -105,3 +105,22 @@ To add an image to a page:
 Imported images are copied into the `assets/images/` folder of the site, with a slugified name, and inserted as `![alt](/images/name.jpg)`. An image already imported is reused, not copied again.
 
 Accepted formats: AVIF, GIF, JPEG, PNG, SVG and WebP, up to 12 MB.
+
+:::tip
+The images and files of the site are also managed in the [Media](#media) section.
+:::
+
+## Media
+
+The **Media** section of a site (`Ctrl/⌘+3`) lists its media, in 2 tabs:
+
+- **Images**: the images of `assets/` and `static/` (both are served at the root of the site, so their folders are merged);
+- **Files**: the other files of `static/` (PDF, documents…).
+
+Each tab opens on the folder where new media go: `assets/images/` and `static/` by default, or the folders set by the [profile of the site](writing-mode.md#the-profile-of-the-site). Browse the folders, search in every folder, and show the media as thumbnails or as a list.
+
+To add media, **drop** files on the screen, or click **Import images…** / **Import files…** (up to 12 MB per file): they are copied into the folder shown if it is inside the folder of the profile, otherwise into the folder of the profile itself.
+
+Select a media to see its **Address on the site**, the pages that use it (click one to open it), and to **Copy the Markdown** to insert it in a page. **Move to trash** warns you first if pages use it.
+
+In [Writing mode](writing-mode.md), the Media section only shows the folders of the profile.

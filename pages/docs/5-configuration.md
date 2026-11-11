@@ -4,7 +4,7 @@ description: Edit the configuration of a site through a form, or in YAML, checke
 ---
 # Configuration
 
-The **Configuration** section of a site (`Ctrl/⌘+5`) edits its configuration file (`cecil.yml`), in 3 tabs: **Form**, **Advanced** and **YAML**.
+The **Configuration** section of a site (`Ctrl/⌘+6`) edits its configuration file (`cecil.yml`), in 4 tabs: **Form**, **Advanced**, **Writing** (the [profile of the site](#writing), in another file) and **YAML**.
 
 Only the changed entries are rewritten: the comments and the rest of the file are kept. An empty field keeps the default value of Cecil, shown as its placeholder.
 
@@ -30,6 +30,10 @@ The build options: the default values of Cecil suit most sites.
 - **Assets**: fingerprint in the file names, minification of CSS and JavaScript, Sass output, quality and optimization of the images;
 - **Optimization** of the generated files (HTML, CSS, JavaScript, images);
 - **Cache and output**: the cache, and the cache and output folders.
+
+## Writing
+
+The **Writing** tab describes what the writers of the site can do in [Writing mode](writing-mode.md): whether the site opens in Writing mode for everyone, its manager, the editable sections, the rights on the pages, the folders of the media and the shared publishing targets. It is saved in `.cecil-desktop.yml`, at the root of the site (not in `cecil.yml`), with its own **Save** button.
 
 ## YAML
 
