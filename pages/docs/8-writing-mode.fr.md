@@ -1,6 +1,6 @@
 ---
 title: Mode Rédaction
-description: Confiez un site à un rédacteur : les modes Rédaction et Gestion, et le profil du site (.cecil-desktop.yml).
+description: "Confiez un site à un rédacteur : les modes Rédaction et Gestion, et le profil du site (.cecil-desktop.yml)."
 ---
 # Mode Rédaction
 

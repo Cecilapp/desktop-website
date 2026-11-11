@@ -1,6 +1,6 @@
 ---
 title: Writing mode
-description: Hand a site to a writer: the Writing and Management modes, and the profile of the site (.cecil-desktop.yml).
+description: "Hand a site to a writer: the Writing and Management modes, and the profile of the site (.cecil-desktop.yml)."
 ---
 # Writing mode
 
