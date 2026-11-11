@@ -4,7 +4,7 @@ description: Éditez la configuration d'un site avec un formulaire, ou en YAML, 
 ---
 # Configuration
 
-La section **Configuration** d'un site (`Ctrl/⌘+5`) édite son fichier de configuration (`cecil.yml`), en 3 onglets : **Formulaire**, **Avancé** et **YAML**.
+La section **Configuration** d'un site (`Ctrl/⌘+6`) édite son fichier de configuration (`cecil.yml`), en 4 onglets : **Formulaire**, **Avancé**, **Rédaction** (le [profil du site](#redaction), dans un autre fichier) et **YAML**.
 
 Seules les entrées modifiées sont réécrites : les commentaires et le reste du fichier sont conservés. Un champ vide garde la valeur par défaut de Cecil, affichée en indication.
 
@@ -30,6 +30,10 @@ Les options du build : les valeurs par défaut de Cecil conviennent à la plupar
 - **Assets** : empreinte dans le nom des fichiers, minification du CSS et du JavaScript, sortie Sass, qualité et optimisation des images ;
 - **Optimisation** des fichiers générés (HTML, CSS, JavaScript, images) ;
 - **Cache et sortie** : le cache, et les dossiers du cache et de sortie.
+
+## Rédaction
+
+L'onglet **Rédaction** décrit ce que peuvent faire les rédacteurs du site en [mode Rédaction](writing-mode.md) : si le site s'ouvre en mode Rédaction pour tout le monde, son responsable, les sections modifiables, les droits sur les pages, les dossiers des médias et les cibles de publication partagées. Il est enregistré dans `.cecil-desktop.yml`, à la racine du site (pas dans `cecil.yml`), avec son propre bouton **Enregistrer**.
 
 ## YAML
 

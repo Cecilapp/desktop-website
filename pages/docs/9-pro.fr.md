@@ -14,12 +14,14 @@ Pendant la bêta, toutes les fonctions sont disponibles sans licence.
 
 | | Gratuite | Pro |
 |-|----------|-----|
-| Sites | 1 | Illimités |
+| Sites | 1 (+ les sites ouverts en mode Rédaction par leur profil) | Illimités |
 | Cibles de publication par site | 1 | Plusieurs (production, préproduction…) |
-| Build, preview, édition du contenu, thèmes | ✓ | ✓ |
+| Build, preview, édition du contenu, médias, thèmes | ✓ | ✓ |
 | Diagnostics : configuration, front matter, cache | ✓ | ✓ |
 | [Diagnostics : SEO et liens](build-preview-diagnosis.md#diagnostic) | | ✓ |
-| [Formulaire du schéma de pages](content.md#schema-de-pages) | | ✓ |
+| [Formulaire du schéma de pages](content.md#schema-de-pages) | En mode Rédaction | ✓ |
+| [Mode Rédaction](writing-mode.md), ouverture d'un site en mode Rédaction pour tout le monde | ✓ | ✓ |
+| [Profil de rédaction](writing-mode.md#confier-un-site-a-un-redacteur) : sections modifiables, droits sur les pages, cibles partagées | | ✓ |
 
 Les fonctions Pro sont signalées dans l'application par un badge **Pro**. Sans licence, rien de ce que vous avez déjà ne vous est retiré : vos sites et vos cibles restent utilisables, seul l'ajout est limité.
 

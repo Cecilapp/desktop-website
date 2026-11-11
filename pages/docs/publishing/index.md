@@ -17,9 +17,11 @@ An account holds the token (or the keys) of a hosting provider. It is stored onc
 The free version allows 1 target per site. [Cecil Desktop Pro](../pro.md) allows several. There is no limit on the number of accounts.
 :::
 
+A target can be **shared** with the writers of the site, through its profile: each writer then publishes to it with their own account. See [Writing mode](../writing-mode.md#shared-targets).
+
 ## Add a target
 
-1. Open the **Publishing** section of the site (`Ctrl/⌘+4`) and click **New target**.
+1. Open the **Publishing** section of the site (`Ctrl/⌘+5`) and click **New target**.
 2. Choose the **Hosting provider**, and give the target a name (e.g. *Production*).
 3. Fill in the settings of the provider: see [Netlify](netlify.md), [Vercel](vercel.md), [GitHub Pages](github-pages.md) or [AWS S3](aws-s3.md).
 4. Optionally, set a **Base URL of the build**, to publish with another URL than the one of the configuration (e.g. for a staging target).

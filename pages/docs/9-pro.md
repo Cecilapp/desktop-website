@@ -14,12 +14,14 @@ During the beta, every feature is available without a license.
 
 | | Free | Pro |
 |-|------|-----|
-| Sites | 1 | Unlimited |
+| Sites | 1 (+ the sites opened in Writing mode by their profile) | Unlimited |
 | Publishing targets per site | 1 | Several (production, staging…) |
-| Build, preview, content editing, themes | ✓ | ✓ |
+| Build, preview, content editing, media, themes | ✓ | ✓ |
 | Diagnoses: configuration, front matter, cache | ✓ | ✓ |
 | [Diagnoses: SEO and links](build-preview-diagnosis.md#diagnosis) | | ✓ |
-| [Form of the pages schema](content.md#pages-schema) | | ✓ |
+| [Form of the pages schema](content.md#pages-schema) | In Writing mode | ✓ |
+| [Writing mode](writing-mode.md), opening a site in Writing mode for everyone | ✓ | ✓ |
+| [Writing profile](writing-mode.md#hand-a-site-to-a-writer): editable sections, rights on the pages, shared targets | | ✓ |
 
 The Pro features are shown in the app with a **Pro** badge. Without a license, nothing you already have is taken away: your sites and targets stay usable, only adding more is limited.
 

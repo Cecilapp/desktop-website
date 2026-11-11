@@ -66,7 +66,7 @@ La version gratuite gère 1 site. [Cecil Desktop Pro](/fr/#pricing) lève cette 
 
 La fenêtre d'un site comporte 3 zones principales :
 
-- la **barre latérale**, à gauche, liste vos sites et les sections du site ouvert : **Aperçu**, **Contenu**, **Thèmes**, **Publication** et **Configuration** (`Ctrl/⌘+1` à `Ctrl/⌘+5`). `Ctrl/⌘+B` la replie en une colonne d'icônes ;
+- la **barre latérale**, à gauche, liste vos sites et les sections du site ouvert : **Aperçu**, **Contenu**, **Médias**, **Thèmes**, **Publication** et **Configuration** (`Ctrl/⌘+1` à `Ctrl/⌘+6` ; moins en [mode Rédaction](writing-mode.md)). `Ctrl/⌘+B` la replie en une colonne d'icônes ;
 - la **zone principale** affiche la section choisie ;
 - le panneau **Sortie**, en bas (`Ctrl/⌘+J`), affiche les logs de la preview, des builds, des publications et du diagnostic.
 

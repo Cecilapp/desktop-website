@@ -66,7 +66,7 @@ The free version manages 1 site. [Cecil Desktop Pro](/#pricing) removes this lim
 
 The window of a site has 3 main areas:
 
-- the **sidebar**, on the left, lists your sites and the sections of the open site: **Overview**, **Content**, **Themes**, **Publishing** and **Configuration** (`Ctrl/⌘+1` to `Ctrl/⌘+5`). `Ctrl/⌘+B` folds it into a rail of icons;
+- the **sidebar**, on the left, lists your sites and the sections of the open site: **Overview**, **Content**, **Media**, **Themes**, **Publishing** and **Configuration** (`Ctrl/⌘+1` to `Ctrl/⌘+6`; fewer in [Writing mode](writing-mode.md)). `Ctrl/⌘+B` folds it into a rail of icons;
 - the **main area** shows the selected section;
 - the **Output** panel, at the bottom (`Ctrl/⌘+J`), shows the logs of the preview, of the builds, of the publications and of the diagnosis.
 
