@@ -33,6 +33,12 @@ languages:
           - id: credits
             name: Crédits
             url: /fr/credits/
+          - id: terms
+            name: Conditions d'utilisation
+            url: /fr/terms/
+          - id: privacy
+            name: Confidentialité
+            url: /fr/privacy/
 menus:
   main:
     - id: index
@@ -49,6 +55,12 @@ menus:
     - id: credits
       name: Credits
       url: /credits/
+    - id: terms
+      name: Terms
+      url: /terms/
+    - id: privacy
+      name: Privacy
+      url: /privacy/
 
 # custom options, used by the templates
 download:
