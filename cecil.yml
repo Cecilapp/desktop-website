@@ -39,6 +39,9 @@ languages:
           - id: privacy
             name: Confidentialité
             url: /fr/privacy/
+          - id: legal
+            name: Mentions légales
+            url: /fr/legal/
 menus:
   main:
     - id: index
@@ -61,6 +64,9 @@ menus:
     - id: privacy
       name: Privacy
       url: /privacy/
+    - id: legal
+      name: Legal notice
+      url: /legal/
 
 # custom options, used by the templates
 download:
