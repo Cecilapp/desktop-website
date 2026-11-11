@@ -219,6 +219,8 @@
           <p>© {{ site.time|date('Y') }} <a href="{{ site.author.url }}" class="hover:text-navy-900 dark:hover:text-white">{{ site.author.name }}</a></p>
           <p class="flex gap-4">
             <a href="{{ url('credits') }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Credits{% endtrans %}</a>
+            <a href="{{ url('terms') }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Terms{% endtrans %}</a>
+            <a href="{{ url('privacy') }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Privacy{% endtrans %}</a>
             <a href="{{ cecil.url }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Powered by Cecil{% endtrans %}</a>
           </p>
         </div>
