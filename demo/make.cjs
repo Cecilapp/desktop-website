@@ -1,7 +1,7 @@
 // Edits a recording (see record.cjs) into the demo video of the home page.
 // usage: node make.cjs <recdir> [light|dark] [raw]
 // - output: ../assets/videos/demo.mp4 (light) or demo.dark.mp4 (dark); `raw`: real time, in <recdir>/raw.mp4
-// - the window buttons (drawn by Electron, missing from the screencast) are cropped from the screenshots
+// - the window buttons (drawn by Electron, missing from the screencast) are those of window-buttons[.dark].png
 const fs = require('fs'), path = require('path'); const { execFileSync } = require('child_process');
 const [dir, scheme = 'light', raw] = process.argv.slice(2);
 const suffix = scheme === 'dark' ? '.dark' : '';
@@ -11,11 +11,10 @@ const { frames, marks } = JSON.parse(fs.readFileSync(path.join(dir, 'timeline.js
 const M = Object.fromEntries(marks.map(m => [m.name, m.t]));
 
 // segments [from, to, mode]: mode > 0 = target duration (s), mode < 0 = speed factor (idle gaps capped), null = real time
+const go = M.confirm ?? M.deploy; // the publication starts once confirmed, if the app asks
 const segs = raw ? [[M.start, M.end, null]] : [
-  [M.start, M.build + 1.8, -1.5],
-  [M.build + 1.8, M.built - 0.5, 2.2], // build
-  [M.built - 0.5, M.deploy + 1.8, -1.8],
-  [M.deploy + 1.8, M.deployed - 0.4, 2.2], // deployment
+  [M.start, go + 1.8, -1.5],
+  [go + 1.8, M.deployed - 0.4, 3.5], // publication: build, then deployment
   [M.deployed - 0.4, M.end + 1, -1.3],
 ];
 const CAP = raw ? Infinity : 0.7, HOLD_END = 1.5;
@@ -38,9 +37,8 @@ fs.writeFileSync(path.join(dir, 'list.txt'), list);
 console.log('duration', total.toFixed(2), 's');
 
 const ff = args => execFileSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', ...args], { stdio: 'inherit' });
-const buttons = path.join(dir, 'buttons.png');
-ff(['-i', path.join(root, 'assets', 'images', 'screenshots', `sites${suffix}.png`), '-vf', 'crop=170:45:1110:0', buttons]);
-const vf = '[0:v]fps=30,scale=1280:800:flags=lanczos,format=rgb24[v];[v][1:v]overlay=1280-overlay_w:0,format=yuv420p';
+const buttons = path.join(__dirname, `window-buttons${suffix}.png`);
+const vf = '[0:v]fps=30,scale=1280:800:flags=lanczos,format=rgb24[v];[1:v]scale=136:36:flags=lanczos[b];[v][b]overlay=1280-overlay_w:0,format=yuv420p';
 ff(['-f', 'concat', '-safe', '0', '-i', path.join(dir, 'list.txt'), '-i', buttons, '-filter_complex', vf, '-an',
   '-c:v', 'libx264', '-preset', 'veryslow', '-crf', '24', '-profile:v', 'high', '-movflags', '+faststart', out]);
 console.log(out);

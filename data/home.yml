@@ -51,6 +51,17 @@ features:
     screenshot:
       image: images/screenshots/accounts.png
       alt: Preferences listing the Netlify account, with its token checked
+  - title: Hand the site to those who write it
+    text: "Open a site in Writing mode for a client, a writer or a team: they get their pages, the media, the preview and publishing. The configuration, the theme and the builds leave the interface."
+    points:
+      - Home screen with the latest pages, the drafts and the pages to publish
+      - Editable sections and page rights, chosen by the site manager
+      - Profile versioned with the site, without any token
+      - Each writer publishes with their own hosting account
+      - Free for writers, and not counted in the single site of the free version
+    screenshot:
+      image: images/screenshots/writing.png
+      alt: Home of a site in Writing mode, with the latest pages, the pages to publish and the sidebar reduced to content, media and publishing
 
 more:
   title: And everything you expect.
@@ -73,15 +84,9 @@ more:
     - icon: doctor
       title: Diagnostics
       text: Project, front matter, SEO, links and cache checks, with readable results in the app.
-    - icon: writing
-      title: Writing mode
-      text: Hand a site to a writer, a client or a team. They write, add images, preview and publish; the configuration, the theme and the builds stay out of sight.
     - icon: media
       title: Media
       text: The images and files of the site by folder, imported by drag and drop, with the pages that use each of them.
-    - icon: share
-      title: Shared publishing
-      text: The site describes its publishing targets, without any token. Each writer publishes with their own hosting account.
     - icon: shortcuts
       title: Keyboard first
       text: Command palette with Ctrl/Cmd+K, Ctrl/Cmd+P to preview, Ctrl/Cmd+Shift+B to build.

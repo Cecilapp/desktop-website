@@ -51,6 +51,17 @@ features:
     screenshot:
       image: images/screenshots/accounts.png
       alt: Préférences listant le compte Netlify, avec son jeton vérifié
+  - title: Confiez le site à ceux qui l'écrivent
+    text: "Ouvrez un site en mode Rédaction pour un client, un rédacteur ou une équipe : ils retrouvent leurs pages, les médias, la preview et la publication. La configuration, le thème et les builds disparaissent de l'interface."
+    points:
+      - Accueil avec les dernières pages, les brouillons et les pages à publier
+      - Sections modifiables et droits sur les pages, choisis par le responsable
+      - Profil versionné avec le site, sans aucun jeton
+      - Chaque rédacteur publie avec son propre compte chez l'hébergeur
+      - Gratuit pour les rédacteurs, sans compter dans le site de la version gratuite
+    screenshot:
+      image: images/screenshots/writing.png
+      alt: Accueil d'un site en mode Rédaction, avec les dernières pages, les pages à publier et la barre latérale réduite au contenu, aux médias et à la publication
 
 more:
   title: Et tout ce que vous attendez.
@@ -73,15 +84,9 @@ more:
     - icon: doctor
       title: Diagnostic
       text: Vérifications du projet, du front matter, du SEO, des liens et du cache, avec des résultats lisibles dans l'application.
-    - icon: writing
-      title: Mode Rédaction
-      text: Confiez un site à un rédacteur, un client ou une équipe. Ils écrivent, ajoutent des images, prévisualisent et publient ; la configuration, le thème et les builds restent hors de vue.
     - icon: media
       title: Médias
       text: Les images et les fichiers du site par dossier, importés par glisser-déposer, avec les pages qui utilisent chacun d'eux.
-    - icon: share
-      title: Publication partagée
-      text: Le site décrit ses cibles de publication, sans aucun jeton. Chaque rédacteur publie avec son propre compte chez l'hébergeur.
     - icon: shortcuts
       title: Pensé pour le clavier
       text: Palette de commandes avec Ctrl/Cmd+K, Ctrl/Cmd+P pour prévisualiser, Ctrl/Cmd+Maj+B pour builder.
