@@ -1,6 +1,6 @@
 # Cecil Desktop website
 
-One-page website of [Cecil Desktop](https://github.com/Cecilapp/Desktop), built with [Cecil](https://cecil.app) and [Tailwind CSS](https://tailwindcss.com) (compiled by [tailwind-builder](https://github.com/ArnaudLigny/tailwind-builder)).
+Website and documentation of [Cecil Desktop](https://github.com/Cecilapp/Desktop), built with [Cecil](https://cecil.app) and [Tailwind CSS](https://tailwindcss.com) (compiled by [tailwind-builder](https://github.com/ArnaudLigny/tailwind-builder)).
 
 ## Content
 
@@ -8,7 +8,10 @@ One-page website of [Cecil Desktop](https://github.com/Cecilapp/Desktop), built 
 - `translations/messages.fr.yaml`: UI strings of the templates (navigation, buttons, footer)
 - `cecil.yml`: site options, including the download URL and version (`download`)
 - `assets/images/screenshots/`: app screenshots
-- `pages/docs/`: the documentation (`/docs/`), rendered with the [Docs](https://github.com/Cecilapp/theme-docs) and [FlexSearch](https://github.com/Cecilapp/theme-flexsearch) themes, styled with the brand colors by `assets/tailwind-docs.css`
+- `pages/docs/`: the documentation (`/docs/`), rendered with the [Docs](https://github.com/Cecilapp/theme-docs) and [FlexSearch](https://github.com/Cecilapp/theme-flexsearch) themes, styled with the brand colors by `assets/tailwind-docs.css`; a feature of the homepage links to its page with `docs` (a page ID, e.g. `docs/content`)
+- `pages/docs/12-changelog.md`: the changelog (`/docs/changelog/`, layout `layouts/changelog.html.twig`), from the notes of the published releases of the app: its `release.yml` workflow exports them as `releases.json` next to the update files (`download.manifests`), then builds the site again. Each version has an anchor (`#v1.2.3`), opened by **Help › What's New** in the app
+
+To test the changelog locally, serve a `releases.json` (`[{version, date, body}]`, newest first) and point the build at it: `CECIL_DOWNLOAD_MANIFESTS=http://127.0.0.1:8099/ php cecil.phar build`.
 
 ## Netlify
 
