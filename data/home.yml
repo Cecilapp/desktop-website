@@ -14,6 +14,7 @@ intro:
 
 features:
   - title: Write content, see it live
+    docs: docs/content
     text: Browse the `pages/` tree, edit Markdown with syntax highlighting and fill the front matter through a form. Save, and the preview reloads in your browser.
     points:
       - Formatting toolbar and shortcuts, outline and word count
@@ -25,6 +26,7 @@ features:
       image: images/screenshots/content.png
       alt: Markdown editor with the pages tree and the live preview
   - title: Build, check, fix
+    docs: docs/build-preview-diagnosis
     text: One click builds the site with Cecil. Logs stream into the output panel, and problems are grouped by message, so a warning repeated fifty times shows up once, with its count.
     points:
       - Build options (drafts, dry run, optimization, base URL)
@@ -34,6 +36,7 @@ features:
       image: images/screenshots/build.png
       alt: Overview of a site, with the state of its preview, build, publishing and diagnostics, and the history of its builds
   - title: Publish anywhere
+    docs: docs/publishing
     text: Deploy to Netlify, Vercel, GitHub Pages or AWS S3 directly through their APIs. Only the changed files are sent, and every deployment is kept in the history.
     points:
       - Several targets per site (production, staging…)
@@ -43,6 +46,7 @@ features:
       image: images/screenshots/publish.png
       alt: Netlify publishing target, with the deployments history
   - title: Your tokens stay safe
+    docs: docs/publishing
     text: Hosting accounts are stored once and shared between your sites. Tokens are encrypted with the system keychain and never written to your projects.
     points:
       - Windows Credential Manager and macOS Keychain
@@ -52,6 +56,7 @@ features:
       image: images/screenshots/accounts.png
       alt: Preferences listing the Netlify account, with its token checked
   - title: Hand the site to those who write it
+    docs: docs/writing-mode
     text: "Open a site in Writing mode for a client, a writer or a team: they get their pages, the media, the preview and publishing. The configuration, the theme and the builds leave the interface."
     points:
       - Home screen with the latest pages, the drafts and the pages to publish
@@ -67,33 +72,43 @@ more:
   title: And everything you expect.
   items:
     - icon: build
+      docs: docs/build-preview-diagnosis
       title: Builds with options
       text: Drafts, dry run, optimization, base URL… with streamed logs, problems grouped by message and the history of builds.
     - icon: preview
+      docs: docs/build-preview-diagnosis
       title: Live preview
       text: A local server with live reload, opened in your browser. One per site.
     - icon: sites
+      docs: docs/getting-started
       title: All your sites
       text: Open a project, or drop its folder on the window. Create a new one with a wizard, and switch between them.
     - icon: config
+      docs: docs/configuration
       title: Configuration
       text: A form for every option, or the raw YAML. Checked like Cecil loads it, and only what you changed is rewritten.
     - icon: themes
+      docs: docs/themes
       title: Themes
       text: Browse, install and update the Cecil themes published on Packagist, without Composer.
     - icon: doctor
+      docs: docs/build-preview-diagnosis
       title: Diagnostics
       text: Project, front matter, SEO, links and cache checks, with readable results in the app.
     - icon: media
+      docs: docs/content
       title: Media
       text: The images and files of the site by folder, imported by drag and drop, with the pages that use each of them.
     - icon: shortcuts
+      docs: docs/shortcuts
       title: Keyboard first
       text: Command palette with Ctrl/Cmd+K, Ctrl/Cmd+P to preview, Ctrl/Cmd+Shift+B to build.
     - icon: desktop
+      docs: docs/preferences
       title: A real desktop app
       text: Light and dark themes following the system, native menus and notifications, progress in the taskbar. In English and French.
     - icon: updates
+      docs: docs/getting-started
       title: Always up to date
       text: The app downloads its updates and installs them on restart, each one with the latest Cecil inside (Windows for now, macOS soon).
 
