@@ -47,6 +47,20 @@ Une page ouverte dans Cecil Desktop n'est pas rechargée quand elle est modifié
 - Les **jetons** et la **clé de licence** sont chiffrés avec le trousseau du système, pour votre compte utilisateur sur cet ordinateur.
 - Il n'y a **aucune télémétrie** : rien n'est envoyé, sauf quand vous publiez, vérifiez une licence ou envoyez un retour.
 
+Le dossier de données de l'application est :
+
+- sous Windows : `%APPDATA%\cecil-desktop` ;
+- sous macOS : `~/Library/Application Support/cecil-desktop`.
+
+### Logs
+
+- Les logs des **builds**, de la **preview**, des **publications** et du **diagnostic** sont dans le panneau **Sortie** (`Ctrl/⌘+J`) ; le log d'un build précédent s'ouvre depuis l'[historique des builds](build-preview-diagnosis.md#historique).
+- Le **journal de l'application** (ses erreurs) est dans le dossier `storage/logs/` du dossier de données.
+
+### Réinitialiser l'application
+
+Pour repartir de zéro, quittez Cecil Desktop, puis supprimez son dossier de données (ou renommez-le, pour en garder une copie). Au lancement suivant, la liste des sites, l'historique, les préférences, les comptes et leurs jetons, et la licence sont vides : activez de nouveau votre licence, et rouvrez vos sites. Vos sites eux-mêmes ne sont pas touchés.
+
 ## Envoyer un retour
 
 Un bug, une idée, une critique ? Utilisez **Aide › Envoyer un retour…** : choisissez son type (bug, idée ou autre), donnez-lui un titre et une description et, si vous le souhaitez, votre e-mail pour obtenir une réponse.

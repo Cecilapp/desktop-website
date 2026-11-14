@@ -78,6 +78,8 @@ The **Diagnose** menu of the **Diagnosis** tile runs the checks of Cecil:
 | **Links** <span class="tag">Pro</span> | Broken internal links, and optionally external links. |
 | **Cache** | The cache settings and the size of the cache folders. |
 
+The rules of each check are described in the documentation of the [`doctor` commands of Cecil](https://cecil.app/documentation/commands/doctor/).
+
 The **SEO** and **Links** diagnoses build the site first, without writing the files: their progress is shown on the tile and their log in the **Output** panel. Their options (gear icon) let you **check external links** (slower: one request per URL), **include generated pages** (sections, taxonomies, pagination…) and **include suggestions**.
 
 ![The results of the SEO diagnosis, grouped by page](/images/screenshots/diagnosis.png)

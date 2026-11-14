@@ -47,6 +47,20 @@ A page open in Cecil Desktop is not reloaded when it is changed by another appli
 - **Tokens** and the **license key** are encrypted with the system keychain, for your user account on this computer.
 - There is **no telemetry**: nothing is sent, except when you publish, check a license or send feedback.
 
+The data folder of the app is:
+
+- on Windows: `%APPDATA%\cecil-desktop`;
+- on macOS: `~/Library/Application Support/cecil-desktop`.
+
+### Logs
+
+- The logs of the **builds**, of the **preview**, of the **publications** and of the **diagnosis** are in the **Output** panel (`Ctrl/⌘+J`); the log of a previous build opens from the [build history](build-preview-diagnosis.md#history).
+- The **log of the app** (its errors) is in the `storage/logs/` folder of the data folder.
+
+### Reset the app
+
+To start again from scratch, quit Cecil Desktop, then delete its data folder (or rename it, to keep a copy). On the next launch, the list of sites, the history, the preferences, the accounts and their tokens, and the license are empty: activate your license again, and open your sites again. Your sites themselves are not affected.
+
 ## Send feedback
 
 A bug, an idea, a criticism? Use **Help › Send feedback…**: choose its type (bug, idea or other), give it a title and a description and, optionally, your email to get an answer.

@@ -41,6 +41,16 @@ Cecil Desktop works directly on your files: nothing is moved or converted, and y
 If the folder you open is not a Cecil site yet, Cecil Desktop offers to **create a site in this folder**.
 :::
 
+### The Sites screen
+
+The **Sites** screen lists your sites, as **Cards** or as a **List** (buttons of the toolbar), with their location, the state of their last build and of their last publication. **Filter…** searches their names and folders.
+
+- Click a site, or select it and press `Enter`, to open it. The keyboard arrows move from one site to another.
+- The buttons of a site start its **Preview** (or open it, if it runs), **Build** it and **Publish** it, with the options of the last ones.
+- Right-click a site to open it, show its folder, **Copy path** or **Remove from list** (`Delete`).
+
+A site whose folder was moved or deleted shows **Folder not found**: see [Troubleshooting](troubleshooting.md#folder-not-found).
+
 ## Create a site
 
 Click **New site** (**File › New site…**, `Ctrl/⌘+N`), then follow the 3 steps of the wizard:
@@ -70,7 +80,7 @@ The window of a site has 3 main areas:
 - the **main area** shows the selected section;
 - the **Output** panel, at the bottom (`Ctrl/⌘+J`), shows the logs of the preview, of the builds, of the publications and of the diagnosis.
 
-The **command palette** (`Ctrl/⌘+K`) gives access to your sites and to all the actions, from the keyboard.
+The **command palette** (`Ctrl/⌘+K`) gives access to your sites and to all the actions, from the keyboard. All the shortcuts are listed in [Keyboard shortcuts](shortcuts.md).
 
 ![The command palette, listing the sections of the site, the sites and the actions](/images/screenshots/palette.png)
 
