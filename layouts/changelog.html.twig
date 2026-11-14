@@ -1,0 +1,19 @@
+{#- Changelog of the documentation: the notes of the published releases of the app, exported by its
+    `release.yml` workflow next to the update files (`releases.json`: [{version, date, body}], newest first) ~#}
+{% extends 'docs/page.html.twig' %}
+
+{%- block content ~%}
+{{ page.content }}
+{%- set file = asset(site.download.manifests ~ 'releases.json', {ignore_missing: true, minify: false, fingerprint: false}) %}
+{%- set releases = file.missing ? [] : file.content|json_decode %}
+{%- for release in releases ~%}
+<h2 id="v{{ release.version }}">{{ release.version }} <small class="font-normal text-secondary-500 dark:text-secondary-300"><time datetime="{{ release.date }}">{{ release.date }}</time></small></h2>
+{%- if release.body is not empty ~%}
+{{ release.body|markdown_to_html }}
+{%- else ~%}
+<p>{% trans %}Minor improvements and fixes.{% endtrans %}</p>
+{%- endif ~%}
+{%- else ~%}
+<p>{% trans %}The release notes are not available at the moment.{% endtrans %}</p>
+{%- endfor ~%}
+{%- endblock content ~%}

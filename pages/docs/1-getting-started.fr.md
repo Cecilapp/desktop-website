@@ -41,6 +41,16 @@ Cecil Desktop travaille directement sur vos fichiers : rien n'est déplacé ni c
 Si le dossier ouvert n'est pas encore un site Cecil, Cecil Desktop propose de **créer un site dans ce dossier**.
 :::
 
+### L'écran Sites
+
+L'écran **Sites** liste vos sites, en **Cartes** ou en **Liste** (boutons de la barre d'outils), avec leur emplacement, l'état de leur dernier build et de leur dernière publication. **Filtrer…** cherche dans leurs noms et leurs dossiers.
+
+- Cliquez sur un site, ou sélectionnez-le et appuyez sur `Entrée`, pour l'ouvrir. Les flèches du clavier passent d'un site à l'autre.
+- Les boutons d'un site lancent sa **Preview** (ou l'ouvrent, si elle tourne), le **buildent** et le **publient**, avec les options des derniers.
+- Faites un clic droit sur un site pour l'ouvrir, afficher son dossier, **Copier le chemin** ou le **Retirer de la liste** (`Suppr`).
+
+Un site dont le dossier a été déplacé ou supprimé affiche **Dossier introuvable** : voir [Dépannage](troubleshooting.md#dossier-introuvable).
+
 ## Créer un site
 
 Cliquez sur **Nouveau site** (**Fichier › Nouveau site…**, `Ctrl/⌘+N`), puis suivez les 3 étapes de l'assistant :
@@ -70,7 +80,7 @@ La fenêtre d'un site comporte 3 zones principales :
 - la **zone principale** affiche la section choisie ;
 - le panneau **Sortie**, en bas (`Ctrl/⌘+J`), affiche les logs de la preview, des builds, des publications et du diagnostic.
 
-La **palette de commandes** (`Ctrl/⌘+K`) donne accès à vos sites et à toutes les actions, au clavier.
+La **palette de commandes** (`Ctrl/⌘+K`) donne accès à vos sites et à toutes les actions, au clavier. Tous les raccourcis sont listés dans [Raccourcis clavier](shortcuts.md).
 
 ![La palette de commandes, qui liste les sections du site, les sites et les actions](/images/screenshots/palette.png)
 

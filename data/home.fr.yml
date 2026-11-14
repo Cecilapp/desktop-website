@@ -14,6 +14,7 @@ intro:
 
 features:
   - title: Écrivez, voyez le résultat en direct
+    docs: docs/content
     text: "Parcourez l'arborescence `pages/`, éditez le Markdown avec coloration syntaxique et remplissez le front matter via un formulaire. Enregistrez : la preview se recharge dans votre navigateur."
     points:
       - Barre de mise en forme et raccourcis, plan et nombre de mots
@@ -25,6 +26,7 @@ features:
       image: images/screenshots/content.png
       alt: Éditeur Markdown avec l'arborescence des pages et l'aperçu en direct
   - title: Buildez, vérifiez, corrigez
+    docs: docs/build-preview-diagnosis
     text: "Un clic et Cecil builde le site. Les logs défilent dans le panneau Sortie, et les problèmes sont regroupés par message : un avertissement répété cinquante fois n'apparaît qu'une fois, avec son nombre."
     points:
       - Options de build (brouillons, dry-run, optimisation, URL de base)
@@ -34,6 +36,7 @@ features:
       image: images/screenshots/build.png
       alt: Aperçu d'un site, avec l'état de sa preview, de son build, de sa publication et de son diagnostic, et l'historique de ses builds
   - title: Publiez où vous voulez
+    docs: docs/publishing
     text: Déployez sur Netlify, Vercel, GitHub Pages ou AWS S3 directement via leurs API. Seuls les fichiers modifiés sont envoyés, et chaque déploiement est conservé dans l'historique.
     points:
       - Plusieurs cibles par site (production, recette…)
@@ -43,6 +46,7 @@ features:
       image: images/screenshots/publish.png
       alt: Cible de publication Netlify, avec l'historique des déploiements
   - title: Vos jetons restent en sécurité
+    docs: docs/publishing
     text: Les comptes des hébergeurs sont enregistrés une fois et partagés entre vos sites. Les jetons sont chiffrés avec le trousseau du système et jamais écrits dans vos projets.
     points:
       - Gestionnaire d'identification Windows et Trousseau macOS
@@ -52,6 +56,7 @@ features:
       image: images/screenshots/accounts.png
       alt: Préférences listant le compte Netlify, avec son jeton vérifié
   - title: Confiez le site à ceux qui l'écrivent
+    docs: docs/writing-mode
     text: "Ouvrez un site en mode Rédaction pour un client, un rédacteur ou une équipe : ils retrouvent leurs pages, les médias, la preview et la publication. La configuration, le thème et les builds disparaissent de l'interface."
     points:
       - Accueil avec les dernières pages, les brouillons et les pages à publier
@@ -67,33 +72,43 @@ more:
   title: Et tout ce que vous attendez.
   items:
     - icon: build
+      docs: docs/build-preview-diagnosis
       title: Builds avec options
       text: Brouillons, dry-run, optimisation, URL de base… avec logs en direct, problèmes regroupés par message et historique des builds.
     - icon: preview
+      docs: docs/build-preview-diagnosis
       title: Preview en direct
       text: Un serveur local avec rechargement automatique, ouvert dans votre navigateur. Un par site.
     - icon: sites
+      docs: docs/getting-started
       title: Tous vos sites
       text: Ouvrez un projet, ou glissez son dossier sur la fenêtre. Créez-en un nouveau avec un assistant, et passez de l'un à l'autre.
     - icon: config
+      docs: docs/configuration
       title: Configuration
       text: Un formulaire pour chaque option, ou le YAML brut. Vérifiée comme Cecil la charge, et seul ce que vous modifiez est réécrit.
     - icon: themes
+      docs: docs/themes
       title: Thèmes
       text: Parcourez, installez et mettez à jour les thèmes Cecil publiés sur Packagist, sans Composer.
     - icon: doctor
+      docs: docs/build-preview-diagnosis
       title: Diagnostic
       text: Vérifications du projet, du front matter, du SEO, des liens et du cache, avec des résultats lisibles dans l'application.
     - icon: media
+      docs: docs/content
       title: Médias
       text: Les images et les fichiers du site par dossier, importés par glisser-déposer, avec les pages qui utilisent chacun d'eux.
     - icon: shortcuts
+      docs: docs/shortcuts
       title: Pensé pour le clavier
       text: Palette de commandes avec Ctrl/Cmd+K, Ctrl/Cmd+P pour prévisualiser, Ctrl/Cmd+Maj+B pour builder.
     - icon: desktop
+      docs: docs/preferences
       title: Une vraie application desktop
       text: Thèmes clair et sombre qui suivent le système, menus et notifications natifs, progression dans la barre des tâches. En français et en anglais.
     - icon: updates
+      docs: docs/getting-started
       title: Toujours à jour
       text: L'application télécharge ses mises à jour et les installe au redémarrage, chacune avec la dernière version de Cecil (Windows pour l'instant, macOS bientôt).
 

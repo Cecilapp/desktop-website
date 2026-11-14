@@ -78,6 +78,8 @@ Le menu **Diagnostiquer** de la tuile **Diagnostic** lance les vérifications de
 | **Liens** <span class="tag">Pro</span> | Les liens internes cassés, et en option les liens externes. |
 | **Cache** | Les réglages du cache et la taille des dossiers de cache. |
 
+Les règles de chaque vérification sont décrites dans la documentation des [commandes `doctor` de Cecil](https://cecil.app/documentation/commands/doctor/).
+
 Les diagnostics **SEO** et **Liens** buildent d'abord le site, sans écrire les fichiers : leur progression s'affiche sur la tuile et leur log dans le panneau **Sortie**. Leurs options (icône d'engrenage) permettent de **vérifier les liens externes** (plus lent : une requête par URL), d'**inclure les pages générées** (sections, taxonomies, pagination…) et d'**inclure les suggestions**.
 
 ![Les résultats du diagnostic SEO, regroupés par page](/images/screenshots/diagnosis.png)
