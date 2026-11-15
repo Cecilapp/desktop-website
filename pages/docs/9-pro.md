@@ -37,7 +37,7 @@ The payment is handled by [Polar](https://polar.sh), which sends the license key
 2. Paste your **License key**, received by email after the purchase (it is also in the customer portal).
 3. Click **Activate**: the key is checked online, then stored encrypted with the system keychain.
 
-![The License preferences, to enter the license key](/images/screenshots/license.png)
+![The License preferences, to enter the license key](/images/screenshots/license.png "License preferences")
 
 The license card then shows your name, the purchase date, the versions covered by your updates and this computer.
 

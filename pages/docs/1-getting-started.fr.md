@@ -33,7 +33,7 @@ Au premier lancement, l'écran **Sites** est vide. Pour ajouter un site existant
 - cliquez sur **Ouvrir un dossier** (**Fichier › Ouvrir un dossier…**, `Ctrl/⌘+O`) et choisissez le dossier de votre site Cecil ;
 - ou déposez le dossier du site sur la fenêtre.
 
-![L'écran Sites, qui liste les sites avec l'état de leur dernier build et de leur dernière publication](/images/screenshots/sites.png)
+![L'écran Sites, qui liste les sites avec l'état de leur dernier build et de leur dernière publication](/images/screenshots/sites.png "Écran Sites")
 
 Cecil Desktop travaille directement sur vos fichiers : rien n'est déplacé ni converti, et votre site reste un projet Cecil standard, que vous pouvez toujours builder en ligne de commande.
 
@@ -64,7 +64,7 @@ Cliquez sur **Nouveau site** (**Fichier › Nouveau site…**, `Ctrl/⌘+N`), pu
 
    Vous pouvez aussi ajouter un workflow GitHub Actions qui déploie le site sur GitHub Pages.
 
-![La dernière étape de l'assistant Nouveau site : le point de départ du site](/images/screenshots/new-site.png)
+![La dernière étape de l'assistant Nouveau site : le point de départ du site](/images/screenshots/new-site.png "Assistant Nouveau site")
 
 Cliquez sur **Créer le site** : le site s'ouvre sur son **Aperçu**.
 
@@ -82,7 +82,7 @@ La fenêtre d'un site comporte 3 zones principales :
 
 La **palette de commandes** (`Ctrl/⌘+K`) donne accès à vos sites et à toutes les actions, au clavier. Tous les raccourcis sont listés dans [Raccourcis clavier](shortcuts.md).
 
-![La palette de commandes, qui liste les sections du site, les sites et les actions](/images/screenshots/palette.png)
+![La palette de commandes, qui liste les sections du site, les sites et les actions](/images/screenshots/palette.png "Palette de commandes")
 
 ## Prévisualiser, builder, publier
 

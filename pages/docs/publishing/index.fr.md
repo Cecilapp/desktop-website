@@ -26,13 +26,13 @@ Une cible peut être **partagée** avec les rédacteurs du site, par son profil 
 4. Si besoin, indiquez une **URL de base du build**, pour publier avec une autre URL que celle de la configuration (par ex. pour une cible de préproduction).
 5. Choisissez un compte existant, ou **Nouveau compte…** : nommez-le, collez son jeton (le lien **Créer un jeton** ouvre la page de l'hébergeur), et cliquez sur **Enregistrer**.
 
-![Le formulaire Nouvelle cible, pour Netlify](/images/screenshots/publish-target.png)
+![Le formulaire Nouvelle cible, pour Netlify](/images/screenshots/publish-target.png "Formulaire Nouvelle cible")
 
 Le jeton et la cible sont vérifiés auprès de l'hébergeur avant d'être enregistrés : si quelque chose ne va pas (jeton invalide, droit manquant, dépôt inconnu…), une erreur s'affiche et rien n'est enregistré.
 
 ## Publier
 
-![Une cible de publication Netlify, avec l'historique de ses publications](/images/screenshots/publish.png)
+![Une cible de publication Netlify, avec l'historique de ses publications](/images/screenshots/publish.png "Cible de publication Netlify")
 
 Cliquez sur **Publier** sur une cible, ou publiez sur la cible par défaut (la dernière publiée) depuis la barre d'outils, le menu **Site › Publier** ou `Ctrl/⌘+Maj+P`. Le menu du bouton de la barre d'outils liste toutes les cibles du site.
 
@@ -56,7 +56,7 @@ Pour supprimer une cible, utilisez son menu **…**, puis **Supprimer** : son hi
 
 **Préférences › Comptes** (`Ctrl/⌘+,`) liste vos comptes d'hébergeurs, avec le nombre de cibles qui les utilisent et leur état (**Valide**, **Non vérifié** ou **Échec**).
 
-![Les préférences Comptes, qui listent un compte Netlify avec son jeton vérifié](/images/screenshots/accounts.png)
+![Les préférences Comptes, qui listent un compte Netlify avec son jeton vérifié](/images/screenshots/accounts.png "Préférences Comptes")
 
 Faites un clic droit sur un compte pour :
 

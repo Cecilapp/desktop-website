@@ -6,7 +6,7 @@ description: Browse the pages of a site, edit their Markdown and front matter, a
 
 The **Content** section of a site (`Ctrl/⌘+2`) is where you write: the pages tree on the left, the Markdown editor in the middle, and the **Front matter** and **Outline** of the page on the right.
 
-![The Markdown editor, with the pages tree and the rendered page](/images/screenshots/content.png)
+![The Markdown editor, with the pages tree and the rendered page](/images/screenshots/content.png "Markdown editor")
 
 ## Pages tree
 
@@ -69,7 +69,7 @@ Changes made to an open page in another editor are not reloaded: open the page a
 
 The **Front matter** tab shows the variables of the page as a form:
 
-![The Front matter tab, next to the Markdown editor](/images/screenshots/frontmatter.png)
+![The Front matter tab, next to the Markdown editor](/images/screenshots/frontmatter.png "Front matter tab")
 
 - **Title**, **Description**, **Date** (`YYYY-MM-DD`) and **Draft** are always shown; empty fields are not written to the file;
 - the **taxonomies** of the site (e.g. tags) are lists of terms: type a term then `Enter` or `,` to add it, `×` to remove it;
@@ -100,7 +100,7 @@ To add an image to a page:
 - **paste** it;
 - or click **Insert an image** in the toolbar: pick an image of the site (from `assets/` and `static/`), **Import…** one or more files, or insert one **By its URL**.
 
-![The Insert an image dialog, with the images of the site](/images/screenshots/images.png)
+![The Insert an image dialog, with the images of the site](/images/screenshots/images.png "Insert an image dialog")
 
 Imported images are copied into the `assets/images/` folder of the site, with a slugified name, and inserted as `![alt](/images/name.jpg)`. An image already imported is reused, not copied again.
 

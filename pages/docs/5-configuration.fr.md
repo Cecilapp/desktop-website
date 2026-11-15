@@ -10,7 +10,7 @@ Seules les entrées modifiées sont réécrites : les commentaires et le reste d
 
 ## Formulaire
 
-![Le formulaire de configuration d'un site](/images/screenshots/config.png)
+![Le formulaire de configuration d'un site](/images/screenshots/config.png "Formulaire de configuration")
 
 La table des matières, à droite, mène à chaque groupe d'options :
 

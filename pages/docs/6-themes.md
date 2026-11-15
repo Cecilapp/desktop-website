@@ -15,7 +15,7 @@ The catalog lists the themes published on [Packagist](https://packagist.org/?typ
 
 **Refresh catalog** loads it again (it is kept for 6 hours).
 
-![The catalog of the themes, with their screenshot, version and description](/images/screenshots/themes.png)
+![The catalog of the themes, with their screenshot, version and description](/images/screenshots/themes.png "Themes catalog")
 
 ## Install a theme
 

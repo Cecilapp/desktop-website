@@ -15,7 +15,7 @@ Le catalogue liste les thèmes publiés sur [Packagist](https://packagist.org/?t
 
 **Actualiser le catalogue** le recharge (il est conservé 6 heures).
 
-![Le catalogue des thèmes, avec leur capture d'écran, leur version et leur description](/images/screenshots/themes.png)
+![Le catalogue des thèmes, avec leur capture d'écran, leur version et leur description](/images/screenshots/themes.png "Catalogue des thèmes")
 
 ## Installer un thème
 

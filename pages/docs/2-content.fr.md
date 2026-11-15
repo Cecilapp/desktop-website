@@ -6,7 +6,7 @@ description: Parcourez les pages d'un site, éditez leur Markdown et leur front 
 
 La section **Contenu** d'un site (`Ctrl/⌘+2`) est l'endroit où vous écrivez : l'arborescence des pages à gauche, l'éditeur Markdown au centre, et le **Front matter** et le **Plan** de la page à droite.
 
-![L'éditeur Markdown, avec l'arborescence des pages et la page rendue](/images/screenshots/content.png)
+![L'éditeur Markdown, avec l'arborescence des pages et la page rendue](/images/screenshots/content.png "Éditeur Markdown")
 
 ## Arborescence des pages
 
@@ -69,7 +69,7 @@ Les modifications faites à une page ouverte dans un autre éditeur ne sont pas 
 
 L'onglet **Front matter** présente les variables de la page sous forme de formulaire :
 
-![L'onglet Front matter, à côté de l'éditeur Markdown](/images/screenshots/frontmatter.png)
+![L'onglet Front matter, à côté de l'éditeur Markdown](/images/screenshots/frontmatter.png "Onglet Front matter")
 
 - **Titre**, **Description**, **Date** (`AAAA-MM-JJ`) et **Brouillon** sont toujours affichés ; les champs vides ne sont pas écrits dans le fichier ;
 - les **taxonomies** du site (par ex. les tags) sont des listes de termes : saisissez un terme puis `Entrée` ou `,` pour l'ajouter, `×` pour le retirer ;
@@ -100,7 +100,7 @@ Pour ajouter une image à une page :
 - **collez**-la ;
 - ou cliquez sur **Insérer une image** dans la barre d'outils : choisissez une image du site (dans `assets/` et `static/`), **Importer…** un ou plusieurs fichiers, ou insérez-en une **Par son URL**.
 
-![La boîte de dialogue Insérer une image, avec les images du site](/images/screenshots/images.png)
+![La boîte de dialogue Insérer une image, avec les images du site](/images/screenshots/images.png "Boîte de dialogue Insérer une image")
 
 Les images importées sont copiées dans le dossier `assets/images/` du site, avec un nom converti en slug, et insérées sous la forme `![alt](/images/nom.jpg)`. Une image déjà importée est réutilisée, pas copiée à nouveau.
 
