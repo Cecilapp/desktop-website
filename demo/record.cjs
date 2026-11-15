@@ -1,10 +1,12 @@
 // Records the demo scenario in the running app (see launch.ps1): screencast frames + timeline.json.
 // usage: node record.cjs <outdir> [dark] [dry]
-// - scenario, in Writing mode: Sites > SITE > Home > PAGE > a typed line > Save > Publish (real deployment on TARGET)
-// - dry: stops before Save (nothing is written or published)
+// - scenario, in Writing mode: Sites > SITE > Home > PAGE > a typed line > Save > FORM_PAGE, in the Form view:
+//   the level of the skill SKILL > Save > Publish (real deployment on TARGET)
+// - dry: stops before Publish (the pages are saved: revert them; nothing is published)
 // - the layout of the app (panels, views, folders) is restored at the end
 const SITE = 'arnaudligny.fr', PAGE = 'a-propos.md', TARGET = 'Production';
 const LINE = '* les pages sont éditées avec [Cecil Desktop](https://desktop.cecil.app)';
+const FORM_PAGE = 'cv.md', BLOCK = 'Compétences', SKILL = 'Claude Code', LEVEL = '90'; // a page without text: it opens in the Form view
 
 const { chromium } = require('playwright-core');
 const { execFileSync } = require('child_process');
@@ -118,14 +120,29 @@ const CURSOR = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" v
   await page.keyboard.type(LINE, { delay: 28 });
   await sleep(1200);
   mark('typed');
-  if (dry) {
-    await s.send('Page.stopScreencast');
-    await page.screenshot({ path: path.join(out, 'dry.png') });
-    await restore(); console.log('dry run: nothing saved, frames', frames.length); process.exit(0);
-  }
   // 4. save
   await clickOn({ sel: 'button[data-action="save"]' }, { after: 1500 });
-  // 5. publish: the site is built, then deployed (confirmed, if the app asks)
+  // 5. the CV, in the Form view: its outline goes to the skills, one of them is unfolded and its level changed
+  await clickOn({ sel: `[data-tree-item][data-path="${FORM_PAGE}"]` }, { after: 2200 });
+  mark('form');
+  await clickOn({ sel: '#pane-outline button.outline-item', text: BLOCK }, { after: 1200 });
+  await clickOn({ sel: 'button.row-summary', text: SKILL }, { after: 900 });
+  const level = await rectOf('input[name$=".level"]');
+  await clickOn({ sel: 'input[name$=".level"]' }, { dx: Math.min(80, level.width / 2), after: 300 });
+  await page.keyboard.press('Control+A'); await sleep(300);
+  await page.keyboard.type(LEVEL, { delay: 180 });
+  await sleep(1000);
+  // 6. save
+  await clickOn({ sel: 'button[data-action="save"]' }, { after: 1500 });
+  mark('saved');
+  if (dry) {
+    await s.send('Page.stopScreencast');
+    marks.push({ name: 'end', t: Date.now() / 1000 });
+    fs.writeFileSync(path.join(out, 'timeline.json'), JSON.stringify({ frames, marks }, null, 1));
+    await page.screenshot({ path: path.join(out, 'dry.png') });
+    await restore(); console.log('dry run: pages saved (revert them), nothing published, frames', frames.length); process.exit(0);
+  }
+  // 7. publish: the site is built, then deployed (confirmed, if the app asks)
   await clickOn({ sel: 'button[data-action="publish"]' }, { after: 800 });
   mark('deploy');
   let st, confirmed = false; const t0 = Date.now(), last = before.deploy ? before.deploy.id : 0, id = () => st.deploy ? st.deploy.id : 0;
