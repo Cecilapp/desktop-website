@@ -54,13 +54,13 @@ Compile the CSS and preview the site (in two terminals):
 ```bash
 composer css:watch        # assets/tailwind.css → assets/site.css (homepage)
 composer css:watch:docs   # assets/tailwind-docs.css → assets/styles.css (documentation, Docs theme)
-composer serve       # http://localhost:8000
+composer serve            # http://localhost:8000
 ```
 
 ## Build
 
 ```bash
-composer build       # minified CSS + optimized site in _site/
+composer build  # minified CSS + optimized site in _site/
 ```
 
 ## License
