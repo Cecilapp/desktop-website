@@ -10,7 +10,7 @@ Only the changed entries are rewritten: the comments and the rest of the file ar
 
 ## Form
 
-![The Configuration form of a site](/images/screenshots/config.png)
+![The Configuration form of a site](/images/screenshots/config.png "Configuration form")
 
 The table of contents, on the right, goes to each group of options:
 

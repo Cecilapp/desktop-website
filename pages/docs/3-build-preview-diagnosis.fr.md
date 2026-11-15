@@ -6,7 +6,7 @@ description: Prévisualisez votre site avec rechargement automatique, buildez-le
 
 L'**Aperçu** d'un site (`Ctrl/⌘+1`) réunit ses 4 tuiles : **Preview**, **Build**, **Publication** et **Diagnostic**, avec l'historique des builds en dessous et les informations sur le site à droite.
 
-![L'Aperçu d'un site, avec l'état de sa preview, de son build, de sa publication et de son diagnostic, et l'historique de ses builds](/images/screenshots/build.png)
+![L'Aperçu d'un site, avec l'état de sa preview, de son build, de sa publication et de son diagnostic, et l'historique de ses builds](/images/screenshots/build.png "Aperçu d'un site")
 
 La barre d'outils, en haut de chaque écran d'un site, donne accès aux mêmes actions : **Preview**, **Builder** et **Publier**.
 
@@ -82,7 +82,7 @@ Les règles de chaque vérification sont décrites dans la documentation des [co
 
 Les diagnostics **SEO** et **Liens** buildent d'abord le site, sans écrire les fichiers : leur progression s'affiche sur la tuile et leur log dans le panneau **Sortie**. Leurs options (icône d'engrenage) permettent de **vérifier les liens externes** (plus lent : une requête par URL), d'**inclure les pages générées** (sections, taxonomies, pagination…) et d'**inclure les suggestions**.
 
-![Les résultats du diagnostic SEO, regroupés par page](/images/screenshots/diagnosis.png)
+![Les résultats du diagnostic SEO, regroupés par page](/images/screenshots/diagnosis.png "Diagnostic SEO")
 
 Les résultats s'ouvrent à la fin du diagnostic (**Résultats** pour les rouvrir), avec les **problèmes** en rouge, les points **à améliorer** en orange et les suggestions en gris. Dans les résultats du diagnostic **Front matter**, cliquez sur le nom d'un fichier pour ouvrir la page dans l'éditeur et la corriger.
 
@@ -90,7 +90,7 @@ Les résultats s'ouvrent à la fin du diagnostic (**Résultats** pour les rouvri
 
 Le panneau **Sortie**, en bas des écrans d'un site (`Ctrl/⌘+J`), a 4 onglets : **Preview**, **Build**, **Publication** et **Diagnostic**. Il s'ouvre sur le bon onglet quand vous lancez l'une de ces actions, et garde les 500 dernières lignes.
 
-![Le panneau Sortie, avec le log du dernier build](/images/screenshots/output.png)
+![Le panneau Sortie, avec le log du dernier build](/images/screenshots/output.png "Panneau Sortie")
 
 Dans les onglets **Build** et **Diagnostic**, **Lignes affichées** filtre le log : toutes les lignes, étapes et problèmes, avertissements et erreurs, ou erreurs seulement. Le filtre par défaut se règle dans les **Préférences**.
 

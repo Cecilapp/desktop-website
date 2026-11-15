@@ -27,13 +27,13 @@ A target can be **shared** with the writers of the site, through its profile: ea
 4. Optionally, set a **Base URL of the build**, to publish with another URL than the one of the configuration (e.g. for a staging target).
 5. Choose an existing account, or **New account…**: name it, paste its token (the **Create a token** link opens the page of the provider), and click **Save**.
 
-![The New target form, for Netlify](/images/screenshots/publish-target.png)
+![The New target form, for Netlify](/images/screenshots/publish-target.png "New target form")
 
 The token and the target are checked with the provider before they are saved: if something is wrong (invalid token, missing permission, unknown repository…), an error is shown and nothing is saved.
 
 ## Publish
 
-![A Netlify publishing target, with the history of its publications](/images/screenshots/publish.png)
+![A Netlify publishing target, with the history of its publications](/images/screenshots/publish.png "Netlify publishing target")
 
 Click **Publish** on a target, or publish to the default target (the last one published) from the toolbar, the **Site › Publish** menu or `Ctrl/⌘+Shift+P`. The menu of the toolbar button lists all the targets of the site.
 
@@ -57,7 +57,7 @@ To delete a target, use its **…** menu, then **Delete**: its history is delete
 
 **Preferences › Accounts** (`Ctrl/⌘+,`) lists your hosting accounts, with the number of targets using them and their status (**Valid**, **Not checked** or **Failed**).
 
-![The Accounts preferences, listing a Netlify account with its token checked](/images/screenshots/accounts.png)
+![The Accounts preferences, listing a Netlify account with its token checked](/images/screenshots/accounts.png "Accounts preferences")
 
 Right-click an account to:
 

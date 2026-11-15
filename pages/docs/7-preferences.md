@@ -6,7 +6,7 @@ description: Language and theme of the app, builds and preview, editor, updates 
 
 **Preferences** (`Ctrl/⌘+,`, or **File › Preferences**) open in their own window. There is no save button: changes apply immediately.
 
-![The General preferences: language, theme and startup](/images/screenshots/preferences.png)
+![The General preferences: language, theme and startup](/images/screenshots/preferences.png "General preferences")
 
 ## General
 

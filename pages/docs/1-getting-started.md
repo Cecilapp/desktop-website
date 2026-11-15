@@ -33,7 +33,7 @@ On the first launch, the **Sites** screen is empty. To add a site you already ha
 - click **Open folder** (**File › Open folder…**, `Ctrl/⌘+O`) and pick the folder of your Cecil site;
 - drop the folder of the site on the window.
 
-![The Sites screen, listing the sites with the state of their last build and publication](/images/screenshots/sites.png)
+![The Sites screen, listing the sites with the state of their last build and publication](/images/screenshots/sites.png "Sites screen")
 
 Cecil Desktop works directly on your files: nothing is moved or converted, and your site stays a standard Cecil project that you can still build from the command line.
 
@@ -64,7 +64,7 @@ Click **New site** (**File › New site…**, `Ctrl/⌘+N`), then follow the 3 s
 
    You can also add a GitHub Actions workflow that deploys the site to GitHub Pages.
 
-![The last step of the New site wizard: the starting point of the site](/images/screenshots/new-site.png)
+![The last step of the New site wizard: the starting point of the site](/images/screenshots/new-site.png "New site wizard")
 
 Click **Create site**: the site opens on its **Overview**.
 
@@ -82,7 +82,7 @@ The window of a site has 3 main areas:
 
 The **command palette** (`Ctrl/⌘+K`) gives access to your sites and to all the actions, from the keyboard. All the shortcuts are listed in [Keyboard shortcuts](shortcuts.md).
 
-![The command palette, listing the sections of the site, the sites and the actions](/images/screenshots/palette.png)
+![The command palette, listing the sections of the site, the sites and the actions](/images/screenshots/palette.png "Command palette")
 
 ## Preview, build, publish
 

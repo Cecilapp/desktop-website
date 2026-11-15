@@ -37,7 +37,7 @@ Le paiement est géré par [Polar](https://polar.sh), qui envoie la clé de lice
 2. Collez votre **Clé de licence**, reçue par e-mail après l'achat (elle est aussi dans le portail client).
 3. Cliquez sur **Activer** : la clé est vérifiée en ligne, puis enregistrée chiffrée avec le trousseau du système.
 
-![Les préférences Licence, pour saisir la clé de licence](/images/screenshots/license.png)
+![Les préférences Licence, pour saisir la clé de licence](/images/screenshots/license.png "Préférences Licence")
 
 La carte de la licence affiche alors votre nom, la date d'achat, les versions couvertes par vos mises à jour et cet ordinateur.
 

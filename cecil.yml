@@ -125,6 +125,7 @@ taxonomies:
 pages:
   body:
     images:
+      caption: true # the title of an image (`![alt](src "title")`) is rendered as a `<figcaption>`
       dark_suffix: .dark # e.g. `sites.dark.png` is the dark variant of `sites.png` (as `layouts.images.dark_suffix`)
 output:
   pagetypeformats:

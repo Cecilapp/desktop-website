@@ -6,7 +6,7 @@ description: Preview your site with live reload, build it with options, read its
 
 The **Overview** of a site (`Ctrl/⌘+1`) gathers its 4 tiles: **Preview**, **Build**, **Publishing** and **Diagnosis**, with the history of the builds below and the information about the site on the right.
 
-![The Overview of a site, with the state of its preview, build, publishing and diagnosis, and the history of its builds](/images/screenshots/build.png)
+![The Overview of a site, with the state of its preview, build, publishing and diagnosis, and the history of its builds](/images/screenshots/build.png "Overview of a site")
 
 The toolbar, at the top of every screen of a site, gives access to the same actions: **Preview**, **Build** and **Publish**.
 
@@ -82,7 +82,7 @@ The rules of each check are described in the documentation of the [`doctor` comm
 
 The **SEO** and **Links** diagnoses build the site first, without writing the files: their progress is shown on the tile and their log in the **Output** panel. Their options (gear icon) let you **check external links** (slower: one request per URL), **include generated pages** (sections, taxonomies, pagination…) and **include suggestions**.
 
-![The results of the SEO diagnosis, grouped by page](/images/screenshots/diagnosis.png)
+![The results of the SEO diagnosis, grouped by page](/images/screenshots/diagnosis.png "SEO diagnosis")
 
 The results open when the diagnosis is done (**Results** to open them again), with the **issues** in red, the points **to improve** in amber and the suggestions in grey. In the results of the **Front matter** diagnosis, click the name of a file to open the page in the editor and fix it.
 
@@ -90,7 +90,7 @@ The results open when the diagnosis is done (**Results** to open them again), wi
 
 The **Output** panel, at the bottom of the screens of a site (`Ctrl/⌘+J`), has 4 tabs: **Preview**, **Build**, **Publishing** and **Diagnosis**. It opens on the right tab when you start one of these actions, and keeps the last 500 lines.
 
-![The Output panel, showing the log of the last build](/images/screenshots/output.png)
+![The Output panel, showing the log of the last build](/images/screenshots/output.png "Output panel")
 
 In the **Build** and **Diagnosis** tabs, **Lines shown** filters the log: all lines, steps and issues, warnings and errors, or errors only. The default filter is set in **Preferences**.
 

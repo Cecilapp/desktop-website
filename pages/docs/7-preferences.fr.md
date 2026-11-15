@@ -6,7 +6,7 @@ description: Langue et thème de l'application, builds et preview, éditeur, mis
 
 Les **Préférences** (`Ctrl/⌘+,`, ou **Fichier › Préférences**) s'ouvrent dans leur propre fenêtre. Il n'y a pas de bouton d'enregistrement : les changements s'appliquent immédiatement.
 
-![Les préférences générales : langue, thème et démarrage](/images/screenshots/preferences.png)
+![Les préférences générales : langue, thème et démarrage](/images/screenshots/preferences.png "Préférences générales")
 
 ## Général
 
