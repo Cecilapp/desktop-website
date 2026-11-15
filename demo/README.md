@@ -2,7 +2,7 @@
 
 Records `assets/videos/demo.mp4` and `demo.dark.mp4` (hero of the home page) from the real Cecil Desktop app, installed on Windows, driven with Playwright through the Chrome DevTools Protocol.
 
-Scenario (`record.cjs`), in Writing mode: Sites → open `SITE` → Home → `PAGE` → type a line → Save → Publish, confirmed (**real deployment** on `TARGET`: the site is built, then sent to its hosting provider). `SITE`, `PAGE` and `TARGET` are set at the top of `record.cjs`.
+Scenario (`record.cjs`), in Writing mode: Sites → open `SITE` → Home → `PAGE` → type a line → Save → `FORM_PAGE` (the CV, a page without text: it opens in the Form view) → its outline goes to the skills, the level of `SKILL` is changed → Save → Publish, confirmed (**real deployment** on `TARGET`: the site is built, then sent to its hosting provider). `SITE`, `PAGE`, `FORM_PAGE`, `SKILL` and `TARGET` are set at the top of `record.cjs`.
 
 ## Requirements
 
@@ -15,15 +15,15 @@ Scenario (`record.cjs`), in Writing mode: Sites → open `SITE` → Home → `PA
 ```sh
 php setprefs.php appearance=system language=en open_last_site=false  # English UI, starts on the Sites screen; "system" theme, for the emulated dark one
 npm run launch        # restarts the app: 1280×800 window, DevTools port 9333
-node record.cjs rec-light dry  # rehearsal: stops before Save, nothing is written or published
-npm run record        # light; then revert the edited page: git -C <site> checkout -- pages/a-propos.md
-npm run record:dark   # dark (emulated prefers-color-scheme); revert the page again
+node record.cjs rec-light dry  # rehearsal: stops before Publish; the pages are saved, revert them
+npm run record        # light; then revert the edited pages: git -C <site> checkout -- pages/a-propos.md pages/cv.md
+npm run record:dark   # dark (emulated prefers-color-scheme); revert the pages again
 npm run make          # → ../assets/videos/demo.mp4
 npm run make:dark     # → ../assets/videos/demo.dark.mp4
 php setprefs.php appearance=system language=system open_last_site=true  # restores the preferences
 ```
 
-The typed line stays online after the recordings: publish the site once more, with the page reverted, to remove it.
+The edits stay online after the recordings: publish the site once more, with the pages reverted, to remove them.
 
 Notes:
 
