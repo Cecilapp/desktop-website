@@ -20,6 +20,8 @@ During the beta, every feature is available without a license.
 | Diagnoses: configuration, front matter, cache | ✓ | ✓ |
 | [Diagnoses: SEO and links](build-preview-diagnosis.md#diagnosis) | | ✓ |
 | [Form of the pages schema](content.md#pages-schema) | In Writing mode | ✓ |
+| [Git sync](git.md): opening a site from its repository, state, resolution of conflicts | ✓ | ✓ |
+| [Git sync](git.md): Fetch and Send | In Writing mode | ✓ |
 | [Writing mode](writing-mode.md), opening a site in Writing mode for everyone | ✓ | ✓ |
 | [Writing profile](writing-mode.md#hand-a-site-to-a-writer): editable sections, rights on the pages, shared targets | | ✓ |
 

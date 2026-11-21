@@ -34,7 +34,7 @@ The **Themes** and **Configuration** sections, the builds, the diagnoses and the
 
 ## Hand a site to a writer
 
-The manager describes what the writers can do in **Configuration › Writing**, then versions the site with them (Git, a synchronized folder…):
+The manager describes what the writers can do in **Configuration › Writing**, then versions the site with them (Git, a synchronized folder…). With Git, writers [sync the site](git.md) from the app, for free:
 
 1. Open the site in Management mode, then **Configuration** (`Ctrl/⌘+6`) › **Writing**.
 2. Check **Open this site in Writing mode**: it applies to anyone who opens the folder; you stay in Management mode on this computer.

@@ -31,7 +31,8 @@ La signature est en cours.
 Au premier lancement, l'écran **Sites** est vide. Pour ajouter un site existant :
 
 - cliquez sur **Ouvrir un dossier** (**Fichier › Ouvrir un dossier…**, `Ctrl/⌘+O`) et choisissez le dossier de votre site Cecil ;
-- ou déposez le dossier du site sur la fenêtre.
+- déposez le dossier du site sur la fenêtre ;
+- ou cliquez sur **Depuis un dépôt Git** (**Fichier › Ouvrir depuis un dépôt Git…**) pour télécharger un site depuis son dépôt : voir [Synchronisation Git](git.md#ouvrir-un-site-depuis-un-depot-git).
 
 ![L'écran Sites, qui liste les sites avec l'état de leur dernier build et de leur dernière publication](/images/screenshots/sites.png "Écran Sites")
 
