@@ -34,7 +34,7 @@ Les sections **Thèmes** et **Configuration**, les builds, les diagnostics et le
 
 ## Confier un site à un rédacteur
 
-Le responsable décrit ce que peuvent faire les rédacteurs dans **Configuration › Rédaction**, puis versionne le site avec eux (Git, dossier synchronisé…) :
+Le responsable décrit ce que peuvent faire les rédacteurs dans **Configuration › Rédaction**, puis versionne le site avec eux (Git, dossier synchronisé…). Avec Git, les rédacteurs [synchronisent le site](git.md) depuis l'application, gratuitement :
 
 1. Ouvrez le site en mode Gestion, puis **Configuration** (`Ctrl/⌘+6`) › **Rédaction**.
 2. Cochez **Ouvrir ce site en mode Rédaction** : cela vaut pour toute personne qui ouvre le dossier ; vous restez en mode Gestion sur cet ordinateur.

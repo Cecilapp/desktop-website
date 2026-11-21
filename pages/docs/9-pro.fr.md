@@ -20,6 +20,8 @@ Pendant la bêta, toutes les fonctions sont disponibles sans licence.
 | Diagnostics : configuration, front matter, cache | ✓ | ✓ |
 | [Diagnostics : SEO et liens](build-preview-diagnosis.md#diagnostic) | | ✓ |
 | [Formulaire du schéma de pages](content.md#schema-de-pages) | En mode Rédaction | ✓ |
+| [Synchronisation Git](git.md) : ouverture d'un site depuis son dépôt, état, résolution des conflits | ✓ | ✓ |
+| [Synchronisation Git](git.md) : Récupérer et Envoyer | En mode Rédaction | ✓ |
 | [Mode Rédaction](writing-mode.md), ouverture d'un site en mode Rédaction pour tout le monde | ✓ | ✓ |
 | [Profil de rédaction](writing-mode.md#confier-un-site-a-un-redacteur) : sections modifiables, droits sur les pages, cibles partagées | | ✓ |
 

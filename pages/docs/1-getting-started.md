@@ -31,7 +31,8 @@ Signing is on its way.
 On the first launch, the **Sites** screen is empty. To add a site you already have, do one of the following:
 
 - click **Open folder** (**File › Open folder…**, `Ctrl/⌘+O`) and pick the folder of your Cecil site;
-- drop the folder of the site on the window.
+- drop the folder of the site on the window;
+- click **From a Git repository** (**File › Open from a Git repository…**) to download a site from its repository: see [Git sync](git.md#open-a-site-from-a-git-repository).
 
 ![The Sites screen, listing the sites with the state of their last build and publication](/images/screenshots/sites.png "Sites screen")
 
