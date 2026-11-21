@@ -83,6 +83,10 @@ more:
       docs: docs/getting-started
       title: All your sites
       text: Open a project, or drop its folder on the window. Create a new one with a wizard, and switch between them.
+    - icon: git
+      docs: docs/git
+      title: Git sync
+      text: Open a site from its repository, fetch the changes of the others and send yours, conflicts included. No Git to install.
     - icon: config
       docs: docs/configuration
       title: Configuration
@@ -126,6 +130,7 @@ pricing:
         - Publish to Netlify, Vercel, GitHub Pages or S3 (1 target per site)
         - Themes and basic diagnostics
         - Writing mode, for every site a manager hands you
+        - Open a site from its Git repository, and sync it in Writing mode
       cta: Download free
     - name: Pro
       price: 49 €
@@ -134,6 +139,7 @@ pricing:
       features:
         - Unlimited sites
         - Several publication targets per site
+        - Git sync in Management mode (fetch and send)
         - SEO and links diagnostics
         - Form of the pages schema
         - "Writing profile: editable sections, rights on the pages, shared targets"
@@ -151,6 +157,8 @@ faq:
       answer: "A desktop application to manage your [Cecil](https://cecil.app) sites: create, edit, build, preview and publish them without typing a single command."
     - question: Do I need to install PHP or Cecil?
       answer: No. Cecil Desktop embeds PHP and Cecil. The embedded Cecil version is shown in the app, and is updated with each release.
+    - question: Do I need to install Git?
+      answer: "No. Git sync is built in: Cecil Desktop opens a site from its repository (GitHub, GitLab, Gitea, Codeberg…), fetches the changes of the others and sends yours, without Git on your computer. Your repository stays a standard Git repository, that you can keep using from your terminal. See [Git sync](/docs/git/)."
     - question: Does it replace my code editor?
       answer: No. The built-in editor is made for content (Markdown and front matter), and a page opens in your favorite editor in one click. Templates and assets stay in your code editor.
     - question: Can I give a site to a non-technical writer?

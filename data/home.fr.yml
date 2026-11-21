@@ -83,6 +83,10 @@ more:
       docs: docs/getting-started
       title: Tous vos sites
       text: Ouvrez un projet, ou glissez son dossier sur la fenêtre. Créez-en un nouveau avec un assistant, et passez de l'un à l'autre.
+    - icon: git
+      docs: docs/git
+      title: Synchronisation Git
+      text: Ouvrez un site depuis son dépôt, récupérez les modifications des autres et envoyez les vôtres, conflits compris. Aucun Git à installer.
     - icon: config
       docs: docs/configuration
       title: Configuration
@@ -126,6 +130,7 @@ pricing:
         - Publication vers Netlify, Vercel, GitHub Pages ou S3 (1 cible par site)
         - Thèmes et diagnostics de base
         - Mode Rédaction, pour tous les sites qu'un responsable vous confie
+        - Ouverture d'un site depuis son dépôt Git, synchronisation en mode Rédaction
       cta: Télécharger gratuitement
     - name: Pro
       price: 49 €
@@ -134,6 +139,7 @@ pricing:
       features:
         - Sites illimités
         - Plusieurs cibles de publication par site
+        - Synchronisation Git en mode Gestion (récupérer et envoyer)
         - Diagnostics SEO et liens
         - Formulaire du schéma de pages
         - "Profil de rédaction : sections modifiables, droits sur les pages, cibles partagées"
@@ -151,6 +157,8 @@ faq:
       answer: "Une application desktop pour gérer vos sites [Cecil](https://cecil.app) : les créer, les éditer, les builder, les prévisualiser et les publier sans taper une seule commande."
     - question: Dois-je installer PHP ou Cecil ?
       answer: Non. Cecil Desktop embarque PHP et Cecil. La version de Cecil embarquée est affichée dans l'application, et mise à jour à chaque release.
+    - question: Dois-je installer Git ?
+      answer: "Non. La synchronisation Git est intégrée : Cecil Desktop ouvre un site depuis son dépôt (GitHub, GitLab, Gitea, Codeberg…), récupère les modifications des autres et envoie les vôtres, sans Git sur votre ordinateur. Votre dépôt reste un dépôt Git standard, que vous pouvez continuer d'utiliser depuis votre terminal. Voir [Synchronisation Git](/fr/docs/git/)."
     - question: Remplace-t-il mon éditeur de code ?
       answer: Non. L'éditeur intégré est fait pour le contenu (Markdown et front matter), et une page s'ouvre dans votre éditeur préféré en un clic. Les templates et les assets restent dans votre éditeur de code.
     - question: Puis-je confier un site à un rédacteur non technique ?
