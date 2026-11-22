@@ -10,7 +10,7 @@ When a site is a Git repository (GitHub, GitLab, Gitea, Codeberg…), Cecil Desk
 The repository stays a standard Git repository: the manager of the site can keep using a terminal or a code editor on the same folder.
 
 :::info
-**Fetch** and **Send** are part of [Pro](pro.md) in Management mode, and free in [Writing mode](writing-mode.md): the writer of a site syncs it without a license. Opening a site from a repository, the state of the repository and the resolution of a merge are free everywhere. During the beta, everything is available without a license.
+Git sync is free, in Management mode as in [Writing mode](writing-mode.md): opening a site from a repository, the state of the repository, **Fetch**, **Send** and the resolution of a merge.
 :::
 
 ## Open a site from a Git repository

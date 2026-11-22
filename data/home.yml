@@ -117,33 +117,33 @@ more:
       text: The app downloads its updates and installs them on restart, each one with the latest Cecil inside (Windows for now, macOS soon).
 
 pricing:
-  title: Free for 1 site. One license to go further.
-  text: Pay once, no subscription. During the beta, everything is included.
+  title: Free for all your sites. Pro for your clients' sites.
+  text: A yearly subscription, cancel anytime. During the beta, everything is included.
   plans:
     - name: Free
       price: 0 €
       period: forever
-      text: To discover Cecil Desktop and manage your first site.
+      text: To discover Cecil Desktop and manage all your sites.
       features:
-        - 1 site
+        - Unlimited sites
         - Build, preview and content editing
         - Publish to Netlify, Vercel, GitHub Pages or S3 (1 target per site)
         - Themes and basic diagnostics
+        - Git sync (open, fetch, send)
         - Writing mode, for every site a manager hands you
-        - Open a site from its Git repository, and sync it in Writing mode
       cta: Download free
     - name: Pro
-      price: 49 €
-      period: one-time payment
-      text: For managing several sites, from freelancers to agencies.
+      price: 59 €
+      period: per year
+      text: For freelancers and agencies managing the sites of their clients.
       features:
-        - Unlimited sites
+        - 5 Pro sites of your choice, and +5 Pro sites for 29 € per year
         - Several publication targets per site
-        - Git sync in Management mode (fetch and send)
         - SEO and links diagnostics
         - Form of the pages schema
         - "Writing profile: editable sections, rights on the pages, shared targets"
-        - 1 year of updates included, on 3 computers
+        - All updates, on 3 computers
+        - "Cancel anytime: back to the free version at the end of the period"
         - Supports the development of Cecil
       cta: Get Cecil Desktop Pro
       url: https://buy.polar.sh/polar_cl_J1QrbXjCKqohqt6HgHuNEfX7XH80MbfYtDKoa2BJ3CQ
@@ -164,13 +164,15 @@ faq:
     - question: Can I give a site to a non-technical writer?
       answer: "Yes. Open the site in [Writing mode](/docs/writing-mode/) for everyone, with a small profile file versioned with the site (`.cecil-desktop.yml`): the writer gets the pages of the sections you chose, the media, the preview and publishing, and nothing else. They publish with their own hosting account: the site never contains a token."
     - question: Does the writer need a Pro license?
-      answer: "No. The Writing mode is free, and a site opened in Writing mode by its profile doesn't count in the 1 site of the free version. Pro is for the manager, to choose the editable sections, the rights on the pages and the shared publishing targets."
+      answer: "No. The Writing mode is free. Pro is for the manager, to choose the editable sections, the rights on the pages and the shared publishing targets: every writer of a Pro site benefits from them, without a license."
     - question: Is the Writing mode a security feature?
       answer: "No. It is a mode of the interface, to make writing simpler: anyone can switch back to the Management mode on their computer (after a confirmation), and the files of the site belong to whoever has them on their disk."
     - question: Where are my sites and tokens stored?
       answer: "Your sites stay where they are, on your disk: Cecil Desktop doesn't move or convert anything. Hosting tokens are encrypted with the system keychain."
-    - question: What happens after the first year of a Pro license?
-      answer: "Your license is perpetual: the Pro features stay available in every version released during your year of updates. The next versions work like the free version, without taking anything away (your sites stay usable): renew only if you want their Pro features."
+    - question: What is a Pro site?
+      answer: "A site the Pro features apply to. The license gives 5 of them, that you choose in the app, and packs of 5 Pro sites can be added for 29 € per year. Your other sites stay managed with the features of the free version. A freed slot can be given to another site 30 days later. See [Cecil Desktop Pro](/docs/pro/)."
+    - question: What happens if I stop the Pro subscription?
+      answer: "The Pro features stay available until the end of the paid period. After that, Cecil Desktop works like the free version, without taking anything away: your sites, your targets and your writing profiles stay usable, only adding more is limited."
     - question: Which systems are supported?
       answer: Windows 10+ and macOS 12+ (Intel and Apple Silicon). Linux is planned.
     - question: Why does my system warn me when installing?

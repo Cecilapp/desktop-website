@@ -14,7 +14,7 @@ A **target** says where a site is published: a hosting provider, its settings (s
 An account holds the token (or the keys) of a hosting provider. It is stored once and shared between your sites: add it with your first target, or in **Preferences › Accounts**. Tokens are checked with the provider, then encrypted with the system keychain (Windows Credential Manager, macOS Keychain); they are never written in your sites.
 
 :::info
-The free version allows 1 target per site. [Cecil Desktop Pro](../pro.md) allows several. There is no limit on the number of accounts.
+The free version allows 1 target per site. [Cecil Desktop Pro](../pro.md) allows several on your Pro sites. There is no limit on the number of accounts.
 :::
 
 A target can be **shared** with the writers of the site, through its profile: each writer then publishes to it with their own account. See [Writing mode](../writing-mode.md#shared-targets).

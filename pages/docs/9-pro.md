@@ -1,10 +1,10 @@
 ---
 title: Cecil Desktop Pro
-description: What Cecil Desktop Pro adds, and how to activate, check, move and renew your license.
+description: What Cecil Desktop Pro adds, how to choose your Pro sites, and how to activate, check, move and renew your license.
 ---
 # Cecil Desktop Pro
 
-Cecil Desktop is free for 1 site. **Cecil Desktop Pro** is a license to go further, and to support the development of Cecil.
+Cecil Desktop is free, for all your sites. **Cecil Desktop Pro** adds features for the freelancers and agencies managing the sites of their clients, and supports the development of Cecil.
 
 :::info
 During the beta, every feature is available without a license.
@@ -14,24 +14,31 @@ During the beta, every feature is available without a license.
 
 | | Free | Pro |
 |-|------|-----|
-| Sites | 1 (+ the sites opened in Writing mode by their profile) | Unlimited |
-| Publishing targets per site | 1 | Several (production, staging…) |
+| Sites | Unlimited | Unlimited, including 5 [Pro sites](#pro-sites) (+5 per pack) |
+| Publishing targets per site | 1 | Several on the Pro sites (production, staging…) |
 | Build, preview, content editing, media, themes | ✓ | ✓ |
 | Diagnoses: configuration, front matter, cache | ✓ | ✓ |
-| [Diagnoses: SEO and links](build-preview-diagnosis.md#diagnosis) | | ✓ |
-| [Form of the pages schema](content.md#pages-schema) | In Writing mode | ✓ |
-| [Git sync](git.md): opening a site from its repository, state, resolution of conflicts | ✓ | ✓ |
-| [Git sync](git.md): Fetch and Send | In Writing mode | ✓ |
+| [Diagnoses: SEO and links](build-preview-diagnosis.md#diagnosis) | | Pro sites |
+| [Form of the pages schema](content.md#pages-schema) | In Writing mode | Pro sites |
+| [Git sync](git.md): opening a site from its repository, state, Fetch and Send, resolution of conflicts | ✓ | ✓ |
 | [Writing mode](writing-mode.md), opening a site in Writing mode for everyone | ✓ | ✓ |
-| [Writing profile](writing-mode.md#hand-a-site-to-a-writer): editable sections, rights on the pages, shared targets | | ✓ |
+| [Writing profile](writing-mode.md#hand-a-site-to-a-writer): editable sections, rights on the pages, shared targets | | Pro sites |
 
-The Pro features are shown in the app with a **Pro** badge. Without a license, nothing you already have is taken away: your sites and targets stay usable, only adding more is limited.
+The Pro features are shown in the app with a **Pro** badge. Without a license, or on a site that is not a Pro site, nothing you already have is taken away: your sites and targets stay usable, only adding more is limited.
+
+## Pro sites
+
+A Pro license gives **5 Pro sites**: the Pro features apply to them, and your other sites keep the features of the free version. You choose your Pro sites in the app, and can change them: a freed slot can be given to another site **30 days** later.
+
+To manage more client sites with the Pro features, add **packs of 5 Pro sites**.
+
+The writers of a Pro site benefit from its writing profile without a license: only the manager of the site needs Pro.
 
 ## Price
 
-**49 €, paid once**: a perpetual license, with **1 year of updates**, on **3 computers**. Buy it from the [pricing section](/#pricing) of the website, or from **Help › Cecil Desktop Pro…** in the app.
+**59 € per year**, per user: a yearly subscription, with **all updates**, on **3 computers**. Each pack of 5 additional Pro sites costs **29 € per year**. Subscribe from the [pricing section](/#pricing) of the website, or from **Help › Cecil Desktop Pro…** in the app.
 
-The payment is handled by [Polar](https://polar.sh), which sends the license key by email.
+The subscription renews automatically every year, and can be cancelled anytime from the **Customer portal**. The payment is handled by [Polar](https://polar.sh), which sends the license key by email.
 
 ## Activate the license
 
@@ -41,20 +48,20 @@ The payment is handled by [Polar](https://polar.sh), which sends the license key
 
 ![The License preferences, to enter the license key](/images/screenshots/license.png "License preferences")
 
-The license card then shows your name, the purchase date, the versions covered by your updates and this computer.
+The license card then shows your name, the renewal date of the subscription, your Pro sites and this computer.
 
 ## Check and move the license
 
 - The license is checked again in the background every week. Offline, it keeps working for **30 days**: after that, connect to the Internet and click **Check**.
 - To move the license to another computer, click **Deactivate this computer** (it requires an Internet connection), then activate it on the other one.
-- If the license is already active on 3 computers, deactivate one from the **Customer portal**, which also gives access to your keys and invoices.
-- **Change the key** replaces the key, e.g. after a renewal.
+- If the license is already active on 3 computers, deactivate one from the **Customer portal**, which also gives access to your keys, your subscription and your invoices.
+- **Change the key** replaces the key, e.g. to use another license.
 
-## After the year of updates
+## End of the subscription
 
-Your license is perpetual: the Pro features stay available in every version released during your year of updates.
+If you cancel the subscription, or if it is not renewed, the Pro features stay available until the end of the paid period.
 
-The versions released after it work like the free version, without taking anything away. Before you install one, the update button of the status bar warns you that the Pro features won't be available in it. To get them back, **Renew the updates**: the renewal gives a new key, to enter in **Preferences › License**. You can also reinstall a version released during your year of updates.
+After that, Cecil Desktop works like the free version, without taking anything away: your sites, your targets and your writing profiles stay usable, only adding more is limited. Subscribe again to get the Pro features back.
 
 ## Troubleshooting
 
@@ -64,4 +71,4 @@ The versions released after it work like the free version, without taking anythi
 | *…maximum number of computers.* | Deactivate a computer from the customer portal. |
 | *Cannot reach desktop.cecil.app.* | Check your Internet connection, then try again. |
 | *License to be checked* | The license could not be checked for more than 30 days: connect to the Internet, then click **Check**. |
-| *Invalid license* | The license was refunded, revoked, or this computer was deactivated from the portal: enter another key, or activate it again. |
+| *Invalid license* | The subscription ended, the license was refunded or revoked, or this computer was deactivated from the portal: subscribe again, enter another key, or activate it again. |

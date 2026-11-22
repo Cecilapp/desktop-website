@@ -70,7 +70,7 @@ Cliquez sur **Nouveau site** (**Fichier › Nouveau site…**, `Ctrl/⌘+N`), pu
 Cliquez sur **Créer le site** : le site s'ouvre sur son **Aperçu**.
 
 :::info
-La version gratuite gère 1 site. [Cecil Desktop Pro](/fr/#pricing) lève cette limite. Pendant la bêta, tout est inclus.
+La version gratuite gère tous vos sites. [Cecil Desktop Pro](pro.md) ajoute des fonctions pour gérer les sites de vos clients. Pendant la bêta, tout est inclus.
 :::
 
 ## Se repérer

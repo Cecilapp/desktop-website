@@ -10,7 +10,7 @@ Quand un site est un dépôt Git (GitHub, GitLab, Gitea, Codeberg…), Cecil Des
 Le dépôt reste un dépôt Git standard : le responsable du site peut continuer d'utiliser un terminal ou un éditeur de code sur le même dossier.
 
 :::info
-**Récupérer** et **Envoyer** font partie de [Pro](pro.md) en mode Gestion, et sont gratuits en [mode Rédaction](writing-mode.md) : le rédacteur d'un site le synchronise sans licence. L'ouverture d'un site depuis un dépôt, l'état du dépôt et la résolution d'une fusion sont gratuits partout. Pendant la bêta, tout est disponible sans licence.
+La synchronisation Git est gratuite, en mode Gestion comme en [mode Rédaction](writing-mode.md) : l'ouverture d'un site depuis un dépôt, l'état du dépôt, **Récupérer**, **Envoyer** et la résolution d'une fusion.
 :::
 
 ## Ouvrir un site depuis un dépôt Git
