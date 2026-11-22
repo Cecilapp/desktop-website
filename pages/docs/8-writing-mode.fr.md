@@ -86,8 +86,7 @@ Pour partager une cible, le responsable l'ajoute dans **Publication**, puis la c
 ## Version gratuite et Pro
 
 - Le **mode Rédaction est gratuit**, y compris le formulaire du [schéma de pages](content.md#schema-de-pages) pour le rédacteur.
-- Un site ouvert en mode Rédaction par son profil **ne compte pas** dans le site unique de la version gratuite : un rédacteur indépendant qui travaille pour plusieurs clients reste gratuit. Passer un tel site en mode Gestion applique la limite.
-- Ouvrir un site en mode Rédaction (`mode`), le responsable et les dossiers des médias sont gratuits. Choisir les **sections modifiables**, les **droits sur les pages** et les **cibles partagées** dans **Configuration › Rédaction** fait partie de [Cecil Desktop Pro](pro.md), pour le responsable. Un rédacteur applique toujours le profil, quelle que soit sa licence.
+- Ouvrir un site en mode Rédaction (`mode`), le responsable et les dossiers des médias sont gratuits. Choisir les **sections modifiables**, les **droits sur les pages** et les **cibles partagées** dans **Configuration › Rédaction** fait partie de [Cecil Desktop Pro](pro.md), sur un site Pro du responsable. Un rédacteur applique toujours le profil, quelle que soit sa licence : un rédacteur indépendant qui travaille pour plusieurs clients reste gratuit.
 
 :::info
 Pendant la bêta, toutes les fonctions sont disponibles sans licence.

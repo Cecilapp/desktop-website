@@ -14,7 +14,7 @@ Une **cible** indique où un site est publié : un hébergeur, ses réglages (si
 Un compte contient le jeton (ou les clés) d'un hébergeur. Il est enregistré une fois et partagé entre vos sites : ajoutez-le avec votre première cible, ou dans **Préférences › Comptes**. Les jetons sont vérifiés auprès de l'hébergeur, puis chiffrés avec le trousseau du système (Gestionnaire d'identification Windows, Trousseau macOS) ; ils ne sont jamais écrits dans vos sites.
 
 :::info
-La version gratuite permet 1 cible par site. [Cecil Desktop Pro](../pro.md) en permet plusieurs. Le nombre de comptes n'est pas limité.
+La version gratuite permet 1 cible par site. [Cecil Desktop Pro](../pro.md) en permet plusieurs sur vos sites Pro. Le nombre de comptes n'est pas limité.
 :::
 Une cible peut être **partagée** avec les rédacteurs du site, par son profil : chaque rédacteur y publie alors avec son propre compte. Voir [Mode Rédaction](../writing-mode.md#cibles-partagees).
 

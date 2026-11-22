@@ -70,7 +70,7 @@ Click **New site** (**File › New site…**, `Ctrl/⌘+N`), then follow the 3 s
 Click **Create site**: the site opens on its **Overview**.
 
 :::info
-The free version manages 1 site. [Cecil Desktop Pro](/#pricing) removes this limit. During the beta, everything is included.
+The free version manages all your sites. [Cecil Desktop Pro](pro.md) adds features to manage the sites of your clients. During the beta, everything is included.
 :::
 
 ## Find your way around

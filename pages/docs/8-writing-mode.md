@@ -86,8 +86,7 @@ To share a target, the manager adds it in **Publishing**, then checks it in the 
 ## Free version and Pro
 
 - The **Writing mode is free**, including the form of the [pages schema](content.md#pages-schema) for the writer.
-- A site opened in Writing mode by its profile **doesn't count** in the 1 site of the free version: a freelance writer working for several clients stays free. Switching such a site to the Management mode applies the limit.
-- Opening a site in Writing mode (`mode`), the manager and the folders of the media are free. Choosing the **editable sections**, the **rights on the pages** and the **shared targets** in **Configuration › Writing** is part of [Cecil Desktop Pro](pro.md), for the manager. A writer always applies the profile, whatever their license.
+- Opening a site in Writing mode (`mode`), the manager and the folders of the media are free. Choosing the **editable sections**, the **rights on the pages** and the **shared targets** in **Configuration › Writing** is part of [Cecil Desktop Pro](pro.md), on a Pro site of the manager. A writer always applies the profile, whatever their license: a freelance writer working for several clients stays free.
 
 :::info
 During the beta, every feature is available without a license.

@@ -21,11 +21,12 @@ Cecil Desktop est une application de bureau pour gérer, builder, prévisualiser
 
 ## Version gratuite et licence Pro
 
-La version gratuite est gratuite, sans limite de durée. Elle gère un site, avec une cible de publication par site, et les diagnostics de base. Le mode Rédaction est gratuit.
+La version gratuite est gratuite, sans limite de durée. Elle gère un nombre illimité de sites, avec une cible de publication par site, et les diagnostics de base. Le mode Rédaction est gratuit.
 
-La licence Pro ajoute ce que décrit la page des [tarifs](/fr/#pricing) (sites et cibles de publication illimités, diagnostics SEO et liens, formulaire du schéma des pages…).
+La licence Pro ajoute ce que décrit la page des [tarifs](/fr/#pricing) (cibles de publication multiples, diagnostics SEO et liens, formulaire du schéma des pages, profil de rédaction…), sur les sites Pro.
 
-- **Perpétuelle** : une licence n'expire pas. Elle couvre toutes les versions de l'application publiées dans l'année qui suit son achat. Les versions publiées ensuite fonctionnent comme la version gratuite, sans rien retirer : ne renouvelez la licence que si vous voulez leurs fonctions Pro.
+- **Abonnement annuel** : la licence est un abonnement d'un an, renouvelé automatiquement, qui donne accès à toutes les versions de l'application. Il se résilie à tout moment depuis le portail client, et reste actif jusqu'à la fin de la période payée. Ensuite, l'application fonctionne comme la version gratuite, sans rien retirer.
+- **Sites Pro** : les fonctions Pro s'appliquent à 5 sites, choisis dans l'application, plus 5 sites par pack supplémentaire. Un emplacement libéré peut être réattribué à un autre site 30 jours plus tard.
 - **3 ordinateurs** : une licence peut être activée sur 3 ordinateurs en même temps. Désactivez un ordinateur depuis l'application (_Préférences › Licence_) ou depuis le portail client pour l'utiliser sur un autre.
 - **Vérifications** : l'application vérifie la licence auprès de notre serveur une fois par semaine. Sans réponse (hors ligne), la licence reste valide 30 jours.
 - **Clé personnelle** : la clé de licence ne doit être ni partagée ni publiée. Une licence peut être révoquée en cas de fraude, de remboursement ou de rétrofacturation.

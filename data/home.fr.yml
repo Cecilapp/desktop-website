@@ -117,33 +117,33 @@ more:
       text: L'application télécharge ses mises à jour et les installe au redémarrage, chacune avec la dernière version de Cecil (Windows pour l'instant, macOS bientôt).
 
 pricing:
-  title: Gratuit pour 1 site. Une licence pour aller plus loin.
-  text: Payez une fois, sans abonnement. Pendant la bêta, tout est inclus.
+  title: Gratuit pour tous vos sites. Pro pour ceux de vos clients.
+  text: Un abonnement annuel, sans engagement. Pendant la bêta, tout est inclus.
   plans:
     - name: Gratuit
       price: 0 €
       period: pour toujours
-      text: Pour découvrir Cecil Desktop et gérer votre premier site.
+      text: Pour découvrir Cecil Desktop et gérer tous vos sites.
       features:
-        - 1 site
+        - Sites illimités
         - Build, preview et édition du contenu
         - Publication vers Netlify, Vercel, GitHub Pages ou S3 (1 cible par site)
         - Thèmes et diagnostics de base
+        - Synchronisation Git (ouvrir, récupérer, envoyer)
         - Mode Rédaction, pour tous les sites qu'un responsable vous confie
-        - Ouverture d'un site depuis son dépôt Git, synchronisation en mode Rédaction
       cta: Télécharger gratuitement
     - name: Pro
-      price: 49 €
-      period: paiement unique
-      text: Pour gérer plusieurs sites, des freelances aux agences.
+      price: 59 €
+      period: par an
+      text: Pour les freelances et les agences qui gèrent les sites de leurs clients.
       features:
-        - Sites illimités
+        - 5 sites Pro au choix, et +5 sites Pro pour 29 € par an
         - Plusieurs cibles de publication par site
-        - Synchronisation Git en mode Gestion (récupérer et envoyer)
         - Diagnostics SEO et liens
         - Formulaire du schéma de pages
         - "Profil de rédaction : sections modifiables, droits sur les pages, cibles partagées"
-        - 1 an de mises à jour inclus, sur 3 ordinateurs
+        - Toutes les mises à jour, sur 3 ordinateurs
+        - "Sans engagement : à l'échéance, retour à la version gratuite"
         - Soutient le développement de Cecil
       cta: Obtenir Cecil Desktop Pro
       url: https://buy.polar.sh/polar_cl_J1QrbXjCKqohqt6HgHuNEfX7XH80MbfYtDKoa2BJ3CQ
@@ -164,13 +164,15 @@ faq:
     - question: Puis-je confier un site à un rédacteur non technique ?
       answer: "Oui. Ouvrez le site en [mode Rédaction](/fr/docs/writing-mode/) pour tout le monde, avec un petit fichier de profil versionné avec le site (`.cecil-desktop.yml`) : le rédacteur dispose des pages des sections que vous avez choisies, des médias, de la preview et de la publication, et de rien d'autre. Il publie avec son propre compte chez l'hébergeur : le site ne contient jamais de jeton."
     - question: Le rédacteur a-t-il besoin d'une licence Pro ?
-      answer: "Non. Le mode Rédaction est gratuit, et un site ouvert en mode Rédaction par son profil ne compte pas dans le site unique de la version gratuite. Pro s'adresse au responsable, pour choisir les sections modifiables, les droits sur les pages et les cibles de publication partagées."
+      answer: "Non. Le mode Rédaction est gratuit. Pro s'adresse au responsable, pour choisir les sections modifiables, les droits sur les pages et les cibles de publication partagées : tous les rédacteurs d'un site Pro en profitent, sans licence."
     - question: Le mode Rédaction est-il une protection ?
       answer: "Non. C'est un mode de l'interface, pour simplifier la rédaction : chacun peut revenir en mode Gestion sur son ordinateur (après une confirmation), et les fichiers du site appartiennent à qui les a sur son disque."
     - question: Où sont stockés mes sites et mes jetons ?
       answer: "Vos sites restent là où ils sont, sur votre disque : Cecil Desktop ne déplace ni ne convertit rien. Les jetons des hébergeurs sont chiffrés avec le trousseau du système."
-    - question: Que se passe-t-il après la première année d'une licence Pro ?
-      answer: "Votre licence est perpétuelle : les fonctions Pro restent disponibles dans toutes les versions publiées pendant votre année de mises à jour. Les versions suivantes fonctionnent comme la version gratuite, sans rien vous retirer (vos sites restent utilisables) : renouvelez seulement si vous voulez leurs fonctions Pro."
+    - question: Qu'est-ce qu'un site Pro ?
+      answer: "Un site sur lequel s'appliquent les fonctions Pro. La licence en donne 5, que vous choisissez dans l'application, et des packs de 5 sites Pro s'ajoutent pour 29 € par an. Vos autres sites restent gérés avec les fonctions de la version gratuite. Un emplacement libéré peut être réattribué à un autre site 30 jours plus tard. Voir [Cecil Desktop Pro](/fr/docs/pro/)."
+    - question: Que se passe-t-il si j'arrête l'abonnement Pro ?
+      answer: "Les fonctions Pro restent disponibles jusqu'à la fin de la période payée. Ensuite, Cecil Desktop fonctionne comme la version gratuite, sans rien vous retirer : vos sites, vos cibles et vos profils de rédaction restent utilisables, seul l'ajout est limité."
     - question: Quels systèmes sont pris en charge ?
       answer: Windows 10+ et macOS 12+ (Intel et Apple Silicon). Linux est prévu.
     - question: Pourquoi mon système m'avertit-il à l'installation ?
