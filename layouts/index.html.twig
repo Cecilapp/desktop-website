@@ -1,4 +1,3 @@
-{% set home = site.data.home %}
 {# Installers of the latest release, read from the electron-builder update files #}
 {% set downloads = [] %}
 {% for platform in site.download.platforms %}
@@ -38,10 +37,10 @@
   <body class="bg-white text-slate-700 antialiased dark:bg-navy-950 dark:text-slate-300">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-navy-800">{% trans %}Skip to content{% endtrans %}</a>
     {#- Announcement ~#}
-    {%- if home.announce is defined ~%}
+    {%- if page.announce is defined ~%}
     <div class="bg-navy-950 text-center text-sm text-navy-100">
       <p class="mx-auto max-w-6xl px-4 py-2.5 sm:px-6">
-        {{- home.announce.text }} <a href="{{ url(home.announce.page) }}{{ home.announce.anchor is defined ? '#' ~ home.announce.anchor }}" class="font-semibold whitespace-nowrap text-gold-300 hover:text-gold-200">{{ home.announce.link }} <span aria-hidden="true">→</span></a>
+        {{- page.announce.text }} <a href="{{ url(page.announce.page) }}{{ page.announce.anchor is defined ? '#' ~ page.announce.anchor }}" class="font-semibold whitespace-nowrap text-gold-300 hover:text-gold-200">{{ page.announce.link }} <span aria-hidden="true">→</span></a>
       </p>
     </div>
     {%- endif ~%}
@@ -70,31 +69,31 @@
       <section class="bg-linear-to-b from-white to-navy-50 dark:from-navy-950 dark:to-navy-900/60">
         <div class="mx-auto max-w-6xl px-4 pt-16 sm:px-6 sm:pt-24">
           <div class="max-w-3xl">
-            <a href="{{ home.hero.pill_url ?? '#pricing' }}" class="inline-flex items-center gap-2.5 rounded-full bg-white py-1 pr-4 pl-1 text-sm font-medium text-navy-900 ring-1 ring-slate-200 hover:ring-navy-300 dark:bg-white/5 dark:text-white dark:ring-white/10 dark:hover:ring-gold-300/40">
-              <span class="rounded-full bg-navy-800 px-2.5 py-0.5 text-xs font-semibold text-gold-300 dark:bg-gold-300 dark:text-navy-950">{{ home.hero.badge }}</span>
-              {{- home.hero.pill }} <span aria-hidden="true">→</span>
+            <a href="{{ page.hero.pill_url ?? '#pricing' }}" class="inline-flex items-center gap-2.5 rounded-full bg-white py-1 pr-4 pl-1 text-sm font-medium text-navy-900 ring-1 ring-slate-200 hover:ring-navy-300 dark:bg-white/5 dark:text-white dark:ring-white/10 dark:hover:ring-gold-300/40">
+              <span class="rounded-full bg-navy-800 px-2.5 py-0.5 text-xs font-semibold text-gold-300 dark:bg-gold-300 dark:text-navy-950">{{ page.hero.badge }}</span>
+              {{- page.hero.pill }} <span aria-hidden="true">→</span>
             </a>
-            <h1 class="mt-8 text-4xl font-bold tracking-tight text-navy-900 text-balance sm:text-6xl dark:text-white">{{ home.hero.title }}</h1>
-            <p class="mt-6 max-w-2xl text-lg text-pretty sm:text-xl">{{ home.hero.text }}</p>
+            <h1 class="mt-8 text-4xl font-bold tracking-tight text-navy-900 text-balance sm:text-6xl dark:text-white">{{ page.hero.title }}</h1>
+            <p class="mt-6 max-w-2xl text-lg text-pretty sm:text-xl">{{ page.hero.text }}</p>
             <div id="download" class="mt-10 scroll-mt-24">
               {{- include('partials/download-buttons.html.twig', {align: 'start', tone: 'light'}) ~}}
             </div>
-            {%- if home.hero.note ~%}
-            <p class="mt-2 text-sm text-slate-500 dark:text-navy-200">{{ home.hero.note }}</p>
+            {%- if page.hero.note ~%}
+            <p class="mt-2 text-sm text-slate-500 dark:text-navy-200">{{ page.hero.note }}</p>
             {%- endif ~%}
           </div>
           <div class="mt-14 rounded-t-3xl bg-navy-100 px-3 pt-3 sm:px-10 sm:pt-10 lg:px-16 lg:pt-16 dark:bg-navy-800">
-            {{- include('partials/screenshot.html.twig', {screenshot: home.hero.screenshot, eager: true, class: 'rounded-b-none'}) ~}}
+            {{- include('partials/screenshot.html.twig', {screenshot: page.hero.screenshot, eager: true, class: 'rounded-b-none'}) ~}}
           </div>
         </div>
       </section>
       {#- What the app works with ~#}
       <section class="border-b border-slate-200 py-16 text-center dark:border-white/10">
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 class="text-xl font-bold tracking-tight text-navy-900 text-balance sm:text-2xl dark:text-white">{{ home.proof.title }}</h2>
-          <p class="mt-2 text-slate-500 dark:text-slate-400">{{ home.proof.text }}</p>
+          <h2 class="text-xl font-bold tracking-tight text-navy-900 text-balance sm:text-2xl dark:text-white">{{ page.proof.title }}</h2>
+          <p class="mt-2 text-slate-500 dark:text-slate-400">{{ page.proof.text }}</p>
           <ul class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
-            {%- for item in home.proof.items ~%}
+            {%- for item in page.proof.items ~%}
             <li class="rounded-xl bg-white px-3 py-4 max-sm:last:odd:col-span-2 ring-1 ring-slate-200 dark:bg-navy-900/40 dark:ring-white/10">
               <span class="block font-semibold text-navy-900 dark:text-white">{{ item.name }}</span>
               <span class="mt-1 block text-xs tracking-wide text-slate-500 uppercase dark:text-slate-400">{{ item.kind }}</span>
@@ -106,12 +105,12 @@
       {#- Features, stacked: text above, full width screenshot below ~#}
       <section id="features" class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <div class="max-w-3xl">
-          <p class="text-sm font-semibold tracking-wider text-navy-500 uppercase dark:text-gold-300">{{ home.intro.eyebrow }}</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ home.intro.title }}</h2>
-          <p class="mt-4 text-lg text-pretty">{{ home.intro.text }}</p>
+          <p class="text-sm font-semibold tracking-wider text-navy-500 uppercase dark:text-gold-300">{{ page.intro.eyebrow }}</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ page.intro.title }}</h2>
+          <p class="mt-4 text-lg text-pretty">{{ page.intro.text }}</p>
         </div>
         <div class="mt-20 space-y-24">
-          {%- for feature in home.features ~%}
+          {%- for feature in page.features ~%}
           <article>
             <div class="grid gap-6 lg:grid-cols-5 lg:gap-14">
               <div class="lg:col-span-2">
@@ -148,19 +147,19 @@
       <section id="writing" class="border-y border-slate-200 bg-navy-50 py-24 dark:border-white/10 dark:bg-navy-900/60">
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
           <div class="max-w-3xl">
-            <p class="text-sm font-semibold tracking-wider text-navy-500 uppercase dark:text-gold-300">{{ home.writing.eyebrow }}</p>
-            <h2 class="mt-3 text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ home.writing.title }}</h2>
-            <p class="mt-4 text-lg text-pretty">{{ home.writing.text }}</p>
-            {%- if home.writing.docs ~%}
-            <p class="mt-5"><a href="{{ url(home.writing.docs) }}" class="font-semibold text-navy-600 hover:text-navy-900 dark:text-gold-300 dark:hover:text-gold-200">{% trans %}Read the documentation{% endtrans %}<span class="sr-only">: {{ home.writing.eyebrow }}</span> <span aria-hidden="true">→</span></a></p>
+            <p class="text-sm font-semibold tracking-wider text-navy-500 uppercase dark:text-gold-300">{{ page.writing.eyebrow }}</p>
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ page.writing.title }}</h2>
+            <p class="mt-4 text-lg text-pretty">{{ page.writing.text }}</p>
+            {%- if page.writing.docs ~%}
+            <p class="mt-5"><a href="{{ url(page.writing.docs) }}" class="font-semibold text-navy-600 hover:text-navy-900 dark:text-gold-300 dark:hover:text-gold-200">{% trans %}Read the documentation{% endtrans %}<span class="sr-only">: {{ page.writing.eyebrow }}</span> <span aria-hidden="true">→</span></a></p>
             {%- endif ~%}
           </div>
           <div class="mt-14 grid items-start gap-12 lg:grid-cols-12">
             <div class="rounded-3xl bg-navy-100 px-3 pt-3 sm:px-8 sm:pt-8 lg:sticky lg:top-24 lg:col-span-7 dark:bg-navy-700">
-              {{- include('partials/screenshot.html.twig', {screenshot: home.writing.screenshot, class: 'rounded-b-none'}) ~}}
+              {{- include('partials/screenshot.html.twig', {screenshot: page.writing.screenshot, class: 'rounded-b-none'}) ~}}
             </div>
             <ul class="grid gap-8 sm:grid-cols-2 lg:col-span-5">
-              {%- for item in home.writing.items ~%}
+              {%- for item in page.writing.items ~%}
               <li>
                 <div class="flex size-10 items-center justify-center rounded-lg bg-navy-800 text-gold-300 dark:ring-1 dark:ring-gold-300/30">
                   {{- include('partials/icon.html.twig', {name: item.icon, class: 'size-5'}) ~}}
@@ -178,13 +177,13 @@
         <div aria-hidden="true" class="pointer-events-none absolute -top-64 -right-48 size-160 rounded-full bg-gold-300/15 blur-3xl"></div>
         <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p class="text-sm font-semibold tracking-wider text-gold-300 uppercase">{{ home.pro.eyebrow }}</p>
-            <h2 class="mt-3 text-3xl font-bold tracking-tight text-white text-balance sm:text-4xl">{{ home.pro.title }}</h2>
-            <p class="mt-4 text-lg text-pretty">{{ home.pro.text }}</p>
-            <p class="mt-6"><a href="#pricing" class="font-semibold text-gold-300 hover:text-gold-200">{{ home.pro.link }} <span aria-hidden="true">→</span></a></p>
+            <p class="text-sm font-semibold tracking-wider text-gold-300 uppercase">{{ page.pro.eyebrow }}</p>
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-white text-balance sm:text-4xl">{{ page.pro.title }}</h2>
+            <p class="mt-4 text-lg text-pretty">{{ page.pro.text }}</p>
+            <p class="mt-6"><a href="#pricing" class="font-semibold text-gold-300 hover:text-gold-200">{{ page.pro.link }} <span aria-hidden="true">→</span></a></p>
           </div>
           <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {%- for item in home.pro.items ~%}
+            {%- for item in page.pro.items ~%}
             <li class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
               <span class="block font-semibold text-white">{{ item.title }}</span>
               <span class="mt-1.5 block text-sm text-navy-200">{{ item.text }}</span>
@@ -195,9 +194,9 @@
       </section>
       {#- More features, compact list ~#}
       <section class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-        <h2 class="text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ home.more.title }}</h2>
+        <h2 class="text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ page.more.title }}</h2>
         <ul class="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-          {%- for item in home.more.items ~%}
+          {%- for item in page.more.items ~%}
           <li class="flex gap-4">
             {{- include('partials/icon.html.twig', {name: item.icon, class: 'mt-0.5 size-6 shrink-0 text-navy-500 dark:text-gold-300'}) ~}}
             <div>
@@ -211,13 +210,13 @@
           {%- endfor ~%}
         </ul>
       </section>
-      {#- Testimonials: commented out until there are real quotes of beta testers (`home.testimonials.items`)
+      {#- Testimonials: commented out until there are real quotes of beta testers (`page.testimonials.items`)
       <section class="border-y border-slate-200 bg-navy-50 py-24 dark:border-white/10 dark:bg-navy-900/60">
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <p class="text-sm font-semibold tracking-wider text-navy-500 uppercase dark:text-gold-300">{{ home.testimonials.eyebrow }}</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ home.testimonials.title }}</h2>
+          <p class="text-sm font-semibold tracking-wider text-navy-500 uppercase dark:text-gold-300">{{ page.testimonials.eyebrow }}</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ page.testimonials.title }}</h2>
           <div class="mt-12 grid gap-6 md:grid-cols-3">
-            {%- for item in home.testimonials.items ~%}
+            {%- for item in page.testimonials.items ~%}
             <figure class="rounded-2xl bg-white p-6 ring-1 ring-slate-200 dark:bg-navy-950 dark:ring-white/10">
               <blockquote class="text-pretty">{{ item.quote }}</blockquote>
               <figcaption class="mt-5 text-sm">
@@ -233,19 +232,19 @@
       {#- Pack of Pro sites ~#}
       <div class="mx-auto max-w-6xl px-4 sm:px-6">
         <div class="flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-navy-800 px-6 py-5 text-navy-100">
-          <p><strong class="font-semibold text-white">{{ home.pack.title }}</strong> {{ home.pack.text }}</p>
-          <a href="#pricing" class="rounded-lg bg-gold-300 px-4 py-2.5 text-sm font-semibold text-navy-950 hover:bg-gold-200">{{ home.pack.cta }}</a>
+          <p><strong class="font-semibold text-white">{{ page.pack.title }}</strong> {{ page.pack.text }}</p>
+          <a href="#pricing" class="rounded-lg bg-gold-300 px-4 py-2.5 text-sm font-semibold text-navy-950 hover:bg-gold-200">{{ page.pack.cta }}</a>
         </div>
       </div>
       {#- Pricing ~#}
       <section id="pricing" class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <div class="mx-auto max-w-2xl text-center">
-          <p class="text-sm font-semibold tracking-wider text-navy-500 uppercase dark:text-gold-300">{{ home.pricing.eyebrow }}</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ home.pricing.title }}</h2>
-          <p class="mt-4 text-lg">{{ home.pricing.text }}</p>
+          <p class="text-sm font-semibold tracking-wider text-navy-500 uppercase dark:text-gold-300">{{ page.pricing.eyebrow }}</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ page.pricing.title }}</h2>
+          <p class="mt-4 text-lg">{{ page.pricing.text }}</p>
         </div>
         <div class="mt-14 grid gap-6 lg:grid-cols-3">
-          {%- for plan in home.pricing.plans ~%}
+          {%- for plan in page.pricing.plans ~%}
           {%- set hl = plan.highlight ?? false %}
           <div class="flex flex-col rounded-3xl p-8 {{ hl ? 'bg-navy-900 text-navy-100 shadow-xl ring-1 ring-navy-900 dark:ring-gold-300/40' : 'bg-white ring-1 ring-slate-200 dark:bg-navy-900/40 dark:ring-white/10' }}">
             <h3 class="flex flex-wrap items-center gap-2 text-lg font-semibold {{ hl ? 'text-white' : 'text-navy-900 dark:text-white' }}">
@@ -277,21 +276,21 @@
           </div>
           {%- endfor ~%}
         </div>
-        {%- if home.pricing.note ~%}
-        <p class="mt-8 text-center text-sm text-slate-500 dark:text-slate-400">{{ home.pricing.note }}</p>
+        {%- if page.pricing.note ~%}
+        <p class="mt-8 text-center text-sm text-slate-500 dark:text-slate-400">{{ page.pricing.note }}</p>
         {%- endif ~%}
       </section>
       {#- FAQ: title and help on the left, questions on the right ~#}
       <section id="faq" class="border-t border-slate-200 dark:border-white/10">
         <div class="mx-auto grid max-w-6xl gap-10 px-4 py-24 sm:px-6 lg:grid-cols-3 lg:gap-16">
           <div>
-            <h2 class="text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ home.faq.title }}</h2>
-            {%- if home.faq.text ~%}
-            <div class="mt-4 text-pretty [&_a]:font-medium [&_a]:text-navy-600 [&_a]:underline [&_strong]:font-semibold [&_strong]:text-navy-900 dark:[&_a]:text-gold-300 dark:[&_strong]:text-white">{{ home.faq.text|markdown_to_html }}</div>
+            <h2 class="text-3xl font-bold tracking-tight text-navy-900 text-balance sm:text-4xl dark:text-white">{{ page.faq.title }}</h2>
+            {%- if page.faq.text ~%}
+            <div class="mt-4 text-pretty [&_a]:font-medium [&_a]:text-navy-600 [&_a]:underline [&_strong]:font-semibold [&_strong]:text-navy-900 dark:[&_a]:text-gold-300 dark:[&_strong]:text-white">{{ page.faq.text|markdown_to_html }}</div>
             {%- endif ~%}
           </div>
           <div class="divide-y divide-slate-200 lg:col-span-2 dark:divide-white/10">
-            {%- for item in home.faq.items ~%}
+            {%- for item in page.faq.items ~%}
             <details class="group py-5 first:pt-0">
               <summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-semibold text-navy-900 dark:text-white">
                 {{- item.question ~}}
@@ -307,8 +306,8 @@
       <section class="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
         <div class="rounded-3xl bg-navy-900 px-6 py-16 text-center text-white sm:py-20">
           {{- html(asset('images/logo.png'), {width: 64, height: 64, alt: '', class: 'mx-auto size-16'}, {responsive: 'density'}) ~}}
-          <h2 class="mt-6 text-3xl font-bold tracking-tight text-balance sm:text-4xl">{{ home.cta.title }}</h2>
-          <p class="mx-auto mt-4 max-w-xl text-navy-100">{{ home.cta.text }}</p>
+          <h2 class="mt-6 text-3xl font-bold tracking-tight text-balance sm:text-4xl">{{ page.cta.title }}</h2>
+          <p class="mx-auto mt-4 max-w-xl text-navy-100">{{ page.cta.text }}</p>
           <div class="mt-8">
             {{- include('partials/download-buttons.html.twig') ~}}
           </div>
@@ -316,9 +315,9 @@
       </section>
       {#- The Cecil ecosystem ~#}
       <section class="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
-        <h2 class="text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl dark:text-white">{{ home.ecosystem.title }}</h2>
+        <h2 class="text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl dark:text-white">{{ page.ecosystem.title }}</h2>
         <ul class="mt-8 grid gap-4 md:grid-cols-3">
-          {%- for item in home.ecosystem.items ~%}
+          {%- for item in page.ecosystem.items ~%}
           <li>
             <a href="{{ item.url }}" class="flex h-full flex-col rounded-2xl bg-white p-6 ring-1 ring-slate-200 hover:ring-navy-400 dark:bg-navy-900/40 dark:ring-white/10 dark:hover:ring-gold-300/50">
               <span class="font-semibold text-navy-900 dark:text-white">{{ item.title }}</span>
