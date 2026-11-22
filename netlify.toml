@@ -5,4 +5,4 @@
 
 [build.environment]
   PHP_VERSION = "8.3"
-  CECIL_CMD_OPTIONS = "--optimize"
+  #CECIL_CMD_OPTIONS = "--optimize"
