@@ -22,6 +22,9 @@
  * without it, a license has its base number of Pro sites. A token is not trusted offline after the
  * end of a canceled pack, so that its sites are counted again.
  *
+ * The app chooses the Pro sites of a license with `assign` and `release` (see ../lib/pro-sites.mjs):
+ * a released site frees its slot 30 days later. Every token lists them (`pro_sites`…).
+ *
  * Environment:
  * - POLAR_ORGANIZATION_ID: the organization selling the licenses;
  * - LICENSE_SIGNING_KEY: the Ed25519 private key, its 32 bytes seed in base64 (`php artisan license:keygen` in the app);
@@ -31,10 +34,12 @@
  * - LICENSE_OFFLINE_DAYS (optional): how long a token can be trusted without checking the key again, 30 by default;
  * - LICENSE_PRO_SITES (optional): the number of Pro sites of a license, 5 by default;
  * - POLAR_PACK_PRODUCT_IDS (optional): the products of the packs of Pro sites, separated by commas;
- * - LICENSE_PACK_SITES (optional): the number of Pro sites a pack adds, 5 by default.
+ * - LICENSE_PACK_SITES (optional): the number of Pro sites a pack adds, 5 by default;
+ * - LICENSE_RELEASE_DAYS (optional): how long a released Pro site keeps its slot, 30 by default.
  */
 
 import { createPrivateKey, sign } from 'node:crypto';
+import * as ProSites from '../lib/pro-sites.mjs';
 
 const API = process.env.POLAR_API || 'https://api.polar.sh';
 
@@ -63,7 +68,7 @@ export default async (request, context) => {
     return json({ error: 'Forbidden' }, 403);
   }
   const action = context.params?.action;
-  if (!['activate', 'validate', 'deactivate'].includes(action)) {
+  if (!Object.hasOwn(ACTIONS, action)) {
     return json({ error: 'Not found' }, 404);
   }
 
@@ -105,7 +110,9 @@ const ACTIONS = {
       return json({ error: 'not_found' }, 422);
     }
 
-    return json({ token: token(activation.license_key, activation.id, await account(activation.license_key)) });
+    const license = activation.license_key;
+
+    return json({ token: token(license, activation.id, await account(license), await ProSites.load(license.id)) });
   },
 
   /**
@@ -113,19 +120,48 @@ const ACTIONS = {
    * not know it anymore (subscription ended, refunded, revoked, disabled, or the activation was deleted).
    */
   async validate({ key, activation }) {
-    const response = await polar('validate', { key, activation_id: activation });
-    if (response.status === 404) {
-      return json({ token: invalidToken(activation) });
-    }
-    if (!response.ok) {
-      throw new Error(`Polar validate: ${response.status} ${await response.text()}`);
-    }
-    const license = await response.json();
-    if (!benefitAccepted(license.benefit_id)) {
+    const license = await check(key, activation);
+    if (!license) {
       return json({ token: invalidToken(activation) });
     }
 
-    return json({ token: token(license, activation, await account(license)) });
+    return json({ token: token(license, activation, await account(license), await ProSites.load(license.id)) });
+  },
+
+  /**
+   * Makes a site a Pro site: a new token, or `no_slot` (with when a slot is free again, if
+   * releases are what keeps them all taken) and the current token.
+   */
+  async assign({ key, activation, site, label }) {
+    const license = await check(key, activation);
+    if (!license) {
+      return json({ token: invalidToken(activation) });
+    }
+    const details = await account(license);
+    const slots = proSites(details.packs);
+    try {
+      const state = await ProSites.update(license.id, (state) => ProSites.assign(state, site, label, slots));
+
+      return json({ token: token(license, activation, details, state) });
+    } catch (error) {
+      if (!(error instanceof ProSites.SlotError)) {
+        throw error;
+      }
+      const state = await ProSites.load(license.id);
+
+      return json({ error: 'no_slot', available_at: error.availableAt, token: token(license, activation, details, state) }, 422);
+    }
+  },
+
+  /** Makes a Pro site a site with the free features again: its slot is free 30 days later. */
+  async release({ key, activation, site }) {
+    const license = await check(key, activation);
+    if (!license) {
+      return json({ token: invalidToken(activation) });
+    }
+    const state = await ProSites.update(license.id, (state) => ProSites.release(state, site));
+
+    return json({ token: token(license, activation, await account(license), state) });
   },
 
   /** Frees the activation of a machine. */
@@ -154,17 +190,45 @@ export function validate(action, input) {
 
   const key = string(input.key, 'key', LIMITS.key);
 
-  return action === 'activate'
-    ? { key, label: string(input.label, 'label', LIMITS.label) }
-    : { key, activation: string(input.activation, 'activation', LIMITS.id) };
+  if (action === 'activate') {
+    return { key, label: string(input.label, 'label', LIMITS.label) };
+  }
+  const activation = string(input.activation, 'activation', LIMITS.id);
+  if (action === 'assign') {
+    return { key, activation, site: string(input.site, 'site', LIMITS.id), label: string(input.label, 'label', LIMITS.label) };
+  }
+  if (action === 'release') {
+    return { key, activation, site: string(input.site, 'site', LIMITS.id) };
+  }
+
+  return { key, activation };
+}
+
+/** The license of a key and its activation, as Polar validates it; null when Polar doesn't know it anymore. */
+async function check(key, activation) {
+  const response = await polar('validate', { key, activation_id: activation });
+  if (response.status === 404) {
+    return null;
+  }
+  if (!response.ok) {
+    throw new Error(`Polar validate: ${response.status} ${await response.text()}`);
+  }
+  const license = await response.json();
+
+  return benefitAccepted(license.benefit_id) ? license : null;
+}
+
+/** The number of Pro sites of a license: the base ones, plus those of its live packs. */
+export function proSites(packs = []) {
+  return Number(process.env.LICENSE_PRO_SITES || 5) + packs.length * Number(process.env.LICENSE_PACK_SITES || 5);
 }
 
 /**
  * The signed token of a key granted by Polar, with the dates of its subscription when known:
  * `renews_at` while it renews, `ends_at` once it is canceled (it stays granted until then), and
- * its Pro sites: the base ones, plus those of its live packs.
+ * its Pro sites: their number (the base ones, plus those of its live packs) and which they are.
  */
-export function token(license, activation, { subscription = null, packs = [] } = {}, now = new Date()) {
+export function token(license, activation, { subscription = null, packs = [] } = {}, state = { sites: [], released: [] }, now = new Date()) {
   const offline = Number(process.env.LICENSE_OFFLINE_DAYS || 30);
   const { renews, ends } = periods(subscription);
   // trusted offline for a while, but not after the end of a subscription or a pack that won't renew
@@ -174,7 +238,7 @@ export function token(license, activation, { subscription = null, packs = [] } =
       until = end;
     }
   }
-  const sites = Number(process.env.LICENSE_PRO_SITES || 5) + packs.length * Number(process.env.LICENSE_PACK_SITES || 5);
+  const sites = proSites(packs);
 
   return signed({
     v: 2,
@@ -189,6 +253,7 @@ export function token(license, activation, { subscription = null, packs = [] } =
     ends_at: ends?.toISOString() ?? null,
     sites,
     packs: packs.length,
+    ...ProSites.view(state, sites),
     valid_until: until.toISOString(),
     issued_at: now.toISOString(),
   });
