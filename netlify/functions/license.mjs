@@ -16,6 +16,12 @@
  * (`renews_at`) or its end (`ends_at`). Without it, or if Polar cannot be reached, the token has no
  * dates, and the license stays valid: Polar's answer on the key is what makes it valid.
  *
+ * More Pro sites are sold as packs: a yearly subscription to a pack product, without a license key,
+ * which adds LICENSE_PACK_SITES sites to the license of the same customer while it is live. A
+ * customer can hold several packs (one subscription each). Counting them needs the access token:
+ * without it, a license has its base number of Pro sites. A token is not trusted offline after the
+ * end of a canceled pack, so that its sites are counted again.
+ *
  * Environment:
  * - POLAR_ORGANIZATION_ID: the organization selling the licenses;
  * - LICENSE_SIGNING_KEY: the Ed25519 private key, its 32 bytes seed in base64 (`php artisan license:keygen` in the app);
@@ -23,7 +29,9 @@
  * - POLAR_API (optional): https://sandbox-api.polar.sh for the sandbox;
  * - POLAR_BENEFIT_IDS (optional): the license key benefits accepted, separated by commas (default: any of the organization);
  * - LICENSE_OFFLINE_DAYS (optional): how long a token can be trusted without checking the key again, 30 by default;
- * - LICENSE_PRO_SITES (optional): the number of Pro sites of a license, 5 by default.
+ * - LICENSE_PRO_SITES (optional): the number of Pro sites of a license, 5 by default;
+ * - POLAR_PACK_PRODUCT_IDS (optional): the products of the packs of Pro sites, separated by commas;
+ * - LICENSE_PACK_SITES (optional): the number of Pro sites a pack adds, 5 by default.
  */
 
 import { createPrivateKey, sign } from 'node:crypto';
@@ -97,7 +105,7 @@ const ACTIONS = {
       return json({ error: 'not_found' }, 422);
     }
 
-    return json({ token: token(activation.license_key, activation.id, await subscription(activation.license_key)) });
+    return json({ token: token(activation.license_key, activation.id, await account(activation.license_key)) });
   },
 
   /**
@@ -117,7 +125,7 @@ const ACTIONS = {
       return json({ token: invalidToken(activation) });
     }
 
-    return json({ token: token(license, activation, await subscription(license)) });
+    return json({ token: token(license, activation, await account(license)) });
   },
 
   /** Frees the activation of a machine. */
@@ -153,16 +161,20 @@ export function validate(action, input) {
 
 /**
  * The signed token of a key granted by Polar, with the dates of its subscription when known:
- * `renews_at` while it renews, `ends_at` once it is canceled (it stays granted until then).
+ * `renews_at` while it renews, `ends_at` once it is canceled (it stays granted until then), and
+ * its Pro sites: the base ones, plus those of its live packs.
  */
-export function token(license, activation, subscription = null, now = new Date()) {
+export function token(license, activation, { subscription = null, packs = [] } = {}, now = new Date()) {
   const offline = Number(process.env.LICENSE_OFFLINE_DAYS || 30);
   const { renews, ends } = periods(subscription);
-  // trusted offline for a while, but not after the end of a subscription that won't renew
+  // trusted offline for a while, but not after the end of a subscription or a pack that won't renew
   let until = new Date(now.getTime() + offline * DAY);
-  if (ends && ends > now && ends < until) {
-    until = ends;
+  for (const end of [ends, ...packs.map((pack) => periods(pack).ends)]) {
+    if (end && end > now && end < until) {
+      until = end;
+    }
   }
+  const sites = Number(process.env.LICENSE_PRO_SITES || 5) + packs.length * Number(process.env.LICENSE_PACK_SITES || 5);
 
   return signed({
     v: 2,
@@ -175,7 +187,8 @@ export function token(license, activation, subscription = null, now = new Date()
     subscribed_at: new Date(license.created_at).toISOString(),
     renews_at: renews?.toISOString() ?? null,
     ends_at: ends?.toISOString() ?? null,
-    sites: Number(process.env.LICENSE_PRO_SITES || 5),
+    sites,
+    packs: packs.length,
     valid_until: until.toISOString(),
     issued_at: now.toISOString(),
   });
@@ -197,13 +210,14 @@ export function periods(subscription) {
 }
 
 /**
- * The live subscription of the key's customer, preferably the one whose product grants the key's
- * benefit; null without an access token, or when Polar cannot say.
+ * The live subscriptions of the key's customer: the one of the license, preferably the one whose
+ * product grants the key's benefit, and the packs of Pro sites. Nothing without an access token,
+ * or when Polar cannot say.
  */
-export async function subscription(license) {
+export async function account(license) {
   const token = process.env.POLAR_ACCESS_TOKEN;
   if (!token || !license?.customer_id) {
-    return null;
+    return {};
   }
   try {
     const url = new URL(`${API}/v1/subscriptions/`);
@@ -220,22 +234,31 @@ export async function subscription(license) {
     }
     const { items = [] } = await response.json();
 
-    return pick(items, license.benefit_id);
+    return split(items, license.benefit_id);
   } catch (error) {
-    // the dates are a bonus: the key validated by Polar is what makes the license
+    // a bonus: the key validated by Polar is what makes the license, with its base Pro sites
     console.error(error);
 
-    return null;
+    return {};
   }
 }
 
-/** Among the subscriptions of a customer, the live one granting the benefit, the latest first. */
-export function pick(subscriptions, benefit) {
+/**
+ * Splits the subscriptions of a customer: the live one granting the benefit (the latest first,
+ * else any live one that is not a pack), and the live packs.
+ */
+export function split(subscriptions, benefit) {
+  const products = (process.env.POLAR_PACK_PRODUCT_IDS ?? '').split(',').map((id) => id.trim()).filter(Boolean);
+  const isPack = (s) => products.includes(s.product_id ?? s.product?.id);
   const live = subscriptions.filter((s) => LIVE.includes(s.status));
-  const granting = live.filter((s) => (s.product?.benefits ?? []).some((b) => b.id === benefit));
+  const licenses = live.filter((s) => !isPack(s));
+  const granting = licenses.filter((s) => (s.product?.benefits ?? []).some((b) => b.id === benefit));
   const latest = (a, b) => new Date(b.current_period_end ?? 0) - new Date(a.current_period_end ?? 0);
 
-  return (granting.length > 0 ? granting : live).sort(latest)[0] ?? null;
+  return {
+    subscription: (granting.length > 0 ? granting : licenses).sort(latest)[0] ?? null,
+    packs: live.filter(isPack),
+  };
 }
 
 /** base64url(JSON) + '.' + base64url(Ed25519 signature of the first part). */

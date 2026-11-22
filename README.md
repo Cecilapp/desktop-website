@@ -30,7 +30,7 @@ Requests are rate limited (5 per minute and IP, `config.rateLimit`); the app's U
 
 ### Licenses of Cecil Desktop Pro
 
-`netlify/functions/license.mjs` (`POST /api/license/{activate,validate,deactivate}`) activates, validates and deactivates the license keys sold with [Polar](https://polar.sh) (its public license API, and optionally its subscriptions API), and answers with a token signed with Ed25519, verified by the app (`App\Support\LicenseToken`). Pro is a yearly subscription: Polar grants its key while the subscription is active and revokes it when it ends, so a key Polar does not know anymore (subscription ended, refunded, revoked, machine deactivated) gives a signed `invalid` token. A valid token (`v: 2`) says until when the app can trust it offline (`valid_until`, never after the end of a canceled subscription), when the subscription renews or ends (`renews_at`, `ends_at`, with an access token) and the number of Pro sites (`sites`). See `docs/spikes/licensing.md` of the app. Environment variables of the Netlify site:
+`netlify/functions/license.mjs` (`POST /api/license/{activate,validate,deactivate}`) activates, validates and deactivates the license keys sold with [Polar](https://polar.sh) (its public license API, and optionally its subscriptions API), and answers with a token signed with Ed25519, verified by the app (`App\Support\LicenseToken`). Pro is a yearly subscription: Polar grants its key while the subscription is active and revokes it when it ends, so a key Polar does not know anymore (subscription ended, refunded, revoked, machine deactivated) gives a signed `invalid` token. A valid token (`v: 2`) says until when the app can trust it offline (`valid_until`, never after the end of a canceled subscription), when the subscription renews or ends (`renews_at`, `ends_at`, with an access token) and the number of Pro sites (`sites`): the base ones, plus those of the live packs (`packs`). A pack of Pro sites is a yearly subscription to a pack product (without license key) of the same customer, one subscription per pack; counting them needs the access token. See `docs/spikes/licensing.md` of the app. Environment variables of the Netlify site:
 
 - `POLAR_ORGANIZATION_ID`: the organization selling the licenses
 - `LICENSE_SIGNING_KEY`: the private key, its 32 bytes seed in base64 (`php artisan license:keygen` in the app, whose public key goes into its `config/license.php`): keep it secret
@@ -39,6 +39,8 @@ Requests are rate limited (5 per minute and IP, `config.rateLimit`); the app's U
 - `POLAR_BENEFIT_IDS` (optional): the license key benefits accepted, separated by commas (default: any of the organization)
 - `LICENSE_OFFLINE_DAYS` (optional): how long a token can be trusted without checking the key again, 30 by default
 - `LICENSE_PRO_SITES` (optional): the number of Pro sites of a license, 5 by default
+- `POLAR_PACK_PRODUCT_IDS` (optional): the products of the packs of Pro sites, separated by commas
+- `LICENSE_PACK_SITES` (optional): the number of Pro sites a pack adds, 5 by default
 
 Requests are rate limited (20 per minute and IP) and require the app's User-Agent.
 
