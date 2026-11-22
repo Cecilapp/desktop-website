@@ -51,18 +51,37 @@
           {{- html(asset('images/logo.png'), {width: 32, height: 32, alt: '', class: 'size-8'}, {responsive: 'density'}) ~}}
           {{- site.title ~}}
         </a>
+        {%- set menu = [
+          {url: '#features', label: 'Features'|trans},
+          {url: '#writing', label: 'Writing mode'|trans},
+          {url: '#pricing', label: 'Pricing'|trans},
+          {url: url('docs'), label: 'Documentation'|trans},
+          {url: url('docs/changelog'), label: 'Changelog'|trans},
+        ] ~%}
         <ul class="ml-auto hidden items-center gap-6 text-sm font-medium lg:flex">
-          <li><a href="#features" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Features{% endtrans %}</a></li>
-          <li><a href="#writing" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Writing mode{% endtrans %}</a></li>
-          <li><a href="#pricing" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Pricing{% endtrans %}</a></li>
-          <li><a href="{{ url('docs') }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Documentation{% endtrans %}</a></li>
-          <li><a href="{{ url('docs/changelog') }}" class="hover:text-navy-900 dark:hover:text-white">{% trans %}Changelog{% endtrans %}</a></li>
+          {%- for item in menu ~%}
+          <li><a href="{{ item.url }}" class="hover:text-navy-900 dark:hover:text-white">{{ item.label }}</a></li>
+          {%- endfor ~%}
         </ul>
-        <div class="ml-auto flex items-center gap-4 lg:ml-0">
+        <div class="ml-auto flex items-center gap-3 sm:gap-4 lg:ml-0">
           {{- include('partials/languages-switcher.html.twig') ~}}
-          <a href="#download" class="rounded-lg bg-navy-800 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-navy-700 dark:bg-gold-300 dark:text-navy-950 dark:hover:bg-gold-200">{% trans %}Download{% endtrans %}</a>
+          <a href="#download" class="rounded-lg bg-navy-800 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-navy-700 max-sm:hidden dark:bg-gold-300 dark:text-navy-950 dark:hover:bg-gold-200">{% trans %}Download{% endtrans %}</a>
+          {#- Burger button: toggles the mobile menu ~#}
+          <button type="button" class="group -mr-2 rounded-lg p-2 text-navy-900 hover:bg-slate-100 lg:hidden dark:text-white dark:hover:bg-white/10" aria-controls="mobile-menu" aria-expanded="false" aria-label="{% trans %}Menu{% endtrans %}" data-mobile-menu-toggle>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 group-aria-expanded:hidden" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden size-6 group-aria-expanded:block" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+          </button>
         </div>
       </nav>
+      {#- Mobile menu ~#}
+      <div id="mobile-menu" class="border-t border-slate-200/70 lg:hidden dark:border-white/10" hidden>
+        <ul class="mx-auto max-w-6xl space-y-1 px-4 py-4 text-base font-medium sm:px-6">
+          {%- for item in menu ~%}
+          <li><a href="{{ item.url }}" class="-mx-3 block rounded-lg px-3 py-2 hover:bg-slate-100 hover:text-navy-900 dark:hover:bg-white/10 dark:hover:text-white">{{ item.label }}</a></li>
+          {%- endfor ~%}
+          <li class="pt-3 sm:hidden"><a href="#download" class="block rounded-lg bg-navy-800 px-4 py-2.5 text-center font-semibold text-white shadow-sm hover:bg-navy-700 dark:bg-gold-300 dark:text-navy-950 dark:hover:bg-gold-200">{% trans %}Download{% endtrans %}</a></li>
+        </ul>
+      </div>
     </header>
     <main id="main">
       {#- Hero: left aligned, screenshot on a solid panel ~#}
@@ -245,7 +264,7 @@
         </div>
         <div class="mt-14 grid gap-6 lg:grid-cols-3">
           {%- for plan in page.pricing.plans ~%}
-          {%- set hl = plan.highlight ?? false %}
+          {%- set hl = plan.highlight ?? false ~%}
           <div class="flex flex-col rounded-3xl p-8 {{ hl ? 'bg-navy-900 text-navy-100 shadow-xl ring-1 ring-navy-900 dark:ring-gold-300/40' : 'bg-white ring-1 ring-slate-200 dark:bg-navy-900/40 dark:ring-white/10' }}">
             <h3 class="flex flex-wrap items-center gap-2 text-lg font-semibold {{ hl ? 'text-white' : 'text-navy-900 dark:text-white' }}">
               {{- plan.name ~}}
@@ -382,7 +401,25 @@
       </div>
     </footer>
     {#- Shows only the download buttons of the visitor's OS (and architecture, when known) ~#}
-    <script>
+    <script>{% apply minify_js ~%}
+      // mobile menu: opened by the burger button, closed by a link, the Escape key or a desktop width
+      (() => {
+        const toggle = document.querySelector('[data-mobile-menu-toggle]');
+        const menu = document.getElementById('mobile-menu');
+        const setOpen = open => {
+          menu.hidden = !open;
+          toggle.setAttribute('aria-expanded', open);
+        };
+        toggle.addEventListener('click', () => setOpen(menu.hidden));
+        menu.addEventListener('click', event => event.target.closest('a') && setOpen(false));
+        document.addEventListener('keydown', event => {
+          if (event.key === 'Escape' && !menu.hidden) {
+            setOpen(false);
+            toggle.focus();
+          }
+        });
+        matchMedia('(min-width: 64rem)').addEventListener('change', event => event.matches && setOpen(false));
+      })();
       // demo videos are hidden when motion is reduced: stops them too (no download, no playback)
       if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.querySelectorAll('[data-demo-video]').forEach(video => {
@@ -446,6 +483,6 @@
           showToggle(group, 'desktop', () => links.forEach(a => a.hidden = false));
         });
       })();
-    </script>
+    {% endapply %}</script>
   </body>
 </html>
