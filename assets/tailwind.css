@@ -1,7 +1,7 @@
 @import "tailwindcss" source(none);
 
 @source "../layouts";
-@source "../data";
+@source "../pages/index*.md";
 
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif;

@@ -4,7 +4,13 @@ Website and documentation of [Cecil Desktop](https://github.com/Cecilapp/Desktop
 
 ## Content
 
-- `data/home.yml` (English) and `data/home.fr.yml` (French): all the page content (hero, features, pricing, FAQ)
+- `pages/index.md` (English) and `pages/index.fr.md` (French): all the homepage content, in the front matter of the page, in the order of its sections (`layouts/index.html.twig`, which reads it with `page.<section>`), so it can be edited with the front matter form of Cecil Desktop:
+  - `announce`: optional bar above the navigation (e.g. the latest release, linked to its changelog anchor)
+  - `hero`, `proof` (hosts and Git forges, names only), `intro` and `features` (stacked, `screenshot` optional)
+  - `writing` (Writing mode spotlight), `pro` (teaser before the pricing), `more`
+  - `testimonials`: real quotes of beta testers only, with their consent; the section is commented out in the template until there are some
+  - `pack` (bar before the pricing), `pricing`, `faq`, `cta` and `ecosystem`
+- `schemas/index.yml`: the schema of this front matter (types, required variables, labels, icon names…), checked at build time and shown as a form by Cecil Desktop
 - `translations/messages.fr.yaml`: UI strings of the templates (navigation, buttons, footer)
 - `cecil.yml`: site options, including the download URL and version (`download`)
 - `assets/images/screenshots/`: app screenshots
