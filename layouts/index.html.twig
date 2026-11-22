@@ -95,7 +95,7 @@
           <p class="mt-2 text-slate-500 dark:text-slate-400">{{ home.proof.text }}</p>
           <ul class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
             {%- for item in home.proof.items ~%}
-            <li class="rounded-xl bg-white px-3 py-4 ring-1 ring-slate-200 dark:bg-navy-900/40 dark:ring-white/10">
+            <li class="rounded-xl bg-white px-3 py-4 max-sm:last:odd:col-span-2 ring-1 ring-slate-200 dark:bg-navy-900/40 dark:ring-white/10">
               <span class="block font-semibold text-navy-900 dark:text-white">{{ item.name }}</span>
               <span class="mt-1 block text-xs tracking-wide text-slate-500 uppercase dark:text-slate-400">{{ item.kind }}</span>
             </li>
@@ -333,8 +333,8 @@
     {#- Footer ~#}
     <footer class="border-t border-slate-200 bg-slate-50 dark:border-white/10 dark:bg-navy-900/40">
       <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
-          <div class="sm:col-span-2">
+        <div class="grid grid-cols-2 gap-10 lg:grid-cols-6">
+          <div class="col-span-2">
             <a href="{{ url(page) }}" class="flex items-center gap-2.5 font-semibold text-navy-900 dark:text-white">
               {{- html(asset('images/logo.png'), {width: 28, height: 28, alt: '', class: 'size-7'}, {responsive: 'density'}) ~}}
               {{- site.title ~}}
