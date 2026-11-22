@@ -7,3 +7,6 @@
 # Local Netlify folder
 .netlify
 .vscode/
+
+# Dependencies of the Netlify functions
+/node_modules/

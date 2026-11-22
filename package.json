@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "description": "Dependencies of the Netlify functions",
+  "dependencies": {
+    "@netlify/blobs": "^11.1.9"
+  }
+}
