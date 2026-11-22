@@ -1,0 +1,239 @@
+# Front matter schema of the homepage (`pages/index.md` and `pages/index.fr.md`), rendered by `layouts/index.html.twig`
+# Pages schema of Cecil (`schemas/` directory): the name of this file (`index`) is the ID of the homepage, in every language
+# Checked at build time, and shown as a form by Cecil Desktop; keep the `icon` enums in sync with `layouts/partials/icon.html.twig`
+
+announce:
+  type: map
+  label: Announcement
+  description: Thin bar above the navigation (optional), e.g. the latest release
+  fields:
+    text: { type: string, required: true, label: Text }
+    link: { type: string, required: true, label: Link label }
+    page: { type: string, required: true, label: Linked page, description: "Page ID, e.g. docs/changelog" }
+    anchor: { type: string, label: Anchor, description: "Without #, e.g. v0.17.0", pattern: '[A-Za-z0-9._-]+' }
+
+hero:
+  type: map
+  required: true
+  label: Hero
+  fields:
+    badge: { type: string, required: true, label: Badge, description: "e.g. Beta" }
+    pill: { type: string, required: true, label: Pill text }
+    pill_url: { type: string, label: Pill link, default: '#pricing' }
+    title: { type: string, required: true, label: Title, description: 'HTML allowed, e.g. <span class="text-gold-400">…</span>' }
+    text: { type: string, required: true, label: Text }
+    note: { type: string, label: Note, description: "Below the download buttons: systems, requirements" }
+    screenshot:
+      type: map
+      required: true
+      label: Screenshot
+      fields: &screenshot
+        image: { type: string, format: path, required: true, label: Image, description: "In assets/, e.g. images/screenshots/sites.png (dark variant: sites.dark.png)" }
+        video: { type: string, format: path, label: Video, description: "In assets/, e.g. videos/demo.mp4 (dark variant: demo.dark.mp4)" }
+        alt: { type: string, required: true, label: Alternative text }
+
+proof:
+  type: map
+  required: true
+  label: Hosts and Git forges
+  fields:
+    title: { type: string, required: true, label: Title }
+    text: { type: string, label: Text }
+    items:
+      type: list
+      label: Items
+      description: Names only, no brand logos
+      items:
+        type: map
+        fields:
+          name: { type: string, required: true, label: Name }
+          kind: { type: string, required: true, label: Kind, description: "e.g. Host, Git forge" }
+
+intro:
+  type: map
+  required: true
+  label: Features introduction
+  fields:
+    eyebrow: { type: string, label: Eyebrow }
+    title: { type: string, required: true, label: Title }
+    text: { type: string, label: Text }
+
+features:
+  type: list
+  required: true
+  label: Features
+  description: Stacked, text above and full width screenshot below
+  min: 1
+  items:
+    type: map
+    fields:
+      kicker: { type: string, label: Kicker, description: "e.g. Write" }
+      title: { type: string, required: true, label: Title }
+      docs: { type: string, label: Documentation page, description: "Page ID, e.g. docs/content" }
+      text: { type: string, format: markdown, required: true, label: Text }
+      points: { type: list, items: string, label: Points }
+      screenshot:
+        type: map
+        label: Screenshot
+        description: Optional
+        fields: *screenshot
+
+writing:
+  type: map
+  required: true
+  label: Writing mode
+  fields:
+    eyebrow: { type: string, required: true, label: Eyebrow }
+    title: { type: string, required: true, label: Title }
+    text: { type: string, required: true, label: Text }
+    docs: { type: string, label: Documentation page, description: "Page ID, e.g. docs/writing-mode" }
+    screenshot:
+      type: map
+      required: true
+      label: Screenshot
+      fields: *screenshot
+    items:
+      type: list
+      label: Features
+      items:
+        type: map
+        fields: &icon_item
+          icon:
+            type: string
+            required: true
+            label: Icon
+            enum: [build, check, config, desktop, doctor, document, download, git, home, lock, media, plus, preview, sections, share, shortcuts, sites, themes, updates, upload, user, writing]
+          title: { type: string, required: true, label: Title }
+          text: { type: string, format: markdown, required: true, label: Text }
+
+pro:
+  type: map
+  required: true
+  label: Pro teaser
+  fields:
+    eyebrow: { type: string, label: Eyebrow }
+    title: { type: string, required: true, label: Title }
+    text: { type: string, required: true, label: Text }
+    link: { type: string, required: true, label: Link to the pricing }
+    items:
+      type: list
+      label: Benefits
+      items:
+        type: map
+        fields:
+          title: { type: string, required: true, label: Title }
+          text: { type: string, label: Text }
+
+more:
+  type: map
+  required: true
+  label: Other features
+  fields:
+    title: { type: string, required: true, label: Title }
+    items:
+      type: list
+      label: Features
+      items:
+        type: map
+        fields:
+          <<: *icon_item
+          text: { type: string, required: true, label: Text }
+          docs: { type: string, label: Documentation page, description: "Page ID, e.g. docs/themes" }
+
+testimonials:
+  type: map
+  label: Testimonials
+  description: "Real quotes of beta testers only, with their consent (the section is commented out in the template)"
+  fields:
+    eyebrow: { type: string, label: Eyebrow }
+    title: { type: string, label: Title }
+    items:
+      type: list
+      label: Quotes
+      items:
+        type: map
+        fields:
+          quote: { type: string, required: true, label: Quote }
+          name: { type: string, required: true, label: Name }
+          role: { type: string, label: Role }
+
+pack:
+  type: map
+  required: true
+  label: Pack bar
+  description: Thin bar before the pricing
+  fields:
+    title: { type: string, required: true, label: Title }
+    text: { type: string, required: true, label: Text }
+    cta: { type: string, required: true, label: Button }
+
+pricing:
+  type: map
+  required: true
+  label: Pricing
+  fields:
+    eyebrow: { type: string, label: Eyebrow }
+    title: { type: string, required: true, label: Title }
+    text: { type: string, label: Text }
+    note: { type: string, label: Note, description: Below the plans }
+    plans:
+      type: list
+      required: true
+      label: Plans
+      min: 1
+      max: 3
+      items:
+        type: map
+        fields:
+          name: { type: string, required: true, label: Name }
+          badge: { type: string, label: Badge }
+          price: { type: string, required: true, label: Price, description: "e.g. 59 €" }
+          period: { type: string, required: true, label: Period, description: "e.g. per year" }
+          text: { type: string, required: true, label: Text }
+          lead: { type: string, label: Lead-in of the features, description: "e.g. Everything in Free, plus:" }
+          features: { type: list, items: string, required: true, label: Features }
+          cta: { type: string, required: true, label: Button }
+          url: { type: string, format: url, label: Button link, description: "Absolute URL; the download buttons by default" }
+          disabled: { type: string, label: Disabled, description: Reason shown below the disabled button }
+          highlight: { type: bool, label: Highlighted, default: false }
+
+faq:
+  type: map
+  required: true
+  label: FAQ
+  fields:
+    title: { type: string, required: true, label: Title }
+    text: { type: string, format: markdown, label: Help text }
+    items:
+      type: list
+      label: Questions
+      items:
+        type: map
+        fields:
+          question: { type: string, required: true, label: Question }
+          answer: { type: string, format: markdown, required: true, label: Answer }
+
+cta:
+  type: map
+  required: true
+  label: Closing call to action
+  fields:
+    title: { type: string, required: true, label: Title }
+    text: { type: string, label: Text }
+
+ecosystem:
+  type: map
+  required: true
+  label: Cecil ecosystem
+  fields:
+    title: { type: string, required: true, label: Title }
+    items:
+      type: list
+      label: Links
+      items:
+        type: map
+        fields:
+          title: { type: string, required: true, label: Title }
+          text: { type: string, required: true, label: Text }
+          link: { type: string, required: true, label: Link label }
+          url: { type: string, format: url, required: true, label: URL }
