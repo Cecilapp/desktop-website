@@ -2,10 +2,10 @@
 title: Cecil Desktop
 # content of the homepage, in the order of its sections (layout: layouts/index.html.twig)
 announce: # thin bar above the navigation (optional)
-  text: "New in 0.17: Git sync, without Git to install."
+  text: "New in 0.18: unlimited free sites, Pro sites and SFTP publishing."
   link: Read the changelog
   page: docs/changelog
-  anchor: v0.17.0
+  anchor: v0.18.0
 
 hero:
   badge: Beta

@@ -2,10 +2,10 @@
 title: Cecil Desktop
 # contenu de la page d'accueil, dans l'ordre de ses sections (layout : layouts/index.html.twig)
 announce: # fine barre au-dessus de la navigation (optionnelle)
-  text: "Nouveau dans la 0.17 : la synchronisation Git, sans Git à installer."
+  text: "Nouveau dans la 0.18 : sites illimités en gratuit, sites Pro et publication SFTP."
   link: Lire les nouveautés
   page: docs/changelog
-  anchor: v0.17.0
+  anchor: v0.18.0
 
 hero:
   badge: Bêta
