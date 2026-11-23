@@ -225,7 +225,7 @@ pricing:
         - Toutes les mises à jour, sur 3 ordinateurs
         - Soutient le développement de Cecil
       cta: Obtenir Cecil Desktop Pro
-      url: https://buy.polar.sh/polar_cl_J1QrbXjCKqohqt6HgHuNEfX7XH80MbfYtDKoa2BJ3CQ
+      url: https://buy.polar.sh/polar_cl_JAAyVlRfypWvzq94Bl8zN5D4Rg1DBvFOZ1ntB2XiVLI
       disabled: Disponible après la bêta
       highlight: true
     - name: Pack de sites Pro
@@ -238,6 +238,7 @@ pricing:
         - Autant de packs que nécessaire
         - Un site libéré garde sa place 30 jours
       cta: Ajouter un pack
+      url: https://buy.polar.sh/polar_cl_u4KlAhqP4Nkfoaq3TaScRmD0vo5lwUyGqtvAf0vYo83
       disabled: Disponible après la bêta
 
 faq:
