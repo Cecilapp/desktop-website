@@ -34,8 +34,8 @@ proof:
       kind: Hébergeur
     - name: SFTP
       kind: Votre serveur
-    - name: GitHub
-      kind: Forge Git
+    #- name: GitHub
+    #  kind: Forge Git
     - name: GitLab
       kind: Forge Git
     - name: Codeberg

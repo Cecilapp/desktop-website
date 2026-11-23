@@ -34,8 +34,8 @@ proof:
       kind: Host
     - name: SFTP
       kind: Your server
-    - name: GitHub
-      kind: Git forge
+    #- name: GitHub
+    #  kind: Git forge
     - name: GitLab
       kind: Git forge
     - name: Codeberg
