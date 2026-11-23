@@ -32,6 +32,8 @@ proof:
       kind: Host
     - name: AWS S3
       kind: Host
+    - name: SFTP
+      kind: Your server
     - name: GitHub
       kind: Git forge
     - name: GitLab
@@ -73,7 +75,7 @@ features:
   - kicker: Publish
     title: Publish anywhere, your tokens stay safe
     docs: docs/publishing
-    text: Deploy to Netlify, Vercel, GitHub Pages or AWS S3 directly through their APIs. Only the changed files are sent, and every deployment is kept in the history. Tokens are encrypted with the system keychain and never written to your projects.
+    text: Deploy to Netlify, Vercel, GitHub Pages or AWS S3 directly through their APIs, or to your own server over SFTP. Only the changed files are sent, and every deployment is kept in the history. Tokens are encrypted with the system keychain and never written to your projects.
     points:
       - Several targets per site (production, staging…)
       - Differential uploads, no git, Netlify or AWS CLI required

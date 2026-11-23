@@ -32,6 +32,8 @@ proof:
       kind: Hébergeur
     - name: AWS S3
       kind: Hébergeur
+    - name: SFTP
+      kind: Votre serveur
     - name: GitHub
       kind: Forge Git
     - name: GitLab
@@ -73,7 +75,7 @@ features:
   - kicker: Publier
     title: Publiez où vous voulez, vos jetons en sécurité
     docs: docs/publishing
-    text: Déployez sur Netlify, Vercel, GitHub Pages ou AWS S3 directement via leurs API. Seuls les fichiers modifiés sont envoyés, et chaque déploiement est conservé dans l'historique. Les jetons sont chiffrés avec le trousseau du système et jamais écrits dans vos projets.
+    text: Déployez sur Netlify, Vercel, GitHub Pages ou AWS S3 directement via leurs API, ou sur votre propre serveur en SFTP. Seuls les fichiers modifiés sont envoyés, et chaque déploiement est conservé dans l'historique. Les jetons sont chiffrés avec le trousseau du système et jamais écrits dans vos projets.
     points:
       - Plusieurs cibles par site (production, recette…)
       - Envoi différentiel, aucun CLI git, Netlify ou AWS requis

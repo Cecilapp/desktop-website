@@ -1,11 +1,11 @@
 ---
 title: Publication
-description: Publiez votre site sur Netlify, Vercel, GitHub Pages ou AWS S3, en un clic, via leurs API.
+description: Publiez votre site sur Netlify, Vercel, GitHub Pages, AWS S3 ou votre propre serveur en SFTP, en un clic.
 weight: 4
 ---
 # Publication
 
-Cecil Desktop publie votre site sur **Netlify**, **Vercel**, **GitHub Pages** ou **AWS S3 / CloudFront**, directement via leurs API : aucun outil en ligne de commande (git, Netlify, Vercel ou AWS) n'est nécessaire. Seuls les fichiers modifiés sont envoyés.
+Cecil Desktop publie votre site sur **Netlify**, **Vercel**, **GitHub Pages** ou **AWS S3 / CloudFront**, directement via leurs API, ou sur votre propre serveur en **SFTP** : aucun outil (git, Netlify, Vercel, AWS ou SSH) n'est nécessaire. Seuls les fichiers modifiés sont envoyés.
 
 ## Cibles et comptes
 
@@ -22,7 +22,7 @@ Une cible peut être **partagée** avec les rédacteurs du site, par son profil 
 
 1. Ouvrez la section **Publication** du site (`Ctrl/⌘+5`) et cliquez sur **Nouvelle cible**.
 2. Choisissez l'**Hébergeur**, et donnez un nom à la cible (par ex. *Production*).
-3. Renseignez les réglages de l'hébergeur : voir [Netlify](netlify.md), [Vercel](vercel.md), [GitHub Pages](github-pages.md) ou [AWS S3](aws-s3.md).
+3. Renseignez les réglages de l'hébergeur : voir [Netlify](netlify.md), [Vercel](vercel.md), [GitHub Pages](github-pages.md), [AWS S3](aws-s3.md) ou [SFTP](sftp.md).
 4. Si besoin, indiquez une **URL de base du build**, pour publier avec une autre URL que celle de la configuration (par ex. pour une cible de préproduction).
 5. Choisissez un compte existant, ou **Nouveau compte…** : nommez-le, collez son jeton (le lien **Créer un jeton** ouvre la page de l'hébergeur), et cliquez sur **Enregistrer**.
 
