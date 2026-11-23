@@ -30,6 +30,15 @@ The Pro features are shown in the app with a **Pro** badge. Without a license, o
 
 A Pro license gives **5 Pro sites**: the Pro features apply to them, and your other sites keep the features of the free version. You choose your Pro sites in the app, and can change them: a freed slot can be given to another site **30 days** later.
 
+- **Make a site a Pro site**: open the site, then **Site › Pro site…** (in Management mode, also in the command palette) and click **Make this site a Pro site**. When a Pro feature is asked on a site that is not Pro, its dialog offers it too. The Pro sites have a **Pro** badge on the Sites screen.
+- **Release a site**: **Site › Pro site…**, or **Release** next to the site in **Preferences › License**, which lists the Pro sites of the license on all your computers, with the free slots. The slot is free again 30 days later; meanwhile, the released site can **take back its slot**.
+- **Without a free slot**, the app tells when the next one is free, or offers to add a pack.
+- If a pack ends, the sites chosen first stay Pro and the next ones become **inactive** (the features of the free version), until a slot is freed or a pack is added: nothing is deleted.
+
+:::info
+A site is identified by an `id` written in its profile, `.cecil-desktop.yml`, the first time it is made a Pro site (the file is created if needed). Commit this file with the site: the site is then the same Pro site on your other computers and in its clones.
+:::
+
 To manage more client sites with the Pro features, add **packs of 5 Pro sites**.
 
 The writers of a Pro site benefit from its writing profile without a license: only the manager of the site needs Pro.
