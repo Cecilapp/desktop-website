@@ -30,6 +30,15 @@ Les fonctions Pro sont signalées dans l'application par un badge **Pro**. Sans 
 
 Une licence Pro donne **5 sites Pro** : les fonctions Pro s'y appliquent, et vos autres sites gardent les fonctions de la version gratuite. Vous choisissez vos sites Pro dans l'application, et pouvez en changer : un emplacement libéré peut être réattribué à un autre site **30 jours** plus tard.
 
+- **Passer un site en Pro** : ouvrez le site, puis **Site › Site Pro…** (en mode Gestion, aussi dans la palette de commandes) et cliquez sur **Passer ce site en Pro**. Quand une fonction Pro est demandée sur un site qui ne l'est pas, sa fenêtre le propose aussi. Les sites Pro portent un badge **Pro** sur l'écran Sites.
+- **Libérer un site** : **Site › Site Pro…**, ou **Libérer** à côté du site dans **Préférences › Licence**, qui liste les sites Pro de la licence sur tous vos ordinateurs, avec les emplacements libres. L'emplacement est libre 30 jours plus tard ; d'ici là, le site libéré peut **reprendre son emplacement**.
+- **Sans emplacement libre**, l'application indique quand le prochain le sera, ou propose d'ajouter un pack.
+- Si un pack prend fin, les sites choisis en premier restent Pro et les suivants deviennent **inactifs** (les fonctions de la version gratuite), jusqu'à ce qu'un emplacement se libère ou qu'un pack soit ajouté : rien n'est supprimé.
+
+:::info
+Un site est identifié par un `id` écrit dans son profil, `.cecil-desktop.yml`, la première fois qu'il passe en Pro (le fichier est créé s'il n'existe pas). Committez ce fichier avec le site : il reste alors le même site Pro sur vos autres ordinateurs et dans ses clones.
+:::
+
 Pour gérer plus de sites clients avec les fonctions Pro, ajoutez des **packs de 5 sites Pro**.
 
 Les rédacteurs d'un site Pro profitent de son profil de rédaction sans licence : seul le responsable du site a besoin de Pro.

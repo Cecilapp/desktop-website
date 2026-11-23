@@ -1,11 +1,11 @@
 ---
 title: Publishing
-description: Publish your site to Netlify, Vercel, GitHub Pages or AWS S3, in one click, through their APIs.
+description: Publish your site to Netlify, Vercel, GitHub Pages, AWS S3 or your own server over SFTP, in one click.
 weight: 4
 ---
 # Publishing
 
-Cecil Desktop publishes your site to **Netlify**, **Vercel**, **GitHub Pages** or **AWS S3 / CloudFront**, directly through their APIs: no git, Netlify, Vercel or AWS CLI is required. Only the changed files are sent.
+Cecil Desktop publishes your site to **Netlify**, **Vercel**, **GitHub Pages** or **AWS S3 / CloudFront**, directly through their APIs, or to your own server over **SFTP**: no git, Netlify, Vercel, AWS or SSH tool is required. Only the changed files are sent.
 
 ## Targets and accounts
 
@@ -23,7 +23,7 @@ A target can be **shared** with the writers of the site, through its profile: ea
 
 1. Open the **Publishing** section of the site (`Ctrl/⌘+5`) and click **New target**.
 2. Choose the **Hosting provider**, and give the target a name (e.g. *Production*).
-3. Fill in the settings of the provider: see [Netlify](netlify.md), [Vercel](vercel.md), [GitHub Pages](github-pages.md) or [AWS S3](aws-s3.md).
+3. Fill in the settings of the provider: see [Netlify](netlify.md), [Vercel](vercel.md), [GitHub Pages](github-pages.md), [AWS S3](aws-s3.md) or [SFTP](sftp.md).
 4. Optionally, set a **Base URL of the build**, to publish with another URL than the one of the configuration (e.g. for a staging target).
 5. Choose an existing account, or **New account…**: name it, paste its token (the **Create a token** link opens the page of the provider), and click **Save**.
 
