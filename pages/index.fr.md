@@ -2,10 +2,10 @@
 title: Cecil Desktop
 # contenu de la page d'accueil, dans l'ordre de ses sections (layout : layouts/index.html.twig)
 announce: # fine barre au-dessus de la navigation (optionnelle)
-  text: "Nouveau dans la 0.18 : sites illimités en gratuit, sites Pro et publication SFTP."
+  text: "Nouveau dans la 0.19 : une visite guidée de l'application."
   link: Lire les nouveautés
   page: docs/changelog
-  anchor: v0.18.0
+  anchor: v0.19.0
 
 hero:
   badge: Bêta

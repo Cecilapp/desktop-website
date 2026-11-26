@@ -75,6 +75,8 @@ La version gratuite gère tous vos sites. [Cecil Desktop Pro](pro.md) ajoute des
 
 ## Se repérer
 
+Au premier lancement, Cecil Desktop propose une courte visite : cliquez sur **Faire la visite** pour voir, un élément après l'autre, où se trouvent vos sites, les menus, la palette de commandes et les préférences, puis les sections et les actions d'un site la première fois que vous en ouvrez un (**Plus tard** la passe). Refaites-la à tout moment depuis **Aide › Visite guidée**.
+
 La fenêtre d'un site comporte 3 zones principales :
 
 - la **barre latérale**, à gauche, liste vos sites et les sections du site ouvert : **Aperçu**, **Contenu**, **Médias**, **Thèmes**, **Publication** et **Configuration** (`Ctrl/⌘+1` à `Ctrl/⌘+6` ; moins en [mode Rédaction](writing-mode.md)). `Ctrl/⌘+B` la replie en une colonne d'icônes ;

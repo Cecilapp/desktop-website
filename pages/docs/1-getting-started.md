@@ -75,6 +75,8 @@ The free version manages all your sites. [Cecil Desktop Pro](pro.md) adds featur
 
 ## Find your way around
 
+On the first launch, Cecil Desktop offers a short tour: click **Take the tour** to see, one element at a time, where your sites, the menus, the command palette and the preferences are, then the sections and the actions of a site the first time you open one (**Later** skips it). Take it again at any time from **Help › Guided tour**.
+
 The window of a site has 3 main areas:
 
 - the **sidebar**, on the left, lists your sites and the sections of the open site: **Overview**, **Content**, **Media**, **Themes**, **Publishing** and **Configuration** (`Ctrl/⌘+1` to `Ctrl/⌘+6`; fewer in [Writing mode](writing-mode.md)). `Ctrl/⌘+B` folds it into a rail of icons;
