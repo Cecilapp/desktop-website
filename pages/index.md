@@ -2,10 +2,10 @@
 title: Cecil Desktop
 # content of the homepage, in the order of its sections (layout: layouts/index.html.twig)
 announce: # thin bar above the navigation (optional)
-  text: "New in 0.18: unlimited free sites, Pro sites and SFTP publishing."
+  text: "New in 0.19: a guided tour of the app."
   link: Read the changelog
   page: docs/changelog
-  anchor: v0.18.0
+  anchor: v0.19.0
 
 hero:
   badge: Beta
