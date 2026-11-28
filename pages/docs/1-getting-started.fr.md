@@ -26,6 +26,12 @@ Cecil Desktop n'est pas encore signé : votre système vous avertit d'un éditeu
 La signature est en cours.
 :::
 
+### Depuis le Microsoft Store
+
+Sous Windows, vous pouvez aussi installer Cecil Desktop depuis le [Microsoft Store](https://apps.microsoft.com/detail/9NM1GQ85XX94?hl=fr-fr) : la copie du Store est signée par Microsoft, Windows n'affiche donc aucun avertissement, et le Store la tient à jour.
+
+La copie du Store a ses propres données : elle ne voit pas les sites, les comptes et la licence d'une copie installée avec l'installeur, même sur le même ordinateur (vos sites restent sur votre disque : rouvrez-les). Y activer la licence occupe l'un de ses 3 ordinateurs, et la désinstaller supprime aussi ses données.
+
 ## Ouvrir un site
 
 Au premier lancement, l'écran **Sites** est vide. Pour ajouter un site existant :
@@ -101,7 +107,7 @@ Pour publier, ajoutez une cible dans la section **Publication** du site, avec un
 
 ## Mises à jour
 
-Sous Windows, Cecil Desktop télécharge ses mises à jour et les installe au redémarrage. Chaque mise à jour embarque la dernière version de Cecil. Pour vérifier tout de suite, utilisez **Aide › Rechercher des mises à jour…**.
+Sous Windows, Cecil Desktop télécharge ses mises à jour et les installe au redémarrage. Chaque mise à jour embarque la dernière version de Cecil. Pour vérifier tout de suite, utilisez **Aide › Rechercher des mises à jour…**. La copie du Microsoft Store est mise à jour par le Store.
 
 Sous macOS, téléchargez la nouvelle version depuis le site et installez-la par-dessus la précédente.
 

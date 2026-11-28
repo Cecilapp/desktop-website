@@ -49,7 +49,7 @@ Une page ouverte dans Cecil Desktop n'est pas rechargée quand elle est modifié
 
 Le dossier de données de l'application est :
 
-- sous Windows : `%APPDATA%\cecil-desktop` ;
+- sous Windows : `%APPDATA%\cecil-desktop`, et pour la copie du Microsoft Store : `%LOCALAPPDATA%\Packages\ApertureLab.CecilDesktop_…\LocalCache\Roaming\cecil-desktop` ;
 - sous macOS : `~/Library/Application Support/cecil-desktop`.
 
 ### Logs
