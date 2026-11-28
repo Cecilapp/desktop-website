@@ -63,6 +63,7 @@ La carte de la licence affiche alors votre nom, la date de renouvellement de l'a
 
 - La licence est vérifiée à nouveau en arrière-plan chaque semaine. Hors ligne, elle continue de fonctionner **30 jours** : au-delà, connectez-vous à Internet et cliquez sur **Vérifier**.
 - Pour déplacer la licence sur un autre ordinateur, cliquez sur **Désactiver cette machine** (une connexion à Internet est nécessaire), puis activez-la sur l'autre.
+- Une copie installée depuis le [Microsoft Store](getting-started.md#depuis-le-microsoft-store) a ses propres données : y activer la licence compte comme un autre ordinateur, même à côté d'une copie installée avec l'installeur.
 - Si la licence est déjà active sur 3 ordinateurs, désactivez-en un depuis le **Portail client**, qui donne aussi accès à vos clés, à votre abonnement et à vos factures.
 - **Changer de clé** remplace la clé, par ex. pour utiliser une autre licence.
 

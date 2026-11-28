@@ -26,6 +26,12 @@ Cecil Desktop is not signed yet, so your system warns you about an unknown publi
 Signing is on its way.
 :::
 
+### From the Microsoft Store
+
+On Windows, you can also install Cecil Desktop from the [Microsoft Store](https://apps.microsoft.com/detail/9NM1GQ85XX94): the Store copy is signed by Microsoft, so Windows shows no warning, and the Store keeps it up to date.
+
+The Store copy has its own data: it doesn't see the sites, accounts and license of a copy installed with the installer, even on the same computer (your sites themselves stay on your disk: open them again). Activating the license there uses one of its 3 computers, and uninstalling it also removes its data.
+
 ## Open a site
 
 On the first launch, the **Sites** screen is empty. To add a site you already have, do one of the following:
@@ -101,7 +107,7 @@ To publish, add a target in the **Publishing** section of the site, with a hosti
 
 ## Updates
 
-On Windows, Cecil Desktop downloads its updates and installs them when you restart it. Each update embeds the latest version of Cecil. To check right away, use **Help › Check for Updates…**.
+On Windows, Cecil Desktop downloads its updates and installs them when you restart it. Each update embeds the latest version of Cecil. To check right away, use **Help › Check for Updates…**. The copy of the Microsoft Store is updated by the Store.
 
 On macOS, download the new version from the website and install it over the previous one.
 

@@ -63,6 +63,7 @@ The license card then shows your name, the renewal date of the subscription, you
 
 - The license is checked again in the background every week. Offline, it keeps working for **30 days**: after that, connect to the Internet and click **Check**.
 - To move the license to another computer, click **Deactivate this computer** (it requires an Internet connection), then activate it on the other one.
+- A copy installed from the [Microsoft Store](getting-started.md#from-the-microsoft-store) has its own data: activating the license there counts as another computer, even next to a copy installed with the installer.
 - If the license is already active on 3 computers, deactivate one from the **Customer portal**, which also gives access to your keys, your subscription and your invoices.
 - **Change the key** replaces the key, e.g. to use another license.
 

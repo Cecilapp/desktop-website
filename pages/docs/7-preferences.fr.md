@@ -42,6 +42,8 @@ Affiche les versions de Cecil Desktop, de Cecil et de PHP, embarqués dans l'app
 
 Sous Windows, Cecil Desktop télécharge ses mises à jour au démarrage. Quand l'une d'elles est prête, la barre d'état affiche **Mise à jour … prête** : cliquez dessus pour redémarrer et l'installer, sinon elle sera installée quand vous quitterez l'application. Chaque mise à jour embarque la dernière version de Cecil.
 
+La copie du [Microsoft Store](getting-started.md#depuis-le-microsoft-store) est mise à jour par le Store : **Rechercher des mises à jour** n'y est pas disponible.
+
 Sous macOS, les mises à jour automatiques ne sont pas encore disponibles : téléchargez la nouvelle version depuis le [site](/fr/#download), et installez-la par-dessus la précédente.
 
 ## Licence

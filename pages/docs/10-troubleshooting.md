@@ -49,7 +49,7 @@ A page open in Cecil Desktop is not reloaded when it is changed by another appli
 
 The data folder of the app is:
 
-- on Windows: `%APPDATA%\cecil-desktop`;
+- on Windows: `%APPDATA%\cecil-desktop`, and for the copy of the Microsoft Store: `%LOCALAPPDATA%\Packages\ApertureLab.CecilDesktop_…\LocalCache\Roaming\cecil-desktop`;
 - on macOS: `~/Library/Application Support/cecil-desktop`.
 
 ### Logs
